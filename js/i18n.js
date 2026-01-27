@@ -882,6 +882,12 @@ function applyLanguage(lang) {
     const modalSuccessMsg = document.querySelector('#formSuccess p');
     if (modalSuccessMsg) modalSuccessMsg.textContent = t.modalSuccessMsg;
     
+    // ===== ATUALIZAR LINK DO WHITE PAPER COM IDIOMA =====
+    const whitepaperLink = document.getElementById('whitepaperLink');
+    if (whitepaperLink) {
+        whitepaperLink.href = `white-paper.html?lang=${lang}`;
+    }
+    
     // Atualizar botões de idioma
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('active');

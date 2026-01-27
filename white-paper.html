@@ -761,5 +761,67 @@
             </p>
         </footer>
     </div>
+
+    <!-- Sistema de Tradução Multi-idioma -->
+    <script>
+        // Detectar idioma da URL ou usar padrão
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'pt';
+
+        // Textos traduzidos para elementos principais
+        const translations = {
+            pt: {
+                backBtn: 'Voltar ao Site',
+                downloadBtn: 'Baixar PDF',
+                title: 'WHITE PAPER TÉCNICO',
+                subtitle: 'Aviões, Foguetes e Trens: Por Que a EdTech Tradicional Falha em Políticas Públicas de Educação no Brasil',
+                subtitleComplement: 'E Como a Infraestrutura Determinística Resolve o Gap de Auditabilidade',
+                version: 'Versão 1.1 | Janeiro de 2026',
+                authorship: 'Autoria: Equipe SVEED',
+                footerBackBtn: 'Voltar ao Site Principal',
+                footerDownloadBtn: 'Baixar PDF Completo',
+                footerCopyright: 'Documento técnico-institucional, sem caráter comercial ou pedagógico.'
+            },
+            en: {
+                backBtn: 'Back to Site',
+                downloadBtn: 'Download PDF',
+                title: 'TECHNICAL WHITE PAPER',
+                subtitle: 'Airplanes, Rockets and Trains: Why Traditional EdTech Fails in Public Education Policies in Brazil',
+                subtitleComplement: 'And How Deterministic Infrastructure Solves the Auditability Gap',
+                version: 'Version 1.1 | January 2026',
+                authorship: 'Authors: SVEED Team',
+                footerBackBtn: 'Back to Main Site',
+                footerDownloadBtn: 'Download Complete PDF',
+                footerCopyright: 'Technical-institutional document, without commercial or pedagogical character.'
+            },
+            es: {
+                backBtn: 'Volver al Sitio',
+                downloadBtn: 'Descargar PDF',
+                title: 'WHITE PAPER TÉCNICO',
+                subtitle: 'Aviones, Cohetes y Trenes: Por Qué la EdTech Tradicional Falla en Políticas Públicas de Educación en Brasil',
+                subtitleComplement: 'Y Cómo la Infraestructura Determinística Resuelve el Gap de Auditabilidad',
+                version: 'Versión 1.1 | Enero de 2026',
+                authorship: 'Autoría: Equipo SVEED',
+                footerBackBtn: 'Volver al Sitio Principal',
+                footerDownloadBtn: 'Descargar PDF Completo',
+                footerCopyright: 'Documento técnico-institucional, sin carácter comercial o pedagógico.'
+            }
+        };
+
+        // Aplicar tradução
+        const t = translations[lang] || translations.pt;
+
+        // Atualizar elementos da página
+        document.querySelector('.wp-back-btn').innerHTML = `<i class="fas fa-arrow-left"></i> ${t.backBtn}`;
+        document.querySelector('.wp-download-btn').innerHTML = `<i class="fas fa-download"></i> ${t.downloadBtn}`;
+        document.querySelector('.wp-hero h1').textContent = t.title;
+        document.querySelector('.wp-hero .subtitle').textContent = t.subtitle;
+        document.querySelectorAll('.wp-hero p')[0].textContent = t.subtitleComplement;
+        document.querySelectorAll('.wp-meta-item')[0].innerHTML = `<i class="fas fa-calendar"></i> ${t.version}`;
+        document.querySelectorAll('.wp-meta-item')[1].innerHTML = `<i class="fas fa-users"></i> ${t.authorship}`;
+        document.querySelectorAll('.wp-footer-btn')[0].innerHTML = `<i class="fas fa-arrow-left"></i> ${t.footerBackBtn}`;
+        document.querySelectorAll('.wp-footer-btn')[1].innerHTML = `<i class="fas fa-download"></i> ${t.footerDownloadBtn}`;
+        document.querySelectorAll('.wp-copyright')[0].innerHTML = `${t.footerCopyright}<br>© 2026 SVEED. Todos os direitos reservados.<br>Registro INPI BR 51 2026 000328-8 | RPI 2873 de 27/01/2026`;
+    </script>
 </body>
 </html>
