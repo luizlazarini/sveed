@@ -19,6 +19,7 @@ const siteTranslations = {
         navDashboard: "Dashboard",
         navOperators: "Operadoras",
         navCompliance: "Conformidade",
+        navDocumentation: "Documentação",
         
         // ===== HERO =====
         heroTitle: "SVEED — Governança Pública da Última Milha Educacional",
@@ -207,6 +208,7 @@ const siteTranslations = {
         navDashboard: "Dashboard",
         navOperators: "Operators",
         navCompliance: "Compliance",
+        navDocumentation: "Documentation",
         
         // ===== HERO =====
         heroTitle: "SVEED — Public Governance of the Educational Last Mile",
@@ -395,6 +397,7 @@ const siteTranslations = {
         navDashboard: "Dashboard",
         navOperators: "Operadoras",
         navCompliance: "Cumplimiento",
+        navDocumentation: "Documentación",
         
         // ===== HERO =====
         heroTitle: "SVEED — Gobernanza Pública de la Última Milla Educativa",
@@ -594,7 +597,7 @@ function applyLanguage(lang) {
     
     // ===== NAVIGATION =====
     const navLinks = document.querySelectorAll('.nav a');
-    if (navLinks.length >= 7) {
+    if (navLinks.length >= 8) {
         navLinks[0].textContent = t.navChallenge;
         navLinks[1].textContent = t.navAbout;
         navLinks[2].textContent = t.navDynamics;
@@ -602,6 +605,7 @@ function applyLanguage(lang) {
         navLinks[4].textContent = t.navDashboard;
         navLinks[5].textContent = t.navOperators;
         navLinks[6].textContent = t.navCompliance;
+        navLinks[7].textContent = t.navDocumentation;
     }
     
     // ===== HERO =====
