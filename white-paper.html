@@ -232,17 +232,6 @@
             color: var(--cinza-claro);
         }
 
-        /* Citações */
-        blockquote {
-            background: rgba(255, 140, 66, 0.1);
-            border-left: 4px solid var(--laranja);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-            font-style: italic;
-            color: var(--cinza-claro);
-        }
-
         /* Boxes de destaque */
         .highlight-box {
             background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(255, 140, 66, 0.15));
@@ -257,13 +246,8 @@
             margin-top: 0;
         }
 
-        /* Código */
-        code {
-            background: rgba(0, 0, 0, 0.3);
-            color: var(--cyan);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
+        .highlight-box p {
+            margin-bottom: 0.5rem;
         }
 
         /* Footer da página */
@@ -352,22 +336,6 @@
                 padding-top: 10rem;
             }
         }
-
-        /* Animações */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .wp-section {
-            animation: fadeIn 0.6s ease-out;
-        }
     </style>
 </head>
 <body>
@@ -393,385 +361,383 @@
     <div class="wp-container">
         <!-- Hero -->
         <div class="wp-hero">
-            <h1>White Paper Técnico</h1>
+            <h1>WHITE PAPER TÉCNICO</h1>
             <p class="subtitle">Aviões, Foguetes e Trens: Por Que a EdTech Tradicional Falha em Políticas Públicas de Educação no Brasil</p>
+            <p style="font-size: 1.1rem; color: var(--branco); margin-bottom: 0.5rem;">E Como a Infraestrutura Determinística Resolve o Gap de Auditabilidade</p>
             <div class="wp-meta">
                 <div class="wp-meta-item">
                     <i class="fas fa-calendar"></i>
-                    Janeiro 2026
+                    Versão 1.1 | Janeiro de 2026
                 </div>
                 <div class="wp-meta-item">
-                    <i class="fas fa-clock"></i>
-                    Leitura: 15 min
+                    <i class="fas fa-users"></i>
+                    Autoria: Equipe SVEED
                 </div>
                 <div class="wp-meta-item">
-                    <i class="fas fa-file-alt"></i>
-                    Documento Técnico-Institucional
+                    <i class="fas fa-registered"></i>
+                    Registro INPI: BR 51 2026 000328-8
                 </div>
             </div>
         </div>
 
         <!-- Conteúdo -->
         <div class="wp-content">
-            <!-- Resumo Executivo -->
+            <!-- Sumário Executivo -->
             <section class="wp-section">
-                <h2><i class="fas fa-bookmark"></i> Resumo Executivo</h2>
+                <h2>Sumário Executivo</h2>
                 <p>
-                    Este documento técnico-institucional analisa o <strong>gap crítico de auditabilidade</strong> em políticas públicas de tecnologia educacional no Brasil, utilizando a metáfora de três tipos de sistemas de transporte — aviões, foguetes e trens — para ilustrar por que soluções EdTech tradicionais, apesar de tecnologicamente avançadas, frequentemente falham em contextos de políticas públicas de larga escala.
+                    A distribuição massiva de dispositivos educacionais em políticas públicas brasileiras enfrenta um paradoxo crítico: <strong>evidência de entrega física não equivale a evidência de uso funcional</strong>. Embora notas fiscais, termos de recebimento e registros logísticos comprovem a aquisição e a distribuição de ativos tecnológicos, tais instrumentos são insuficientes para demonstrar sua execução operacional no contexto educacional.
                 </p>
+                <p>
+                    À medida que o Tribunal de Contas da União (TCU) e a Controladoria-Geral da União (CGU) intensificam auditorias sobre a efetividade dos investimentos em tecnologia educacional, gestores públicos, fornecedores e integradores carecem de instrumentos técnicos capazes de comprovar, de forma objetiva e auditável, o uso funcional dos dispositivos contratados.
+                </p>
+                <p>
+                    Este documento analisa por que soluções EdTech tradicionais — concebidas para ambientes de alta conectividade, hardware atualizado e infraestrutura robusta — <strong>falham sistematicamente</strong> quando aplicadas à realidade brasileira, caracterizada por conectividade intermitente, hardware legado e exigências rigorosas de conformidade com a Lei Geral de Proteção de Dados (LGPD).
+                </p>
+                <p>
+                    Apresenta-se o conceito de <strong>infraestrutura determinística de verificação</strong> como alternativa técnica viável e necessária, demonstrando como arquiteturas offline-first, agnósticas a conteúdo pedagógico e baseadas em processamento local resolvem o problema da auditabilidade sem comprometer a privacidade dos usuários nem depender de condições ideais de operação.
+                </p>
+
                 <div class="highlight-box">
-                    <h4><i class="fas fa-lightbulb"></i> Síntese da Tese</h4>
-                    <p>
-                        <strong>EdTech tradicional = Aviões (alta performance, mas dependência de infraestrutura)</strong><br>
-                        <strong>IA Generativa em Educação = Foguetes (tecnologia de fronteira, mas imprevisível)</strong><br>
-                        <strong>SVEED = Trem (determinístico, auditável, infraestrutura de base)</strong>
-                    </p>
+                    <h4>Principais Conclusões</h4>
+                    <p><strong>Primeira conclusão.</strong> Soluções EdTech globais (como GoGuardian, Lightspeed, Securly e MDMs corporativos) foram projetadas para ambientes controlados e altamente conectados — os "aviões e foguetes" — e não operam de forma eficaz nas "vielas e na mata fechada" da educação pública brasileira.</p>
+                    <p><strong>Segunda conclusão.</strong> O gap de auditabilidade identificado pelo TCU (Acórdãos nº 326/2022 e nº 286/2025) permanece sem resposta técnica adequada no mercado.</p>
+                    <p><strong>Terceira conclusão.</strong> A infraestrutura determinística de verificação fornece evidência objetiva de uso funcional, sem coleta de dados pessoais, alinhando-se às exigências regulatórias, operacionais e jurídicas do setor público.</p>
                 </div>
             </section>
 
-            <!-- Introdução -->
+            <!-- 1. O Problema -->
             <section class="wp-section">
-                <h2><i class="fas fa-flag"></i> 1. Introdução: O Problema da Auditabilidade</h2>
+                <h2>1. O Problema: Evidência de Entrega ≠ Evidência de Uso</h2>
                 
-                <h3>1.1. O Contexto das Políticas Públicas Educacionais</h3>
+                <h3>1.1 Contexto das Políticas Públicas de Tecnologia Educacional</h3>
                 <p>
-                    Nos últimos 10 anos, o Brasil investiu bilhões de reais em políticas públicas de distribuição de dispositivos tecnológicos para educação. Programas como <em>Computador Portátil para Professores</em>, <em>Um Computador por Aluno (UCA)</em>, e iniciativas estaduais de distribuição de tablets alcançaram milhões de estudantes e educadores.
+                    Desde o lançamento do Programa Nacional de Tecnologia Educacional (ProInfo), em 1997, o governo federal brasileiro investe recursos significativos na aquisição e distribuição de dispositivos tecnológicos para escolas públicas. Entre 2012 e 2015, o Fundo Nacional de Desenvolvimento da Educação (FNDE) coordenou a aquisição de aproximadamente <strong>600 mil tablets educacionais</strong> destinados a professores do ensino médio.
                 </p>
                 <p>
-                    No entanto, um desafio persistente atravessa todos esses programas: <strong>como comprovar que os dispositivos distribuídos estão sendo efetivamente utilizados?</strong>
+                    Apesar do volume expressivo de investimentos, auditorias conduzidas por órgãos de controle identificaram lacunas críticas na comprovação da utilização efetiva desses ativos. O TCU, em auditoria operacional realizada em 2022 (<strong>Acórdão nº 326/2022-TCU-Plenário</strong>), apontou o risco de desalinhamento entre a aquisição de TIC e os requisitos das políticas públicas de educação digital, comprometendo a efetividade dos investimentos realizados.
                 </p>
-
-                <h3>1.2. O Gap de Auditabilidade</h3>
                 <p>
-                    A ausência de mecanismos de verificação objetiva de uso gera três problemas estruturais:
-                </p>
-                <ul>
-                    <li><strong>Risco de ociosidade patrimonial:</strong> Dispositivos distribuídos mas não utilizados representam desperdício de recursos públicos</li>
-                    <li><strong>Questionamento por órgãos de controle:</strong> TCU, controladorias e auditorias demandam evidências objetivas de execução</li>
-                    <li><strong>Dificuldade de planejamento:</strong> Sem dados agregados de uso, gestores não conseguem fundamentar decisões de continuidade ou expansão</li>
-                </ul>
-
-                <blockquote>
-                    "A evidência de entrega não substitui a evidência de utilização. Distribuir tablets é relativamente simples; garantir que sejam usados de forma funcional e auditável é o verdadeiro desafio." — TCU Acórdão 326/2022 e 286/2025
-                </blockquote>
-            </section>
-
-            <!-- A Metáfora -->
-            <section class="wp-section">
-                <h2><i class="fas fa-plane"></i> 2. Aviões, Foguetes e Trens: Uma Metáfora de Sistemas</h2>
-
-                <h3>2.1. EdTech Tradicional = Aviões</h3>
-                <p>
-                    Plataformas EdTech comerciais (como Khan Academy, Google Classroom, Duolingo) são como <strong>aviões</strong>:
-                </p>
-                <ul>
-                    <li><strong>Alta performance:</strong> Interface rica, gamificação, dashboards sofisticados</li>
-                    <li><strong>Dependência de infraestrutura:</strong> Exigem conectividade contínua, servidores em nuvem, autenticação online</li>
-                    <li><strong>Custo operacional elevado:</strong> Licenças, manutenção, suporte técnico</li>
-                    <li><strong>Falha catastrófica sem combustível:</strong> Sem internet, não funcionam</li>
-                </ul>
-                <p>
-                    <strong>O problema:</strong> No Brasil, 39% das escolas públicas não têm acesso adequado à internet (CETIC Educação, 2023). Aviões não voam onde não há combustível.
+                    O <strong>Acórdão nº 286/2025-TCU-Plenário</strong> reforçou esse diagnóstico ao destacar a necessidade de mecanismos capazes de comprovar não apenas a entrega física, mas a execução funcional dos dispositivos no contexto educacional.
                 </p>
 
-                <h3>2.2. IA Generativa em Educação = Foguetes</h3>
+                <h3>1.2 O Desafio da Comprovação Operacional</h3>
                 <p>
-                    Soluções baseadas em IA generativa (LLMs, sistemas adaptativos probabilísticos) são como <strong>foguetes</strong>:
+                    O problema central pode ser sintetizado da seguinte forma:
                 </p>
-                <ul>
-                    <li><strong>Tecnologia de fronteira:</strong> Personalização adaptativa, geração de conteúdo, inferência de desempenho</li>
-                    <li><strong>Imprevisibilidade:</strong> Outputs não determinísticos, "alucinações", viés algorítmico</li>
-                    <li><strong>Custo computacional proibitivo:</strong> Processamento pesado, GPUs, APIs custosas</li>
-                    <li><strong>Inauditabilidade:</strong> Impossível explicar por que uma resposta foi gerada ("caixa-preta")</li>
-                </ul>
-                <p>
-                    <strong>O problema:</strong> Órgãos de controle exigem <em>determinismo</em> e <em>auditabilidade</em>. Foguetes são fascinantes, mas não são ferramentas de governança pública.
-                </p>
-
-                <h3>2.3. SVEED = Trens</h3>
-                <p>
-                    O SVEED é como um <strong>trem</strong>:
-                </p>
-                <ul>
-                    <li><strong>Determinístico:</strong> Opera em trilhos definidos, comportamento previsível</li>
-                    <li><strong>Offline-first:</strong> Funciona sem conectividade, como trens em linhas isoladas</li>
-                    <li><strong>Auditável:</strong> Logs de sistema verificáveis, timestamps monotônicos, trilha de processamento</li>
-                    <li><strong>Compatível com hardware legado:</strong> Roda em dispositivos Android 7+ com ~1.5GB RAM</li>
-                    <li><strong>Arquitetura LGPD por design:</strong> Não coleta dados pessoais, impossibilidade técnica de identificação individual</li>
-                </ul>
-                <p>
-                    <strong>A solução:</strong> Trens não são sexy como aviões ou foguetes, mas são a <em>infraestrutura de base</em> que garante transporte confiável, previsível e auditável.
-                </p>
-
                 <div class="highlight-box">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Insight Crítico</h4>
-                    <p>
-                        <strong>Políticas públicas não precisam de tecnologia de ponta. Precisam de tecnologia confiável, auditável e que funcione onde a população está.</strong>
+                    <p style="text-align: center; font-size: 1.2rem; font-weight: 600; margin: 0;">
+                        Nota Fiscal + Termo de Recebimento ≠ Evidência de Uso Funcional
                     </p>
                 </div>
+                <p>
+                    Gestores públicos são confrontados com questionamentos recorrentes:
+                </p>
+                <ul>
+                    <li>Os dispositivos estão sendo utilizados pelos beneficiários finais (alunos e professores)?</li>
+                    <li>O uso ocorre com regularidade mínima compatível com os objetivos da política pública?</li>
+                    <li>É possível comprovar a execução operacional sem violar direitos de privacidade?</li>
+                    <li>Como auditar o uso em contextos de baixa conectividade, nos quais relatórios em tempo real são inviáveis?</li>
+                </ul>
+                <p>
+                    Para fornecedores e operadoras, a ausência de evidência objetiva de uso funcional representa <strong>risco contratual e reputacional</strong>, podendo resultar em questionamentos por órgãos de controle, retenção de pagamentos e prejuízos em futuras licitações.
+                </p>
+
+                <h3>1.3 Dados de Contexto Operacional</h3>
+                <p>
+                    A infraestrutura educacional brasileira impõe restrições técnicas que inviabilizam a adoção direta de soluções EdTech convencionais:
+                </p>
+                
+                <h4>Conectividade</h4>
+                <p>
+                    De acordo com o <strong>Censo Escolar 2023 (INEP)</strong>, cerca de 35% das escolas públicas não possuem acesso adequado à internet ou apresentam conectividade intermitente. Em áreas rurais e periferias urbanas, esse percentual ultrapassa 50%.
+                </p>
+
+                <h4>Hardware</h4>
+                <p>
+                    Grande parte dos dispositivos distribuídos opera em Android 7 ou versões anteriores, com 1,5 GB a 2 GB de memória RAM. Os ciclos de atualização de hardware variam entre cinco e sete anos, incompatíveis com os requisitos de plataformas SaaS modernas.
+                </p>
+
+                <h4>Regulação e privacidade</h4>
+                <p>
+                    A LGPD (Lei nº 13.709/2018) impõe restrições severas à coleta e ao tratamento de dados pessoais de menores de idade. Soluções baseadas em monitoramento de conteúdo, comportamento ou comunicações individuais enfrentam barreiras jurídicas significativas no contexto da educação pública.
+                </p>
             </section>
 
-            <!-- Arquitetura Técnica -->
+            <!-- 2. Aviões e Foguetes -->
             <section class="wp-section">
-                <h2><i class="fas fa-cogs"></i> 3. Arquitetura Determinística de Verificação</h2>
+                <h2>2. Aviões e Foguetes: Por Que a EdTech Global Não Resolve o Problema</h2>
 
-                <h3>3.1. Pilares Técnicos do SVEED</h3>
-
-                <h4>3.1.1. Relógio Monotônico (Monotonic Clock)</h4>
+                <h3>2.1 Plataformas de Monitoramento Comportamental</h3>
                 <p>
-                    O SVEED utiliza <code>System.nanoTime()</code> (Android) para garantir registro fidedigno de tempo real de execução, <strong>imune a manipulações de relógio de parede</strong> (wall clock).
+                    Plataformas como <strong>GoGuardian, Lightspeed Systems, Securly e Gaggle</strong> foram desenvolvidas para monitorar a atividade estudantil em ambientes escolares altamente conectados, com foco em segurança digital e vigilância comportamental.
+                </p>
+                <p>
+                    Essas soluções <strong>dependem de conectividade contínua</strong>, realizam coleta extensiva de dados pessoais e priorizam monitoramento de conteúdo, não verificação operacional. Em contextos de baixa conectividade, tornam-se inoperantes; sob a ótica da LGPD, apresentam riscos jurídicos estruturais; e, do ponto de vista da auditoria pública, não respondem à pergunta central: <em>o dispositivo está sendo utilizado funcionalmente para fins educacionais?</em>
+                </p>
+
+                <h3>2.2 Mobile Device Management (MDM) Corporativo</h3>
+                <p>
+                    Ferramentas de MDM foram concebidas para gestão patrimonial e segurança de frotas corporativas. Embora úteis para inventário e controle de dispositivos, <strong>não verificam a execução de atividades educacionais específicas</strong>, tampouco distinguem uso educacional de uso recreativo.
+                </p>
+                <p>
+                    Relatórios genéricos de "tempo de tela" não constituem evidência auditável de execução operacional, e a associação entre dispositivo e usuário cria riscos adicionais de identificação individual incompatíveis com políticas públicas educacionais.
+                </p>
+
+                <h3>2.3 Plataformas Educacionais com Analytics</h3>
+                <p>
+                    Sistemas como <strong>Google Classroom, Moodle e Canvas LMS</strong> mensuram engajamento dentro de suas próprias plataformas, mas não verificam o uso funcional do dispositivo como ativo público. Além disso, dependem de conectividade contínua e não são agnósticos a conteúdo pedagógico.
+                </p>
+
+                <h3>2.4 O Viés Estratégico Comum</h3>
+                <p>
+                    Essas soluções compartilham um viés de origem: foram projetadas para contextos do primeiro mundo, com conectividade ubíqua, hardware padronizado, equipes de TI dedicadas e orçamentos recorrentes. <strong>Adaptá-las a contextos emergentes equivale a tentar pousar aviões em terrenos sem pista.</strong>
+                </p>
+            </section>
+
+            <!-- 3. Trilhos e Trens -->
+            <section class="wp-section">
+                <h2>3. Trilhos e Trens: Infraestrutura Determinística de Verificação</h2>
+
+                <h3>3.1 Redefinição do Problema</h3>
+                <p>
+                    A solução não está em sofisticar aviões, mas em <strong>construir trilhos</strong>. O desafio é comprovar uso operacional de dispositivos educacionais em larga escala, em contextos adversos, sem violar a LGPD e com evidência auditável.
+                </p>
+                <p>
+                    A resposta é a <strong>infraestrutura determinística de verificação</strong>, caracterizada por:
                 </p>
                 <ul>
-                    <li>Timestamps em nanosegundos</li>
-                    <li>Proteção contra adulteração de data/hora do sistema</li>
-                    <li>Auditabilidade temporal precisa</li>
+                    <li>Operação offline-first</li>
+                    <li>Verificação de nexo operacional mínimo</li>
+                    <li>Geração de registros agregados e auditáveis</li>
                 </ul>
 
-                <h4>3.1.2. Arquitetura LGPD por Design</h4>
+                <h3>3.2 Pilares Arquiteturais</h3>
                 <p>
-                    A arquitetura do SVEED <strong>impede, por concepção técnica</strong>, a coleta de dados pessoais:
+                    A arquitetura determinística de verificação fundamenta-se em seis pilares técnicos interdependentes:
+                </p>
+
+                <h4>Pilar 1: Offline-first com sincronização assíncrona</h4>
+                <p>
+                    O sistema opera integralmente sem conexão à internet, armazenando registros localmente e sincronizando apenas quando há conectividade Wi-Fi disponível. Essa abordagem elimina a dependência de infraestrutura de rede e garante funcionamento em qualquer contexto operacional.
+                </p>
+
+                <h4>Pilar 2: Timer monotônico inviolável</h4>
+                <p>
+                    A medição de tempo utiliza o <strong>relógio monotônico do sistema operacional</strong> (SystemClock.elapsedRealtime), imune a manipulações do relógio de parede pelo usuário. Qualquer tentativa de adulteração temporal é detectada e registrada, garantindo a integridade dos dados de execução.
+                </p>
+
+                <h4>Pilar 3: Gatekeeper temporal</h4>
+                <p>
+                    O sistema respeita integralmente a rotina educacional, operando exclusivamente fora do horário escolar, em dias letivos. Finais de semana, feriados e férias permanecem livres. Essa arquitetura elimina conflitos com a prática pedagógica e garante que a verificação não interfira no processo de ensino.
+                </p>
+
+                <h4>Pilar 4: Detecção de nexo operacional</h4>
+                <p>
+                    A verificação ocorre por meio de <strong>checkpoints que exigem confirmação humana explícita</strong>, sem inferência automática de tópico ou conteúdo. O sistema verifica a interação funcional, não o desempenho pedagógico. Não há avaliação de certo ou errado, apenas confirmação de execução.
+                </p>
+
+                <h4>Pilar 5: Agregação regional com hash criptográfico</h4>
+                <p>
+                    Os dados são agregados por região (MCC/MNC da operadora) e período, utilizando <strong>hash SHA-256</strong> que impossibilita tecnicamente a desagregação para identificação individual. A conformidade com a LGPD é garantida por design, não por processo administrativo.
+                </p>
+
+                <h4>Pilar 6: Geolocalização por MCC/MNC</h4>
+                <p>
+                    A identificação regional utiliza os códigos de país e operadora da rede móvel, sem acesso a GPS ou dados de localização precisa. Essa abordagem permite agregação geográfica para fins estatísticos sem comprometer a privacidade do usuário.
+                </p>
+
+                <h3>3.3 Fluxo Operacional Determinístico</h3>
+                <p>
+                    O ciclo de verificação segue uma sequência predefinida e invariável:
+                </p>
+
+                <h4>Etapa 1: Orientação por áudio</h4>
+                <p>
+                    O sistema apresenta instruções em linguagem acessível, utilizando síntese de voz local (TTS), sem pressupor letramento funcional do usuário.
+                </p>
+
+                <h4>Etapa 2: Bloco de reforço</h4>
+                <p>
+                    Período dedicado à exposição de conteúdo relacionado à última lição estudada, sem avaliação ou cobrança de desempenho. O foco é o tempo de contato com o tema, não a absorção de conhecimento.
+                </p>
+
+                <h4>Etapa 3: Pausa obrigatória</h4>
+                <p>
+                    Interrupção programada para hidratação e alongamento, promovendo saúde digital e mitigando comportamentos de simulação de estudo por fadiga.
+                </p>
+
+                <h4>Etapa 4: Bloco de execução</h4>
+                <p>
+                    Momento de interação funcional com exercícios análogos à lição, verificando nexo operacional por meio de checkpoints com confirmação humana explícita.
+                </p>
+
+                <h4>Etapa 5: Encerramento e liberação</h4>
+                <p>
+                    Conclusão do ciclo com registro dos dados de execução e liberação total do dispositivo até o próximo dia letivo.
+                </p>
+            </section>
+
+            <!-- 4. Evidências de Demanda -->
+            <section class="wp-section">
+                <h2>4. Evidências de Demanda Não Atendida</h2>
+
+                <h3>4.1 Auditorias do TCU</h3>
+                <p>
+                    O <strong>Acórdão nº 326/2022-TCU-Plenário</strong> identificou riscos de desalinhamento entre aquisições de TIC e requisitos de políticas públicas educacionais, recomendando a adoção de mecanismos de verificação de efetividade.
+                </p>
+                <p>
+                    O <strong>Acórdão nº 286/2025-TCU-Plenário</strong> reiterou a necessidade de comprovação de execução funcional, não apenas de entrega física, dos ativos tecnológicos distribuídos.
+                </p>
+
+                <h3>4.2 Dados do FNDE e CETIC.br</h3>
+                <p>
+                    Pesquisas do Centro Regional de Estudos para o Desenvolvimento da Sociedade da Informação (CETIC.br) indicam subutilização sistemática de dispositivos distribuídos em políticas públicas, com taxas de ociosidade que comprometem a efetividade dos investimentos realizados.
+                </p>
+
+                <h3>4.3 Lacuna de Mercado</h3>
+                <p>
+                    Não há, no mercado brasileiro ou internacional, solução técnica que atenda simultaneamente aos requisitos de:
                 </p>
                 <ul>
-                    <li>Sem campos de nome, CPF, matrícula ou identificadores individuais</li>
-                    <li>Registros agregados por região, período e área de conhecimento</li>
-                    <li>Impossibilidade técnica de desagregação para nível individual</li>
-                    <li>Conformidade por design, não por processo</li>
+                    <li>Operação offline</li>
+                    <li>Conformidade com LGPD</li>
+                    <li>Auditabilidade por órgãos de controle</li>
+                    <li>Compatibilidade com hardware legado</li>
+                </ul>
+                <p>
+                    <strong>O gap de auditabilidade permanece sem resposta adequada.</strong>
+                </p>
+            </section>
+
+            <!-- 5. O Caso SVEED -->
+            <section class="wp-section">
+                <h2>5. Trilhos Já Existem: O Caso SVEED</h2>
+                <p>
+                    O Sistema de Verificação de Execução Educacional em Dispositivos (SVEED) é uma implementação concreta da arquitetura determinística de verificação, desenvolvida especificamente para o contexto brasileiro.
+                </p>
+
+                <h3>5.1 Registro e Proteção Legal</h3>
+                <p>
+                    O SVEED possui <strong>registro de programa de computador concedido</strong> pelo Instituto Nacional da Propriedade Industrial (INPI), processo <strong>BR 51 2026 000328-8</strong>, publicado na Revista da Propriedade Industrial nº 2873 de 27 de janeiro de 2026, com proteção válida por 50 anos.
+                </p>
+
+                <h3>5.2 Especificações Técnicas</h3>
+                <ul>
+                    <li><strong>Plataforma:</strong> Android 7.0 ou superior</li>
+                    <li><strong>Requisito mínimo:</strong> 1,5 GB de RAM</li>
+                    <li><strong>Tamanho do aplicativo:</strong> ~7,5 MB</li>
+                    <li><strong>Banco de dados:</strong> Room/SQLite com janela móvel de 5 dias</li>
+                    <li><strong>Sincronização:</strong> Exclusivamente via Wi-Fi quando disponível</li>
                 </ul>
 
-                <h4>3.1.3. Operação Offline (Offline-First)</h4>
+                <h3>5.3 Natureza Jurídica</h3>
                 <p>
-                    O SVEED funciona <strong>independente de conectividade contínua</strong>:
+                    O SVEED é classificado como <strong>GovTech (infraestrutura técnica de governança pública)</strong>, não EdTech (plataforma educacional).
                 </p>
                 <ul>
-                    <li>Processamento local no dispositivo</li>
-                    <li>Sem dependência de serviços em nuvem</li>
-                    <li>Sem APIs externas ou autenticação remota</li>
-                    <li>Sincronização eventual via batch (quando disponível)</li>
-                </ul>
-
-                <h4>3.1.4. Processamento Determinístico</h4>
-                <p>
-                    Sem componentes probabilísticos:
-                </p>
-                <ul>
-                    <li>Sem IA generativa</li>
-                    <li>Sem algoritmos de inferência</li>
-                    <li>Sem machine learning adaptativo</li>
-                    <li>Lógica condicional explícita e auditável</li>
-                </ul>
-
-                <h3>3.2. O Que o SVEED NÃO É</h3>
-                <p>
-                    É fundamental compreender o escopo negativo:
-                </p>
-                <ul>
-                    <li>❌ Não é plataforma educacional</li>
-                    <li>❌ Não realiza avaliação pedagógica</li>
-                    <li>❌ Não infere qualidade de aprendizagem</li>
+                    <li>❌ Não realiza ensino</li>
+                    <li>❌ Não executa avaliação pedagógica</li>
                     <li>❌ Não coleta dados pessoais</li>
-                    <li>❌ Não interfere na prática pedagógica</li>
+                    <li>✅ Atua exclusivamente na camada de verificação de processos operacionais</li>
                 </ul>
+
+                <h3>5.4 Validação Técnica</h3>
                 <p>
-                    <strong>O SVEED é infraestrutura técnica de verificação</strong>, não ferramenta educacional.
+                    O sistema encontra-se em processo de obtenção de <strong>Laudo de Validação de Protocolo Determinístico</strong> por empresa terceirizada independente, atestando o funcionamento dos seis pilares arquiteturais em condições reais de operação.
                 </p>
             </section>
 
-            <!-- Caso de Uso -->
+            <!-- 6. Implicações -->
             <section class="wp-section">
-                <h2><i class="fas fa-map-marked-alt"></i> 4. Caso de Uso: Política Pública Estadual</h2>
+                <h2>6. Implicações para Stakeholders</h2>
 
-                <h3>4.1. Cenário</h3>
+                <h3>6.1 Gestores Públicos</h3>
                 <p>
-                    Estado brasileiro distribui <strong>200.000 tablets Android</strong> para alunos de escolas públicas, com investimento de <strong>R$ 150 milhões</strong>.
+                    A adoção de infraestrutura determinística de verificação <strong>reduz significativamente o risco de questionamentos</strong> em auditorias do TCU e CGU, fornecendo evidência objetiva de execução funcional dos ativos tecnológicos contratados. A transparência na prestação de contas é ampliada sem comprometer a privacidade dos beneficiários.
                 </p>
 
-                <h3>4.2. Desafio de Governança</h3>
-                <ul>
-                    <li><strong>TCU questiona:</strong> Como comprovar que os tablets estão sendo usados?</li>
-                    <li><strong>Controladorias demandam:</strong> Evidência objetiva de execução operacional</li>
-                    <li><strong>Gestores precisam:</strong> Dados agregados para planejamento de continuidade</li>
-                </ul>
-
-                <h3>4.3. Solução Tradicional (EdTech = Avião)</h3>
+                <h3>6.2 Fornecedores e Integradores</h3>
                 <p>
-                    Implementar plataforma educacional com dashboards em nuvem:
+                    A disponibilidade de evidência auditável de uso funcional representa <strong>proteção contratual objetiva</strong>, mitigando riscos de retenção de pagamentos e questionamentos sobre efetividade de entrega. Constitui diferencial competitivo em processos licitatórios que passem a exigir verificação de execução.
                 </p>
-                <ul>
-                    <li>✅ Interface rica, gamificação</li>
-                    <li>❌ 40% das escolas sem internet adequada → dispositivos inutilizados</li>
-                    <li>❌ Custo de licenciamento anual: R$ 5 milhões</li>
-                    <li>❌ Coleta de dados pessoais → problemas de conformidade LGPD</li>
-                </ul>
 
-                <h3>4.4. Solução SVEED (Trem)</h3>
+                <h3>6.3 Órgãos de Controle</h3>
                 <p>
-                    Implementar camada de verificação determinística:
+                    A infraestrutura determinística fornece dados agregados, auditáveis e compatíveis com a LGPD, permitindo avaliação objetiva da efetividade de políticas públicas de tecnologia educacional sem acesso a informações individuais de beneficiários.
                 </p>
-                <ul>
-                    <li>✅ Funciona offline em 100% dos dispositivos</li>
-                    <li>✅ Custo de implementação: licença única, sem recorrência</li>
-                    <li>✅ Registros agregados auditáveis por TCU</li>
-                    <li>✅ Conformidade LGPD nativa (sem coleta de dados pessoais)</li>
-                    <li>✅ Dashboards públicos com indicadores de execução</li>
-                </ul>
 
-                <h3>4.5. Resultados Esperados</h3>
-                <ul>
-                    <li><strong>Evidência objetiva de uso:</strong> Tempo médio de execução, sessões concluídas, distribuição por área</li>
-                    <li><strong>Prestação de contas:</strong> Relatórios auditáveis para TCU e controladorias</li>
-                    <li><strong>Planejamento fundamentado:</strong> Dados para decisões de expansão ou ajuste</li>
-                    <li><strong>Proteção reputacional:</strong> Documentação de uso funcional dos ativos</li>
-                </ul>
+                <h3>6.4 Operadoras de Telecomunicações</h3>
+                <p>
+                    Empresas que fornecem conectividade e dispositivos em contratos com o setor público podem agregar a verificação de execução como camada adicional de valor, demonstrando compromisso com a efetividade dos investimentos e não apenas com a entrega física de ativos.
+                </p>
             </section>
 
-            <!-- Comparação -->
+            <!-- 7. Roadmap -->
             <section class="wp-section">
-                <h2><i class="fas fa-balance-scale"></i> 5. Comparação Técnica: EdTech vs. SVEED</h2>
+                <h2>7. Roadmap de Adoção</h2>
 
-                <h3>5.1. Tabela Comparativa</h3>
-                <table style="width: 100%; border-collapse: collapse; margin: 2rem 0;">
-                    <thead>
-                        <tr style="background: rgba(255, 140, 66, 0.2); border: 2px solid var(--laranja);">
-                            <th style="padding: 1rem; text-align: left; color: var(--branco);">Critério</th>
-                            <th style="padding: 1rem; text-align: left; color: var(--branco);">EdTech Tradicional</th>
-                            <th style="padding: 1rem; text-align: left; color: var(--branco);">SVEED</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-                            <td style="padding: 1rem;"><strong>Conectividade</strong></td>
-                            <td style="padding: 1rem;">Dependência de internet contínua</td>
-                            <td style="padding: 1rem; color: var(--cyan);">✓ Offline-first</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-                            <td style="padding: 1rem;"><strong>Auditabilidade</strong></td>
-                            <td style="padding: 1rem;">Logs em nuvem proprietária</td>
-                            <td style="padding: 1rem; color: var(--cyan);">✓ Logs locais verificáveis</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-                            <td style="padding: 1rem;"><strong>LGPD</strong></td>
-                            <td style="padding: 1rem;">Coleta de dados pessoais</td>
-                            <td style="padding: 1rem; color: var(--cyan);">✓ Conformidade por design</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-                            <td style="padding: 1rem;"><strong>Hardware</strong></td>
-                            <td style="padding: 1rem;">Requer dispositivos modernos</td>
-                            <td style="padding: 1rem; color: var(--cyan);">✓ Android 7+ / 1.5GB RAM</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-                            <td style="padding: 1rem;"><strong>Custo</strong></td>
-                            <td style="padding: 1rem;">Licenças recorrentes</td>
-                            <td style="padding: 1rem; color: var(--cyan);">✓ Licença única</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 1rem;"><strong>Escopo</strong></td>
-                            <td style="padding: 1rem;">Plataforma educacional completa</td>
-                            <td style="padding: 1rem; color: var(--cyan);">✓ Verificação operacional</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>5.2. Quando Usar EdTech vs. SVEED</h3>
+                <h3>7.1 Fase 1: Prova de Conceito Municipal</h3>
                 <p>
-                    <strong>Use EdTech tradicional quando:</strong>
+                    Implementação piloto em município de médio porte, com acompanhamento técnico e geração de relatórios de validação.
                 </p>
                 <ul>
-                    <li>Há infraestrutura de internet estável</li>
-                    <li>Objetivo é ensino/avaliação pedagógica</li>
-                    <li>Contexto de escolas particulares ou urbanas de alta renda</li>
+                    <li><strong>Duração estimada:</strong> 90 dias</li>
+                    <li><strong>Objetivo:</strong> demonstrar viabilidade operacional e gerar evidências para escala</li>
                 </ul>
 
+                <h3>7.2 Fase 2: Escala Regional</h3>
                 <p>
-                    <strong>Use SVEED quando:</strong>
+                    Expansão para rede estadual ou conjunto de municípios, com integração a sistemas de gestão educacional existentes.
                 </p>
                 <ul>
-                    <li>Contexto de política pública de larga escala</li>
-                    <li>Baixa conectividade ou ambientes offline</li>
-                    <li>Necessidade de auditabilidade por órgãos de controle</li>
-                    <li>Exigência de conformidade LGPD nativa</li>
-                    <li>Objetivo é <em>verificação de uso</em>, não ensino</li>
+                    <li><strong>Duração estimada:</strong> 180 dias</li>
+                    <li><strong>Objetivo:</strong> validar escalabilidade e refinar processos de implantação</li>
                 </ul>
+
+                <h3>7.3 Fase 3: Adoção como Padrão Nacional</h3>
+                <p>
+                    Inclusão de requisitos de verificação de execução em editais federais de aquisição de dispositivos educacionais, estabelecendo a auditabilidade como condição de conformidade contratual.
+                </p>
+                <p>
+                    <strong>Mecanismo:</strong> impugnação de editais que não contemplem verificação de execução, com base no princípio constitucional de economicidade (art. 70, CF/88).
+                </p>
             </section>
 
-            <!-- Conclusão -->
+            <!-- 8. Conclusão -->
             <section class="wp-section">
-                <h2><i class="fas fa-check-circle"></i> 6. Conclusão: A Necessidade de Infraestrutura de Base</h2>
-
+                <h2>8. Conclusão</h2>
                 <p>
-                    A metáfora de aviões, foguetes e trens ilustra uma verdade incômoda sobre políticas públicas de tecnologia educacional: <strong>a tecnologia mais avançada nem sempre é a mais adequada</strong>.
+                    Políticas públicas de tecnologia educacional não precisam de mais sofisticação algorítmica, mas de <strong>infraestrutura robusta, determinística e auditável</strong>. O paradigma de "aviões e foguetes" — soluções de alta complexidade projetadas para contextos ideais — falha sistematicamente quando confrontado com a realidade da educação pública brasileira.
                 </p>
-
                 <p>
-                    Aviões (EdTech tradicional) oferecem alta performance, mas falham onde não há combustível (internet). Foguetes (IA generativa) impressionam, mas são imprevisíveis e inauditáveis. <strong>Trens (SVEED) são a infraestrutura de base</strong> que garante transporte confiável, determinístico e auditável.
+                    A metáfora dos "trilhos e trens" oferece uma alternativa pragmática: infraestrutura simples, confiável e escalável, que funciona independentemente das condições adversas do terreno. O SVEED demonstra que essa abordagem é tecnicamente viável, juridicamente compatível e operacionalmente escalável.
                 </p>
-
-                <h3>6.1. Três Insights Fundamentais</h3>
-
-                <div class="highlight-box">
-                    <ol>
-                        <li><strong>Auditabilidade é não-negociável em políticas públicas:</strong> Órgãos de controle não aceitam "caixas-pretas". Sistemas determinísticos são mandatórios.</li>
-                        <li><strong>Conectividade não é ubíqua:</strong> 39% das escolas públicas brasileiras não têm internet adequada. Soluções offline-first são essenciais.</li>
-                        <li><strong>LGPD não é compliance, é design:</strong> Conformidade deve ser arquitetural, não processual. Não coletar dados pessoais é mais seguro do que "proteger" dados coletados.</li>
-                    </ol>
+                <p>
+                    O gap de auditabilidade identificado pelo TCU há anos permanece sem resposta adequada do mercado. A infraestrutura determinística de verificação preenche essa lacuna, fornecendo aos gestores públicos, fornecedores e órgãos de controle o instrumento técnico que faltava para transformar evidência de entrega em evidência de uso.
+                </p>
+                <div class="highlight-box" style="text-align: center; background: rgba(255, 140, 66, 0.2); border-color: var(--laranja);">
+                    <h4 style="color: var(--laranja); font-size: 1.5rem; margin-bottom: 1rem;">O trem está nos trilhos. Resta embarcar os passageiros.</h4>
                 </div>
-
-                <h3>6.2. O Papel do SVEED</h3>
-                <p>
-                    O SVEED não substitui plataformas educacionais. <strong>Ele as complementa</strong>, fornecendo a camada de verificação objetiva que essas plataformas não podem oferecer:
-                </p>
-                <ul>
-                    <li>Plataformas EdTech ensinam e avaliam</li>
-                    <li>SVEED verifica se os dispositivos estão sendo usados</li>
-                </ul>
-
-                <blockquote>
-                    "Trens não são glamourosos como aviões ou foguetes. Mas são eles que mantêm uma nação em movimento, de forma previsível, auditável e acessível a todos." — Analogia de infraestrutura pública
-                </blockquote>
-
-                <h3>6.3. Chamada à Ação</h3>
-                <p>
-                    Para gestores públicos, secretarias de educação e órgãos de controle, o SVEED representa uma oportunidade de:
-                </p>
-                <ul>
-                    <li>Documentar objetivamente o uso de ativos tecnológicos distribuídos</li>
-                    <li>Fundamentar decisões de continuidade ou expansão de políticas</li>
-                    <li>Proteger-se de questionamentos sobre efetividade de investimentos</li>
-                    <li>Garantir conformidade LGPD nativa e auditabilidade</li>
-                </ul>
-
-                <p>
-                    <strong>Não é sobre escolher entre aviões, foguetes ou trens. É sobre reconhecer que cada tecnologia tem seu lugar.</strong> E em políticas públicas de larga escala, infraestrutura de base determinística, offline-first e auditável não é opcional — <em>é mandatória</em>.
-                </p>
             </section>
 
             <!-- Referências -->
             <section class="wp-section">
-                <h2><i class="fas fa-book"></i> 7. Referências e Recursos</h2>
-                
-                <h3>7.1. Registros Oficiais</h3>
-                <ul>
-                    <li>Registro INPI: Processo BR 51 2026 000328-8</li>
-                    <li>Publicação RPI 2873 de 27/01/2026</li>
-                    <li>Natureza jurídica: Software de infraestrutura técnica voltada à governança pública</li>
+                <h2>Referências</h2>
+                <ul style="line-height: 2;">
+                    <li>Tribunal de Contas da União. <strong>Acórdão nº 326/2022-TCU-Plenário</strong>. Auditoria operacional sobre políticas públicas de educação digital.</li>
+                    <li>Tribunal de Contas da União. <strong>Acórdão nº 286/2025-TCU-Plenário</strong>. Auditoria sobre efetividade de investimentos em tecnologia educacional.</li>
+                    <li>Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP). <strong>Censo Escolar 2023</strong>.</li>
+                    <li>Centro Regional de Estudos para o Desenvolvimento da Sociedade da Informação (<strong>CETIC.br</strong>). Pesquisa TIC Educação.</li>
+                    <li><strong>Lei nº 13.709/2018</strong>. Lei Geral de Proteção de Dados Pessoais (LGPD).</li>
+                    <li><strong>Constituição Federal de 1988, art. 70</strong>. Princípio da economicidade.</li>
+                    <li>Instituto Nacional da Propriedade Industrial (INPI). <strong>Registro de Programa de Computador BR 51 2026 000328-8</strong>, RPI 2873 de 27/01/2026.</li>
                 </ul>
 
-                <h3>7.2. Dados e Estatísticas</h3>
-                <ul>
-                    <li>CETIC Educação 2023 - Pesquisa sobre o Uso das Tecnologias de Informação e Comunicação nas Escolas Brasileiras</li>
-                    <li>TCU - Acórdão 326/2022 e Acórdão 286/2025 sobre Fiscalização em Políticas Públicas de Tecnologia Educacional</li>
-                    <li>LGPD (Lei nº 13.709/2018) - Lei Geral de Proteção de Dados</li>
-                </ul>
-
-                <h3>7.3. Documentação Técnica Adicional</h3>
-                <ul>
-                    <li>Arquitetura de Sistema SVEED (documento técnico)</li>
-                    <li>Especificação de APIs e Logs de Auditoria</li>
-                    <li>Manual de Integração para Gestores Públicos</li>
-                </ul>
-
-                <h3>7.4. Contato Institucional</h3>
+                <h3 style="margin-top: 3rem;">Informações de Contato</h3>
                 <p>
-                    Para solicitações de Nota Técnica de Viabilidade, esclarecimentos ou integração, acesse o formulário de contato no site oficial.
+                    <strong>Site institucional:</strong> <a href="https://www.sveed.com.br" style="color: var(--cyan); text-decoration: none;">https://www.sveed.com.br</a><br>
+                    <strong>Consulta INPI:</strong> <a href="https://busca.inpi.gov.br" style="color: var(--cyan); text-decoration: none;">https://busca.inpi.gov.br</a> — Processo BR 51 2026 000328-8
                 </p>
             </section>
         </div>
@@ -789,8 +755,9 @@
                 </a>
             </div>
             <p class="wp-copyright">
-                © 2026 SVEED - Programa de computador de infraestrutura técnica voltada à governança pública.<br>
-                Todos os direitos reservados. Registro INPI BR 51 2026 000328-8.
+                Documento técnico-institucional, sem caráter comercial ou pedagógico.<br>
+                © 2026 SVEED. Todos os direitos reservados.<br>
+                Registro INPI BR 51 2026 000328-8 | RPI 2873 de 27/01/2026
             </p>
         </footer>
     </div>
