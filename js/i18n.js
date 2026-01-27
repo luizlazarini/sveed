@@ -146,6 +146,14 @@ const siteTranslations = {
         complianceScope4: "Comparação entre indivíduos ou instituições",
         complianceScope5: "Processamento de dados sensíveis ou pessoais",
         
+        // ===== SEÇÃO DOCUMENTAÇÃO TÉCNICA =====
+        documentationTitle: "Documentação Técnica",
+        whitepaperTitle: "White Paper Técnico",
+        whitepaperSubtitle: "Aviões, Foguetes e Trens: Por Que a EdTech Tradicional Falha em Políticas Públicas de Educação no Brasil",
+        whitepaperDescription: "Documento técnico-institucional que analisa o gap de auditabilidade em políticas públicas de tecnologia educacional e apresenta a arquitetura determinística de verificação como solução.",
+        whitepaperBtnView: "VER DOCUMENTO",
+        whitepaperBtnDownload: "BAIXAR PDF",
+        
         // ===== FOOTER =====
         footerTagline: "Verificação de Rotinas de Uso na Educação",
         footerDescription: "Infraestrutura técnica voltada à governança pública da última milha educacional.",
@@ -326,6 +334,14 @@ const siteTranslations = {
         complianceScope4: "Comparison between individuals or institutions",
         complianceScope5: "Processing of sensitive or personal data",
         
+        // ===== TECHNICAL DOCUMENTATION SECTION =====
+        documentationTitle: "Technical Documentation",
+        whitepaperTitle: "Technical White Paper",
+        whitepaperSubtitle: "Airplanes, Rockets and Trains: Why Traditional EdTech Fails in Public Education Policies in Brazil",
+        whitepaperDescription: "Technical-institutional document that analyzes the auditability gap in public policies of educational technology and presents the deterministic verification architecture as a solution.",
+        whitepaperBtnView: "VIEW DOCUMENT",
+        whitepaperBtnDownload: "DOWNLOAD PDF",
+        
         // ===== FOOTER =====
         footerTagline: "Verification of Educational Use Routines",
         footerDescription: "Technical infrastructure for public governance of the educational last mile.",
@@ -505,6 +521,14 @@ const siteTranslations = {
         complianceScope3: "Medición de resultados de aprendizaje",
         complianceScope4: "Comparación entre individuos o instituciones",
         complianceScope5: "Procesamiento de datos sensibles o personales",
+        
+        // ===== SECCIÓN DOCUMENTACIÓN TÉCNICA =====
+        documentationTitle: "Documentación Técnica",
+        whitepaperTitle: "White Paper Técnico",
+        whitepaperSubtitle: "Aviones, Cohetes y Trenes: Por Qué la EdTech Tradicional Falla en Políticas Públicas de Educación en Brasil",
+        whitepaperDescription: "Documento técnico-institucional que analiza el gap de auditabilidad en políticas públicas de tecnología educativa y presenta la arquitectura determinística de verificación como solución.",
+        whitepaperBtnView: "VER DOCUMENTO",
+        whitepaperBtnDownload: "DESCARGAR PDF",
         
         // ===== PIE DE PÁGINA =====
         footerTagline: "Verificación de Rutinas de Uso en Educación",

@@ -1220,6 +1220,120 @@ a:hover {
 }
 
 /* ==========================================================================
+   Documentação Técnica / White Paper
+   ========================================================================== */
+
+.whitepaper-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.whitepaper-header {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, var(--azul-marinho) 0%, var(--azul-marinho-escuro) 100%);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(10, 35, 66, 0.15);
+}
+
+.whitepaper-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whitepaper-icon i {
+    font-size: 2.5rem;
+    color: var(--branco);
+}
+
+.whitepaper-text {
+    flex: 1;
+    color: var(--branco);
+}
+
+.whitepaper-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--branco);
+    margin-bottom: var(--spacing-xs);
+}
+
+.whitepaper-subtitle {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--laranja-ambar);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.4;
+}
+
+.whitepaper-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.whitepaper-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-whitepaper {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-whitepaper i {
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+    border: 2px solid var(--azul-marinho);
+}
+
+.btn-primary:hover {
+    background-color: var(--azul-marinho-escuro);
+    border-color: var(--azul-marinho-escuro);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(10, 35, 66, 0.25);
+    color: var(--branco);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--azul-marinho);
+    border: 2px solid var(--azul-marinho);
+}
+
+.btn-secondary:hover {
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(10, 35, 66, 0.25);
+}
+
+/* ==========================================================================
    Responsividade
    ========================================================================== */
 
@@ -1245,6 +1359,33 @@ a:hover {
     
     .section-title {
         font-size: 1.75rem;
+    }
+    
+    /* White Paper */
+    .whitepaper-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .whitepaper-icon {
+        margin: 0 auto;
+    }
+    
+    .whitepaper-title {
+        font-size: 1.25rem;
+    }
+    
+    .whitepaper-subtitle {
+        font-size: 1rem;
+    }
+    
+    .whitepaper-actions {
+        flex-direction: column;
+    }
+    
+    .btn-whitepaper {
+        width: 100%;
+        justify-content: center;
     }
     
     /* Header */
