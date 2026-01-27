@@ -889,7 +889,13 @@ function applyLanguage(lang) {
     // ===== ATUALIZAR LINK DO WHITE PAPER COM IDIOMA =====
     const whitepaperLink = document.getElementById('whitepaperLink');
     if (whitepaperLink) {
-        whitepaperLink.href = `white-paper.html?lang=${lang}`;
+        // Determinar arquivo correto baseado no idioma
+        const wpFiles = {
+            'pt': 'white-paper.html',
+            'en': 'white-paper-en.html',
+            'es': 'white-paper-es.html'
+        };
+        whitepaperLink.href = wpFiles[lang] || 'white-paper.html';
     }
     
     // Atualizar botões de idioma

@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="White Paper Técnico SVEED - Aviones, Cohetes y Trenes: Por Qué la EdTech Tradicional Falla en Políticas Públicas de Educación en Brasil">
+    <title>White Paper Técnico - SVEED</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/logo-sveed.jpg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul-escuro: #0A1628;
+            --laranja: #FF8C42;
+            --cyan: #00D4FF;
+            --branco: #FFFFFF;
+            --cinza-claro: #E2E8F0;
+            --cinza-medio: #94A3B8;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--azul-escuro);
+            color: var(--cinza-claro);
+            line-height: 1.8;
+        }
+
+        /* Header fixo com navegação de volta */
+        .wp-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            border-bottom: 2px solid var(--laranja);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .wp-header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .wp-back-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--laranja);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            border: 2px solid var(--laranja);
+        }
+
+        .wp-back-btn:hover {
+            background: var(--laranja);
+            color: var(--azul-escuro);
+            transform: translateX(-5px);
+        }
+
+        .wp-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .wp-logo img {
+            height: 40px;
+            border-radius: 8px;
+        }
+
+        .wp-logo h1 {
+            font-size: 1.5rem;
+            color: var(--branco);
+        }
+
+        .wp-download-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--cyan);
+            color: var(--azul-escuro);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .wp-download-btn:hover {
+            background: var(--branco);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+        }
+
+        /* Container principal */
+        .wp-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        /* Título principal */
+        .wp-hero {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(0, 212, 255, 0.1));
+            border-radius: 16px;
+            border: 2px solid var(--laranja);
+        }
+
+        .wp-hero h1 {
+            font-size: 2.5rem;
+            color: var(--branco);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .wp-hero .subtitle {
+            font-size: 1.8rem;
+            color: var(--laranja);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .wp-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            color: var(--cinza-medio);
+            font-size: 0.9rem;
+        }
+
+        .wp-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .wp-meta-item i {
+            color: var(--cyan);
+        }
+
+        /* Conteúdo */
+        .wp-content {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 16px;
+            margin-bottom: 3rem;
+        }
+
+        .wp-section {
+            margin-bottom: 3rem;
+        }
+
+        .wp-section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--laranja);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--cyan);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--cyan);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            color: var(--branco);
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--cinza-claro);
+        }
+
+        strong {
+            color: var(--branco);
+            font-weight: 600;
+        }
+
+        em {
+            color: var(--laranja);
+            font-style: italic;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            color: var(--cinza-claro);
+        }
+
+        /* Boxes de destaque */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(255, 140, 66, 0.15));
+            border: 2px solid var(--cyan);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--cyan);
+            margin-top: 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer da página */
+        .wp-footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 2px solid var(--laranja);
+            margin-top: 4rem;
+        }
+
+        .wp-footer-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .wp-footer-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .wp-footer-btn.primary {
+            background: var(--laranja);
+            color: var(--azul-escuro);
+        }
+
+        .wp-footer-btn.primary:hover {
+            background: var(--branco);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(255, 140, 66, 0.4);
+        }
+
+        .wp-footer-btn.secondary {
+            background: transparent;
+            color: var(--cyan);
+            border: 2px solid var(--cyan);
+        }
+
+        .wp-footer-btn.secondary:hover {
+            background: var(--cyan);
+            color: var(--azul-escuro);
+        }
+
+        .wp-copyright {
+            color: var(--cinza-medio);
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .wp-header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .wp-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .wp-hero .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .wp-content {
+                padding: 2rem 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            .wp-container {
+                padding-top: 10rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header fixo -->
+    <header class="wp-header">
+        <div class="wp-header-content">
+            <a href="index.html" class="wp-back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Volver al Sitio
+            </a>
+            <div class="wp-logo">
+                <img src="images/logo-sveed.jpg" alt="SVEED Logo">
+                <h1>SVEED</h1>
+            </div>
+            <a href="white-paper-sveed.pdf" class="wp-download-btn" download>
+                <i class="fas fa-download"></i>
+                Descargar PDF
+            </a>
+        </div>
+    </header>
+
+    <!-- Container principal -->
+    <div class="wp-container">
+        <!-- Hero -->
+        <div class="wp-hero">
+            <h1>WHITE PAPER TÉCNICO</h1>
+            <p class="subtitle">Aviones, Cohetes y Trenes: Por Qué la EdTech Tradicional Falla en Políticas Públicas de Educación en Brasil</p>
+            <p style="font-size: 1.1rem; color: var(--branco); margin-bottom: 0.5rem;">Y Cómo la Infraestructura Determinística Resuelve el Gap de Auditabilidad</p>
+            <div class="wp-meta">
+                <div class="wp-meta-item">
+                    <i class="fas fa-calendar"></i>
+                    Versión 1.1 | Enero de 2026
+                </div>
+                <div class="wp-meta-item">
+                    <i class="fas fa-users"></i>
+                    Autoría: Equipo SVEED
+                </div>
+                <div class="wp-meta-item">
+                    <i class="fas fa-registered"></i>
+                    Registro INPI: BR 51 2026 000328-8
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="wp-content">
+            <!-- Resumen Ejecutivo -->
+            <section class="wp-section">
+                <h2>Resumen Ejecutivo</h2>
+                <p>
+                    La distribución masiva de dispositivos educativos en políticas públicas brasileñas enfrenta una paradoja crítica: <strong>evidencia de entrega física no equivale a evidencia de uso funcional</strong>. Aunque las facturas, términos de recepción y registros logísticos comprueban la adquisición y distribución de activos tecnológicos, tales instrumentos son insuficientes para demostrar su ejecución operativa en el contexto educativo.
+                </p>
+                <p>
+                    A medida que el Tribunal de Cuentas de la Unión (TCU) y la Contraloría General de la Unión (CGU) intensifican las auditorías sobre la efectividad de las inversiones en tecnología educativa, los gestores públicos, proveedores e integradores carecen de instrumentos técnicos capaces de comprobar, de forma objetiva y auditable, el uso funcional de los dispositivos contratados.
+                </p>
+                <p>
+                    Este documento analiza por qué las soluciones EdTech tradicionales — concebidas para ambientes de alta conectividad, hardware actualizado e infraestructura robusta — <strong>fallan sistemáticamente</strong> cuando se aplican a la realidad brasileña, caracterizada por conectividad intermitente, hardware heredado y exigencias rigurosas de cumplimiento con la Ley General de Protección de Datos (LGPD).
+                </p>
+                <p>
+                    Se presenta el concepto de <strong>infraestructura determinística de verificación</strong> como alternativa técnica viable y necesaria, demostrando cómo arquitecturas offline-first, agnósticas al contenido pedagógico y basadas en procesamiento local resuelven el problema de la auditabilidad sin comprometer la privacidad de los usuarios ni depender de condiciones ideales de operación.
+                </p>
+
+                <div class="highlight-box">
+                    <h4>Conclusiones Principales</h4>
+                    <p><strong>Primera conclusión.</strong> Las soluciones EdTech globales (como GoGuardian, Lightspeed, Securly y MDMs corporativos) fueron proyectadas para ambientes controlados y altamente conectados — los "aviones y cohetes" — y no operan de forma eficaz en las "callejuelas y en la selva cerrada" de la educación pública brasileña.</p>
+                    <p><strong>Segunda conclusión.</strong> El gap de auditabilidad identificado por el TCU (Acuerdos nº 326/2022 y nº 286/2025) permanece sin respuesta técnica adecuada en el mercado.</p>
+                    <p><strong>Tercera conclusión.</strong> La infraestructura determinística de verificación proporciona evidencia objetiva de uso funcional, sin recopilación de datos personales, alineándose con las exigencias regulatorias, operativas y jurídicas del sector público.</p>
+                </div>
+            </section>
+
+            <!-- 1. El Problema -->
+            <section class="wp-section">
+                <h2>1. El Problema: Evidencia de Entrega ≠ Evidencia de Uso</h2>
+                
+                <h3>1.1 Contexto de las Políticas Públicas de Tecnología Educativa</h3>
+                <p>
+                    Desde el lanzamiento del Programa Nacional de Tecnología Educativa (ProInfo) en 1997, el gobierno federal brasileño invierte recursos significativos en la adquisición y distribución de dispositivos tecnológicos para escuelas públicas. Entre 2012 y 2015, el Fondo Nacional de Desarrollo de la Educación (FNDE) coordinó la adquisición de aproximadamente <strong>600 mil tablets educativas</strong> destinadas a profesores de enseñanza media.
+                </p>
+                <p>
+                    A pesar del volumen expresivo de inversiones, auditorías conducidas por órganos de control identificaron lagunas críticas en la comprobación de la utilización efectiva de esos activos. El TCU, en una auditoría operativa realizada en 2022 (<strong>Acuerdo nº 326/2022-TCU-Plenario</strong>), señaló el riesgo de desalineamiento entre la adquisición de TIC y los requisitos de las políticas públicas de educación digital, comprometiendo la efectividad de las inversiones realizadas.
+                </p>
+                <p>
+                    El <strong>Acuerdo nº 286/2025-TCU-Plenario</strong> reforzó ese diagnóstico al destacar la necesidad de mecanismos capaces de comprobar no solo la entrega física, sino la ejecución funcional de los dispositivos en el contexto educativo.
+                </p>
+
+                <h3>1.2 El Desafío de la Comprobación Operativa</h3>
+                <p>
+                    El problema central puede sintetizarse de la siguiente forma:
+                </p>
+                <div class="highlight-box">
+                    <p style="text-align: center; font-size: 1.2rem; font-weight: 600; margin: 0;">
+                        Factura + Término de Recepción ≠ Evidencia de Uso Funcional
+                    </p>
+                </div>
+                <p>
+                    Los gestores públicos son confrontados con cuestionamientos recurrentes:
+                </p>
+                <ul>
+                    <li>¿Los dispositivos están siendo utilizados por los beneficiarios finales (alumnos y profesores)?</li>
+                    <li>¿El uso ocurre con regularidad mínima compatible con los objetivos de la política pública?</li>
+                    <li>¿Es posible comprobar la ejecución operativa sin violar derechos de privacidad?</li>
+                    <li>¿Cómo auditar el uso en contextos de baja conectividad, donde los informes en tiempo real son inviables?</li>
+                </ul>
+                <p>
+                    Para proveedores y operadoras, la ausencia de evidencia objetiva de uso funcional representa <strong>riesgo contractual y reputacional</strong>, pudiendo resultar en cuestionamientos por órganos de control, retención de pagos y perjuicios en futuras licitaciones.
+                </p>
+
+                <h3>1.3 Datos de Contexto Operativo</h3>
+                <p>
+                    La infraestructura educativa brasileña impone restricciones técnicas que inviabilizan la adopción directa de soluciones EdTech convencionales:
+                </p>
+                
+                <h4>Conectividad</h4>
+                <p>
+                    De acuerdo con el <strong>Censo Escolar 2023 (INEP)</strong>, cerca del 35% de las escuelas públicas no poseen acceso adecuado a internet o presentan conectividad intermitente. En áreas rurales y periferias urbanas, ese porcentaje ultrapasa el 50%.
+                </p>
+
+                <h4>Hardware</h4>
+                <p>
+                    Gran parte de los dispositivos distribuidos opera en Android 7 o versiones anteriores, con 1,5 GB a 2 GB de memoria RAM. Los ciclos de actualización de hardware varían entre cinco y siete años, incompatibles con los requisitos de plataformas SaaS modernas.
+                </p>
+
+                <h4>Regulación y Privacidad</h4>
+                <p>
+                    La LGPD (Ley nº 13.709/2018) impone restricciones severas a la recopilación y tratamiento de datos personales de menores de edad. Soluciones basadas en monitoreo de contenido, comportamiento o comunicaciones individuales enfrentan barreras jurídicas significativas en el contexto de la educación pública.
+                </p>
+            </section>
+
+            <!-- 2. Aviones y Cohetes -->
+            <section class="wp-section">
+                <h2>2. Aviones y Cohetes: Por Qué la EdTech Global No Resuelve el Problema</h2>
+
+                <h3>2.1 Plataformas de Monitoreo Comportamental</h3>
+                <p>
+                    Plataformas como <strong>GoGuardian, Lightspeed Systems, Securly y Gaggle</strong> fueron desarrolladas para monitorear la actividad estudiantil en ambientes escolares altamente conectados, con foco en seguridad digital y vigilancia comportamental.
+                </p>
+                <p>
+                    Estas soluciones <strong>dependen de conectividad continua</strong>, realizan recopilación extensiva de datos personales y priorizan monitoreo de contenido, no verificación operativa. En contextos de baja conectividad, se vuelven inoperantes; bajo la óptica de la LGPD, presentan riesgos jurídicos estructurales; y, desde el punto de vista de la auditoría pública, no responden a la pregunta central: <em>¿el dispositivo está siendo utilizado funcionalmente para fines educativos?</em>
+                </p>
+
+                <h3>2.2 Mobile Device Management (MDM) Corporativo</h3>
+                <p>
+                    Herramientas de MDM fueron concebidas para gestión patrimonial y seguridad de flotas corporativas. Aunque útiles para inventario y control de dispositivos, <strong>no verifican la ejecución de actividades educativas específicas</strong>, tampoco distinguen uso educativo de uso recreativo.
+                </p>
+                <p>
+                    Los informes de tiempo de uso producidos por sistemas MDM indican solo que el dispositivo estuvo encendido, no que rutinas educativas fueron ejecutadas. Para fines de auditoría pública, tales datos son <strong>insuficientes</strong> para demostrar efectividad funcional.
+                </p>
+
+                <h3>2.3 Plataformas Educativas con Analytics</h3>
+                <p>
+                    Plataformas como <strong>Google Classroom, Moodle y Canvas</strong> ofrecen informes detallados de uso y miden el engagement estudiantil en contenidos específicos.
+                </p>
+                <p>
+                    Sin embargo, esas plataformas requieren <strong>conectividad continua</strong> y se limitan a contextos donde el acceso a internet es confiable. En contextos de baja conectividad o con uso intenso de apps offline, tales plataformas no pueden proporcionar datos sobre uso efectivo.
+                </p>
+                <p>
+                    Además, métricas de engagement (logins, visualizaciones de página, entregas de tareas) miden interacción, no <strong>ejecución funcional</strong> — la ejecución de rutinas educativas definidas con regularidad mínima.
+                </p>
+
+                <h3>2.4 El Sesgo Estructural de las Soluciones Globales</h3>
+                <p>
+                    La característica común de esas soluciones es que fueron <strong>proyectadas para contextos muy diferentes de la realidad brasileña</strong>:
+                </p>
+                <ul>
+                    <li>Alta banda ancha y conectividad constante</li>
+                    <li>Hardware actualizado y ciclos frecuentes de sustitución</li>
+                    <li>Regulaciones permisivas respecto a recopilación de datos</li>
+                    <li>Infraestructura de TI y soporte técnico especializado</li>
+                </ul>
+                <p>
+                    Intentar aplicar "aviones y cohetes" a las "callejuelas y selva cerrada" de la educación pública brasileña resulta en fracaso operativo, jurídico y financiero.
+                </p>
+            </section>
+
+            <!-- 3. Rieles y Trenes -->
+            <section class="wp-section">
+                <h2>3. Rieles y Trenes: Infraestructura Determinística de Verificación</h2>
+
+                <h3>3.1 Redefiniendo el Problema</h3>
+                <p>
+                    El desafío técnico no es monitorear contenido o comportamiento. El desafío es comprobar, a escala, offline y de acuerdo con la LGPD, que <strong>rutinas educativas funcionales fueron ejecutadas</strong>.
+                </p>
+                <p>
+                    La infraestructura determinística de verificación fue proyectada precisamente para ese contexto: <strong>confiable, auditable, simple y compatible con las limitaciones operativas, jurídicas y tecnológicas</strong>.
+                </p>
+
+                <h3>3.2 Los Seis Pilares de la Arquitectura Determinística</h3>
+
+                <h4>Pilar 1: Offline-First con Sincronización Asíncrona</h4>
+                <p>
+                    El sistema opera completamente offline. La sincronización con servidores centrales ocurre solo cuando hay Wi-Fi disponible, sin depender de conectividad para funcionar. Los datos son almacenados localmente y sincronizados en lotes cuando la conectividad es restaurada.
+                </p>
+
+                <h4>Pilar 2: Timer Monotónico para Integridad Temporal</h4>
+                <p>
+                    Uso del timer monotónico de Android (<code>SystemClock.elapsedRealtime</code>) asegura que mediciones de tiempo no estén sujetas a manipulación por cambios en el reloj del sistema. Esto garantiza la integridad de los registros temporales.
+                </p>
+
+                <h4>Pilar 3: Gatekeeper Temporal</h4>
+                <p>
+                    El sistema solo opera fuera del horario escolar y en días lectivos. Ese diseño asegura que las rutinas educativas sean ejecutadas en el contexto apropiado, sin interferir con las actividades regulares de clase.
+                </p>
+
+                <h4>Pilar 4: Detección de Nexo Operativo con Confirmación Humana</h4>
+                <p>
+                    El sistema usa múltiples checkpoints (orientación de audio, pausa de ejecución, confirmación interactiva) para asegurar que un humano esté ejecutando activamente la rutina. Esto previene falsos positivos y asegura uso funcional.
+                </p>
+
+                <h4>Pilar 5: Agregación Regional con Hash SHA-256</h4>
+                <p>
+                    Los datos son agregados por región (identificada por MCC/MNC) y protegidos por hash SHA-256. <strong>La desagregación individual es técnicamente imposible</strong>, asegurando cumplimiento con la LGPD por diseño.
+                </p>
+
+                <h4>Pilar 6: Geolocalización MCC/MNC (Sin GPS)</h4>
+                <p>
+                    La identificación de la región geográfica se hace por el Mobile Country Code (MCC) y Mobile Network Code (MNC) de la tarjeta SIM, sin usar GPS o localización precisa. Esto permite distribución regional de datos sin comprometer la privacidad individual.
+                </p>
+
+                <h3>3.3 El Flujo Operativo en Cinco Etapas</h3>
+                <p>
+                    Cada sesión educativa consta de cinco etapas secuenciales:
+                </p>
+                <ol>
+                    <li><strong>Orientación de Audio:</strong> Orientación clara sobre el área de conocimiento a trabajar.</li>
+                    <li><strong>Bloque de Refuerzo:</strong> Revisión rápida de contenido previo para asegurar continuidad.</li>
+                    <li><strong>Pausa Obligatoria:</strong> Pausa breve para descanso, previniendo fatiga.</li>
+                    <li><strong>Bloque de Ejecución con Checkpoints:</strong> Actividad principal con confirmaciones periódicas de presencia humana.</li>
+                    <li><strong>Cierre:</strong> Finalización de la sesión, registro local y liberación del dispositivo.</li>
+                </ol>
+                <p>
+                    Al final del ciclo, el dispositivo es liberado para uso libre (juegos, redes sociales, aplicaciones en general), sin restricciones.
+                </p>
+            </section>
+
+            <!-- 4. Evidencias de Demanda No Atendida -->
+            <section class="wp-section">
+                <h2>4. Evidencias de Demanda No Atendida</h2>
+
+                <h3>4.1 Auditorías TCU</h3>
+                <p>
+                    El <strong>Acuerdo nº 326/2022-TCU-Plenario</strong> señaló el riesgo de desalineamiento entre la adquisición de TIC y los requisitos de las políticas públicas de educación digital. El <strong>Acuerdo nº 286/2025-TCU-Plenario</strong> reforzó la necesidad de mecanismos capaces de comprobar la ejecución funcional de los dispositivos.
+                </p>
+
+                <h3>4.2 Datos FNDE y CETIC.br TIC Educación</h3>
+                <p>
+                    Datos del FNDE y encuestas realizadas por CETIC.br (Comité Gestor de Internet en Brasil) indican que una parte significativa de los dispositivos distribuidos es subutilizada o inactiva debido a la falta de mecanismos adecuados de verificación operativa.
+                </p>
+
+                <h3>4.3 Laguna de Mercado</h3>
+                <p>
+                    Actualmente, no existe <strong>ninguna solución en el mercado</strong> que atienda simultáneamente los siguientes requisitos:
+                </p>
+                <ul>
+                    <li>Operación en contextos offline</li>
+                    <li>Cumplimiento estructural con LGPD (sin recopilación de datos personales)</li>
+                    <li>Comprobación objetiva de uso funcional para fines de auditoría</li>
+                    <li>Compatibilidad con hardware heredado (Android 7+, 1,5 GB RAM)</li>
+                </ul>
+            </section>
+
+            <!-- 5. Rieles Ya Existen -->
+            <section class="wp-section">
+                <h2>5. Rieles Ya Existen: El Caso SVEED</h2>
+
+                <h3>5.1 Registro INPI</h3>
+                <p>
+                    SVEED (Verificación de Rutinas de Uso en la Educación) es un programa de computadora con registro de software concedido por el Instituto Nacional de Propiedad Industrial (INPI), proceso <strong>BR 51 2026 000328-8</strong>, publicado en RPI 2873 del 27/01/2026.
+                </p>
+                <p>
+                    Naturaleza jurídica: software de infraestructura técnica orientado a la gobernanza pública, válido por 50 años desde la fecha de creación.
+                </p>
+
+                <h3>5.2 Especificaciones Técnicas</h3>
+                <ul>
+                    <li><strong>Requisitos Mínimos:</strong> Android 7.0+, 1,5 GB RAM</li>
+                    <li><strong>Tamaño de la Aplicación:</strong> ~7,5 MB</li>
+                    <li><strong>Base de Datos Local:</strong> Room/SQLite con ventana deslizante de 5 días</li>
+                    <li><strong>Sincronización:</strong> Asíncrona vía Wi-Fi cuando disponible</li>
+                    <li><strong>Operación Offline:</strong> No depende de conexión a internet</li>
+                </ul>
+
+                <h3>5.3 Naturaleza Funcional</h3>
+                <p>
+                    SVEED es <strong>infraestructura GovTech</strong>, no EdTech. No enseña contenidos, no evalúa calidad pedagógica, no infiere aprendizaje. Su función es exclusivamente verificar que <strong>rutinas educativas fueron ejecutadas funcionalmente</strong>.
+                </p>
+
+                <h3>5.4 Validación Técnica</h3>
+                <p>
+                    El <strong>Laudo de Validación de Protocolo Determinístico</strong> está siendo conducido por empresa independiente, certificando la precisión técnica e integridad operativa de la arquitectura.
+                </p>
+            </section>
+
+            <!-- 6. Implicaciones para Stakeholders -->
+            <section class="wp-section">
+                <h2>6. Implicaciones para Stakeholders</h2>
+
+                <h3>6.1 Gestores Públicos</h3>
+                <p>
+                    La infraestructura determinística de verificación reduce riesgo de auditoría y proporciona <strong>evidencia objetiva de uso funcional</strong> sin violar privacidad. Se alinea con los principios de eficiencia, economía y legalidad exigidos por el Art. 70 de la Constitución Federal.
+                </p>
+
+                <h3>6.2 Proveedores e Integradores</h3>
+                <p>
+                    Para proveedores, ofrecer infraestructura determinística de verificación como parte de la solución tecnológica representa <strong>protección contractual y reputacional</strong>. En licitaciones, la inclusión de cláusulas de verificación objetiva puede ser un diferencial competitivo decisivo.
+                </p>
+
+                <h3>6.3 Órganos de Control</h3>
+                <p>
+                    Para TCU, CGU y tribunales de cuentas estatales, la infraestructura determinística proporciona <strong>datos agregados, auditables y en cumplimiento con LGPD</strong>, permitiendo evaluación objetiva de la efectividad de inversiones en tecnología educativa.
+                </p>
+
+                <h3>6.4 Operadoras</h3>
+                <p>
+                    Las operadoras de telecomunicaciones pueden ofrecer infraestructura determinística de verificación como <strong>valor agregado</strong> en contratos públicos, diferenciándose en licitaciones y fortaleciendo relaciones con el sector público.
+                </p>
+            </section>
+
+            <!-- 7. Roadmap de Adopción -->
+            <section class="wp-section">
+                <h2>7. Roadmap de Adopción</h2>
+
+                <h3>Fase 1: Prueba de Concepto Municipal (90 Días)</h3>
+                <ul>
+                    <li>Prueba piloto en un único municipio con 1.000 a 3.000 dispositivos</li>
+                    <li>Validación técnica, jurídica y operativa</li>
+                    <li>Informes de auditoría y documentación de prueba de concepto</li>
+                </ul>
+
+                <h3>Fase 2: Escala Regional (180 Días)</h3>
+                <ul>
+                    <li>Expansión a nivel estatal o múltiples municipios</li>
+                    <li>Validación de mecanismos de sincronización y agregación</li>
+                    <li>Refinamiento de métricas operativas</li>
+                </ul>
+
+                <h3>Fase 3: Adopción Nacional</h3>
+                <ul>
+                    <li>Inclusión de requisitos de verificación funcional en especificaciones de edictos</li>
+                    <li>Adopción de infraestructura determinística como buena práctica</li>
+                    <li>Cumplimiento con principios de economía (Art. 70, CF/88)</li>
+                </ul>
+            </section>
+
+            <!-- 8. Conclusión -->
+            <section class="wp-section">
+                <h2>8. Conclusión</h2>
+                <p>
+                    Aviones y cohetes fueron proyectados para ambientes controlados, predecibles y altamente conectados. Rieles y trenes fueron proyectados para contextos donde <strong>confiabilidad, simplicidad y escalabilidad</strong> son más importantes que la velocidad.
+                </p>
+                <p>
+                    La educación pública brasileña necesita "rieles y trenes": infraestructura simple, auditable, compatible con offline y respetuosa con la privacidad, que compruebe el uso funcional sin depender de condiciones ideales.
+                </p>
+                <p>
+                    El gap de auditabilidad identificado por el TCU permanece sin respuesta adecuada en el mercado. <strong>La infraestructura determinística de verificación proporciona esa respuesta.</strong>
+                </p>
+                <div class="highlight-box">
+                    <h4>Mensaje Final</h4>
+                    <p>Aviones y cohetes necesitan pistas y cielo. Rieles y trenes solo necesitan existir. Y los rieles ya existen.</p>
+                </div>
+            </section>
+
+            <!-- Referencias -->
+            <section class="wp-section">
+                <h2>Referencias</h2>
+                <ul>
+                    <li>TCU. <strong>Acuerdo nº 326/2022-TCU-Plenario</strong>. Auditoría operativa sobre adquisición de TIC para políticas públicas de educación digital.</li>
+                    <li>TCU. <strong>Acuerdo nº 286/2025-TCU-Plenario</strong>. Refuerzo de la necesidad de mecanismos de comprobación de ejecución funcional de dispositivos.</li>
+                    <li>INEP. <strong>Censo Escolar 2023</strong>. Datos sobre conectividad e infraestructura en escuelas públicas brasileñas.</li>
+                    <li>CETIC.br. <strong>Encuesta TIC Educación</strong>. Uso de tecnologías de información y comunicación en escuelas brasileñas.</li>
+                    <li>Brasil. <strong>Ley nº 13.709, de 14 de agosto de 2018 (LGPD)</strong>. Ley General de Protección de Datos Personales.</li>
+                    <li>Brasil. <strong>Constitución Federal de 1988</strong>. Art. 70 — Control externo y contabilidad pública.</li>
+                    <li>INPI. <strong>Registro de Software BR 51 2026 000328-8</strong>. SVEED — Verificación de Rutinas de Uso en la Educación.</li>
+                </ul>
+
+                <p style="margin-top: 2rem;">
+                    <strong>Contacto Institucional:</strong><br>
+                    Sitio Web: <a href="https://www.sveed.com.br" style="color: var(--cyan);">https://www.sveed.com.br</a><br>
+                    Consulta INPI: <a href="https://busca.inpi.gov.br" style="color: var(--cyan);">https://busca.inpi.gov.br</a> (Proceso BR 51 2026 000328-8)
+                </p>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <div class="wp-footer">
+            <div class="wp-footer-actions">
+                <a href="index.html" class="wp-footer-btn primary">
+                    <i class="fas fa-home"></i>
+                    Volver al Sitio Principal
+                </a>
+                <a href="white-paper-sveed.pdf" class="wp-footer-btn secondary" download>
+                    <i class="fas fa-file-pdf"></i>
+                    Descargar PDF Completo
+                </a>
+            </div>
+            <div class="wp-copyright">
+                © 2026 SVEED. Todos los derechos reservados.<br>
+                Registro INPI BR 51 2026 000328-8 | RPI 2873 del 27/01/2026<br>
+                Documento técnico-institucional, sin carácter comercial o pedagógico.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
