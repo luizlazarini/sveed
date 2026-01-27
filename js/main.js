@@ -14,7 +14,7 @@ const dashboardData = {
                 'Matemática': 26,
                 'Ciências': 18,
                 'História': 15,
-                'Outras': 13
+                'Inglês': 13
             },
             evolucaoTemporal: {
                 labels: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4'],
@@ -30,7 +30,7 @@ const dashboardData = {
                 'Matemática': 27,
                 'Ciências': 19,
                 'História': 14,
-                'Outras': 11
+                'Inglês': 11
             },
             evolucaoTemporal: {
                 labels: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4'],
@@ -46,7 +46,7 @@ const dashboardData = {
                 'Matemática': 24,
                 'Ciências': 17,
                 'História': 17,
-                'Outras': 16
+                'Inglês': 16
             },
             evolucaoTemporal: {
                 labels: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4'],
@@ -62,7 +62,7 @@ const dashboardData = {
                 'Matemática': 25,
                 'Ciências': 19,
                 'História': 16,
-                'Outras': 13
+                'Inglês': 13
             },
             evolucaoTemporal: {
                 labels: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4'],
@@ -78,7 +78,7 @@ const dashboardData = {
                 'Matemática': 28,
                 'Ciências': 18,
                 'História': 13,
-                'Outras': 11
+                'Inglês': 11
             },
             evolucaoTemporal: {
                 labels: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4'],
@@ -96,7 +96,7 @@ const dashboardData = {
                 'Matemática': 27,
                 'Ciências': 18,
                 'História': 14,
-                'Outras': 12
+                'Inglês': 12
             },
             evolucaoTemporal: {
                 labels: ['Mês 1', 'Mês 2', 'Mês 3'],
@@ -112,7 +112,7 @@ const dashboardData = {
                 'Matemática': 28,
                 'Ciências': 19,
                 'História': 13,
-                'Outras': 10
+                'Inglês': 10
             },
             evolucaoTemporal: {
                 labels: ['Mês 1', 'Mês 2', 'Mês 3'],
@@ -128,7 +128,7 @@ const dashboardData = {
                 'Matemática': 25,
                 'Ciências': 17,
                 'História': 16,
-                'Outras': 15
+                'Inglês': 15
             },
             evolucaoTemporal: {
                 labels: ['Mês 1', 'Mês 2', 'Mês 3'],
@@ -144,7 +144,7 @@ const dashboardData = {
                 'Matemática': 26,
                 'Ciências': 19,
                 'História': 15,
-                'Outras': 12
+                'Inglês': 12
             },
             evolucaoTemporal: {
                 labels: ['Mês 1', 'Mês 2', 'Mês 3'],
@@ -160,7 +160,7 @@ const dashboardData = {
                 'Matemática': 29,
                 'Ciências': 18,
                 'História': 12,
-                'Outras': 10
+                'Inglês': 10
             },
             evolucaoTemporal: {
                 labels: ['Mês 1', 'Mês 2', 'Mês 3'],
@@ -178,7 +178,7 @@ const dashboardData = {
                 'Matemática': 26,
                 'Ciências': 19,
                 'História': 15,
-                'Outras': 12
+                'Inglês': 12
             },
             evolucaoTemporal: {
                 labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
@@ -194,7 +194,7 @@ const dashboardData = {
                 'Matemática': 27,
                 'Ciências': 20,
                 'História': 14,
-                'Outras': 10
+                'Inglês': 10
             },
             evolucaoTemporal: {
                 labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
@@ -210,7 +210,7 @@ const dashboardData = {
                 'Matemática': 24,
                 'Ciências': 18,
                 'História': 17,
-                'Outras': 15
+                'Inglês': 15
             },
             evolucaoTemporal: {
                 labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
@@ -226,7 +226,7 @@ const dashboardData = {
                 'Matemática': 25,
                 'Ciências': 20,
                 'História': 16,
-                'Outras': 12
+                'Inglês': 12
             },
             evolucaoTemporal: {
                 labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
@@ -242,7 +242,7 @@ const dashboardData = {
                 'Matemática': 28,
                 'Ciências': 19,
                 'História': 13,
-                'Outras': 10
+                'Inglês': 10
             },
             evolucaoTemporal: {
                 labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],

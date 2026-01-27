@@ -104,7 +104,7 @@ const siteTranslations = {
         dashboardMetric2Change: "+3% vs período anterior",
         dashboardMetric2Note: "Ciclo encerrado refere-se exclusivamente ao término técnico da sessão conforme parâmetros temporais do sistema, sem inferência de desempenho, conteúdo ou aprendizagem.",
         dashboardMetric3Label: "Total de Sessões",
-        dashboardMetric3Change: "Período: Q1 2025",
+        dashboardMetric3Change: "Período: Q1 2026",
         dashboardChart1Title: "Distribuição por Área de Conhecimento",
         dashboardChart2Title: "Evolução Temporal de Execução",
         dashboardNote: "Nota técnica:",
@@ -127,7 +127,7 @@ const siteTranslations = {
         complianceTitle: "Conformidade e Natureza Jurídica",
         complianceHighlight: "O SVEED é infraestrutura técnica de verificação, não plataforma da educação.",
         compliance1Title: "Registro INPI",
-        compliance1Text: "Programa de computador com registro depositado no Instituto Nacional da Propriedade Industrial (INPI), com natureza jurídica de software de infraestrutura técnica voltada à governança pública.",
+        compliance1Text: "Programa de computador com registro concedido pelo Instituto Nacional da Propriedade Industrial (INPI), processo BR 51 2026 000328-8, publicado na RPI 2873 de 27/01/2026. Natureza jurídica de software de infraestrutura técnica voltada à governança pública.",
         compliance2Title: "Arquitetura Determinística",
         compliance2Text: "Processamento baseado em lógica determinística e auditável, sem componentes probabilísticos, algoritmos de inferência ou processamento de linguagem natural generativo.",
         compliance3Title: "Operação Offline",
@@ -174,7 +174,7 @@ const siteTranslations = {
             'Matemática': 'Matemática',
             'Ciências': 'Ciências',
             'História': 'História',
-            'Outras': 'Outras'
+            'Inglês': 'Inglês'
         },
         chartTimeLabels: {
             week: 'Sem',
@@ -284,7 +284,7 @@ const siteTranslations = {
         dashboardMetric2Change: "+3% vs previous period",
         dashboardMetric2Note: "Completed cycle refers exclusively to the technical termination of the session according to system temporal parameters, without inference of performance, content, or learning.",
         dashboardMetric3Label: "Total Sessions",
-        dashboardMetric3Change: "Period: Q1 2025",
+        dashboardMetric3Change: "Period: Q1 2026",
         dashboardChart1Title: "Distribution by Knowledge Area",
         dashboardChart2Title: "Temporal Evolution of Execution",
         dashboardNote: "Technical note:",
@@ -354,7 +354,7 @@ const siteTranslations = {
             'Matemática': 'Mathematics',
             'Ciências': 'Science',
             'História': 'History',
-            'Outras': 'Other'
+            'Inglês': 'English'
         },
         chartTimeLabels: {
             week: 'Week',
@@ -464,7 +464,7 @@ const siteTranslations = {
         dashboardMetric2Change: "+3% vs período anterior",
         dashboardMetric2Note: "Ciclo cerrado se refiere exclusivamente al término técnico de la sesión conforme parámetros temporales del sistema, sin inferencia de desempeño, contenido o aprendizaje.",
         dashboardMetric3Label: "Total de Sesiones",
-        dashboardMetric3Change: "Período: Q1 2025",
+        dashboardMetric3Change: "Período: Q1 2026",
         dashboardChart1Title: "Distribución por Área de Conocimiento",
         dashboardChart2Title: "Evolución Temporal de Ejecución",
         dashboardNote: "Nota técnica:",
@@ -534,7 +534,7 @@ const siteTranslations = {
             'Matemática': 'Matemáticas',
             'Ciências': 'Ciencias',
             'História': 'Historia',
-            'Outras': 'Otras'
+            'Inglês': 'Inglés'
         },
         chartTimeLabels: {
             week: 'Sem',
