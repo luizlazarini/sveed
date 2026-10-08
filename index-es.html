@@ -1,523 +1,437 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SVEED - Governança Pública da Última Milha Educacional. Infraestrutura técnica voltada à governança pública para verificação de execução em dispositivos da educação.">
-    <meta name="keywords" content="Governança digital, Última milha, Conformidade TCU, Gestão de ativos públicos, Software offline da educação">
-    <title>SVEED - Governança Pública da Última Milha Educacional</title>
-    
-    <!-- Favicon -->
+    <meta name="description" content="SVEED — repaso curricular individual guiado, offline-first, diseñado para acompañar al niño después de clase sin sustituir al docente, la escuela o el currículo.">
+    <meta name="keywords" content="SVEED, repaso escolar, repaso curricular, BNCC, offline-first, educación, Android, autonomía infantil">
+    <title>SVEED — Repaso Curricular Individual Guiado</title>
+
     <link rel="icon" type="image/jpeg" href="images/logo-sveed.jpg">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header / Navigation -->
     <header class="header">
         <div class="container">
+            <div class="lang-selector-wrapper">
+                <div class="lang-selector" aria-label="Selector de idioma">
+                    <a class="lang-btn" href="index.html" lang="pt-BR">
+                        <img src="https://flagcdn.com/w20/br.png" alt=""> PT
+                    </a>
+                    <a class="lang-btn" href="index-en.html" lang="en-US">
+                        <img src="https://flagcdn.com/w20/us.png" alt=""> EN
+                    </a>
+                    <a class="lang-btn active" href="index-es.html" lang="es">
+                        <img src="https://flagcdn.com/w20/es.png" alt=""> ES
+                    </a>
+                </div>
+            </div>
             <div class="header-content">
                 <div class="logo">
                     <img src="images/logo-sveed.jpg" alt="SVEED Logo" class="logo-image">
                     <div class="logo-text">
                         <h1>SVEED</h1>
-                        <p class="logo-subtitle">Verificação de Rotinas de Uso na Educação</p>
+                        <p class="logo-subtitle">Repaso Curricular Individual Guiado</p>
                     </div>
                 </div>
                 <nav class="nav">
-                    <a href="#desafio">O Desafio</a>
-                    <a href="#sobre">O SVEED</a>
-                    <a href="#dinamica">Dinâmica</a>
-                    <a href="#pilares">Pilares</a>
-                    <a href="#dashboard">Dashboard</a>
-                    <a href="#operadoras">Operadoras</a>
-                    <a href="#conformidade">Conformidade</a>
+                    <a href="#desafio">El problema</a>
+                    <a href="#sobre">SVEED</a>
+                    <a href="#dinamica">Cómo funciona</a>
+                    <a href="#pilares">Tecnología</a>
+                    <a href="#dashboard">Evidencia</a>
+                    <a href="#operadoras">Escuela y familia</a>
+                    <a href="#conformidade">Privacidad</a>
+                    <a href="#documentacao">White Paper</a>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2 class="hero-title">SVEED — Governança Pública da Última Milha Educacional</h2>
-                <p class="hero-subtitle">Verificação técnica de execução mínima de uso na educação em dispositivos utilizados no âmbito de políticas públicas de educação, em ambientes offline e de difícil monitoramento.</p>
-                <button class="cta-button" id="ctaButton">Solicitar Nota Técnica de Viabilidade</button>
-                <p class="cta-disclaimer">Documento técnico-institucional, sem caráter comercial ou pedagógico.</p>
+                <h2 class="hero-title">15 minutos de repaso individual para quienes no siempre tienen a alguien a su lado.</h2>
+                <p class="hero-subtitle">En casa, SVEED acompaña el repaso de lo que la escuela ya enseñó — con ejercicios generados localmente, pistas progresivas y recuperación de prerrequisitos, incluso sin internet.</p>
+                <a class="cta-button" href="white-paper.html" style="display:inline-block;text-decoration:none;">Ver White Paper</a>
+                <p class="cta-disclaimer">La escuela enseña. SVEED acompaña el repaso.</p>
             </div>
         </div>
     </section>
 
-    <!-- O Desafio da Evidência -->
     <section id="desafio" class="section section-light">
         <div class="container">
-            <h2 class="section-title">O Desafio da Evidência</h2>
+            <h2 class="section-title">El problema</h2>
             <div class="content-grid">
                 <div class="challenge-card">
-                    <div class="challenge-icon">
-                        <i class="fas fa-box-open"></i>
-                    </div>
-                    <h3>Entrega Física ≠ Uso Efetivo</h3>
-                    <p>A distribuição de hardware da educação não assegura, por si só, a execução das atividades para as quais os ativos foram contratados. A evidência de entrega não substitui a evidência de utilização.</p>
+                    <div class="challenge-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>La enseñanza es colectiva</h3>
+                    <p>El docente conduce a todo un grupo. Incluso después de una buena clase, cada niño sale con dudas, pasos olvidados y necesidades de repaso diferentes.</p>
                 </div>
                 <div class="challenge-card">
-                    <div class="challenge-icon">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <h3>Desafio de Comprovação Operacional</h3>
-                    <p>O desafio atual da gestão pública consiste em comprovar a execução funcional dos ativos tecnológicos, especialmente em contextos de baixa conectividade e ausência de infraestrutura de monitoramento centralizado.</p>
+                    <div class="challenge-icon"><i class="fas fa-house-user"></i></div>
+                    <h3>El repaso es individual</h3>
+                    <p>Después de clase, el niño necesita reorganizar lo aprendido, practicar y recuperar etapas olvidadas. Ese proceso ocurre al ritmo de cada estudiante.</p>
                 </div>
                 <div class="challenge-card">
-                    <div class="challenge-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <h3>Risco de Ociosidade e Questionamento</h3>
-                    <p>A ausência de evidência operacional objetiva pode resultar em questionamentos sobre efetividade de políticas públicas, gerando risco de ociosidade patrimonial e questionamento contratual por órgãos de controle.</p>
+                    <div class="challenge-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>El apoyo en casa es desigual</h3>
+                    <p>No todos los niños cuentan cada día con un adulto disponible, con tiempo y conocimientos para acompañar el repaso. SVEED fue diseñado para actuar en esa brecha.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- O Que É o SVEED -->
     <section id="sobre" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">O Que É o SVEED</h2>
+            <h2 class="section-title">Qué es SVEED</h2>
             <div class="sveed-definition">
-                <p class="definition-lead">O SVEED é um programa de computador de infraestrutura técnica voltada à governança pública, desenvolvido para verificação de execução mínima de uso educacional em dispositivos Android 7+ com 1.5GB RAM+, utilizados no âmbito de políticas públicas de educação.</p>
-                
+                <p class="definition-lead">SVEED es una infraestructura de repaso curricular individual guiado para Android. Repasa habilidades ya trabajadas en la escuela, ofrece apoyo progresivo cuando el niño encuentra una dificultad y puede recuperar prerrequisitos antes de conducirlo nuevamente a la habilidad objetivo.</p>
+
                 <div class="definition-grid">
                     <div class="definition-item">
-                        <h4>Natureza Funcional</h4>
-                        <p>Sistema determinístico de verificação operacional, agnóstico a conteúdo pedagógico e a plataformas educacionais específicas.</p>
+                        <h4>Repaso</h4>
+                        <p>El punto de partida es una habilidad curricular ya trabajada por la escuela, identificada por el niño o indicada mediante el modo profesor.</p>
                     </div>
                     <div class="definition-item">
-                        <h4>Foco em Processo</h4>
-                        <p>Verifica execução de rotinas operacionais, não resultados de aprendizagem ou desempenho individual.</p>
+                        <h4>Apoyo progresivo</h4>
+                        <p>Ante una respuesta incorrecta, el niño puede recibir una pista e intentarlo de nuevo. El apoyo orienta el razonamiento sin convertir la sesión en un marcador de rendimiento.</p>
                     </div>
                     <div class="definition-item">
-                        <h4>Infraestrutura Técnica</h4>
-                        <p>Não realiza ensino, não executa avaliação e não coleta dados pessoais. Atua exclusivamente na camada de verificação de processos.</p>
+                        <h4>Prerrequisitos</h4>
+                        <p>Cuando la dificultad persiste, reglas predefinidas pueden retroceder a una habilidad anterior asociada y luego devolver al niño a la trayectoria original.</p>
                     </div>
                 </div>
 
                 <div class="technical-highlights">
-                    <h3>Características Técnicas</h3>
+                    <h3>Características del producto</h3>
                     <ul class="technical-list">
-                        <li><i class="fas fa-wifi-slash"></i> <strong>Offline-first:</strong> Operação independente de conectividade contínua</li>
-                        <li><i class="fas fa-microchip"></i> <strong>Compatível com hardware legado de uso na educação pública:</strong> Requisitos mínimos (~1.5GB RAM)</li>
-                        <li><i class="fas fa-ban"></i> <strong>Sem IA generativa:</strong> Processamento determinístico e auditável</li>
-                        <li><i class="fas fa-user-shield"></i> <strong>Sem avaliação pedagógica:</strong> Não infere qualidade de aprendizagem</li>
+                        <li><i class="fas fa-wifi-slash"></i> <strong>Offline-first:</strong> la sesión pedagógica no depende de conectividad continua</li>
+                        <li><i class="fas fa-mobile-alt"></i> <strong>Android:</strong> contenido, reglas, grafos y plantillas permanecen disponibles localmente</li>
+                        <li><i class="fas fa-ban"></i> <strong>Sin IA generativa durante la sesión:</strong> las preguntas se producen mediante reglas y plantillas locales</li>
+                        <li><i class="fas fa-trophy"></i> <strong>Sin gamificación:</strong> sin monedas, rankings, streaks ni marcador permanente de rendimiento durante el repaso</li>
                     </ul>
                 </div>
 
                 <div class="sveed-scope-note">
-                    <p>O SVEED não induz, orienta ou interfere na prática pedagógica, limitando-se à verificação técnica da execução operacional.</p>
+                    <p><strong>La escuela enseña. SVEED acompaña el repaso.</strong> El producto no pretende sustituir al docente, la clase o el currículo, ni debe introducir de manera autónoma contenido curricular aún no enseñado.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Dinâmica Operacional na Prática -->
     <section id="dinamica" class="section section-light">
         <div class="container">
-            <h2 class="section-title">Dinâmica Operacional na Prática</h2>
-            <p class="section-subtitle">O SVEED respeita integralmente a rotina da escola e da família, garantindo autonomia e fluidez no uso dos dispositivos.</p>
-            
+            <h2 class="section-title">Cómo funciona</h2>
+            <p class="section-subtitle">Una rutina breve, previsible e individual, diseñada para que el niño pueda continuar incluso cuando aparece una dificultad.</p>
+
             <div class="dinamica-context">
-                <p>Durante o horário de aula, finais de semana, feriados e férias, o dispositivo funciona em modo de autonomia total, sem qualquer interferência do sistema. A verificação ocorre exclusivamente uma única vez ao dia, no primeiro uso fora do horário escolar, seguindo o fluxo abaixo:</p>
+                <p>El núcleo de SVEED es una sesión diaria de repaso de aproximadamente 15 minutos. La interfaz se mantiene simple; la complejidad queda en la lógica que organiza la secuencia, ofrece apoyo y ajusta la dificultad.</p>
             </div>
 
             <div class="flow-grid">
                 <div class="flow-card">
                     <div class="flow-number">1</div>
-                    <div class="flow-icon">
-                        <i class="fas fa-volume-up"></i>
-                    </div>
-                    <h3>Orientação Inicial por Áudio</h3>
-                    <p>O sistema explica de forma simples e humanizada o que vai acontecer. A criança não precisa ter domínio de leitura para iniciar a rotina.</p>
+                    <div class="flow-icon"><i class="fas fa-search"></i></div>
+                    <h3>Confirmar qué se estudió</h3>
+                    <p>En el flujo sin intervención del profesor, Nexo Visual ayuda al niño a identificar el tema visto en la escuela antes de iniciar el repaso.</p>
                 </div>
 
                 <div class="flow-card">
                     <div class="flow-number">2</div>
-                    <div class="flow-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3>Bloco de Reforço (Tempo de Exposição)</h3>
-                    <p>Período curto dedicado à revisão de conteúdos. Sem perguntas, sem avaliação e sem pressão por resultados. O foco é o contato com o tema.</p>
+                    <div class="flow-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>Repasar la habilidad objetivo</h3>
+                    <p>El sistema presenta ejercicios generados localmente dentro de un universo curricular cerrado, manteniendo el repaso cerca de la habilidad seleccionada.</p>
                 </div>
 
                 <div class="flow-card">
                     <div class="flow-number">3</div>
-                    <div class="flow-icon">
-                        <i class="fas fa-pause-circle"></i>
-                    </div>
-                    <h3>Pausa Obrigatória (Saúde Digital)</h3>
-                    <p>O sistema interrompe a atividade para uma pausa breve (hidratação e alongamento). Previne a fadiga e mitiga comportamentos de simulação de estudo.</p>
+                    <div class="flow-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Usar una pista</h3>
+                    <p>Cuando una respuesta es incorrecta y hay una pista disponible, el niño puede pedir ayuda y observar una orientación antes de intentarlo nuevamente.</p>
                 </div>
 
                 <div class="flow-card">
                     <div class="flow-number">4</div>
-                    <div class="flow-icon">
-                        <i class="fas fa-hand-pointer"></i>
-                    </div>
-                    <h3>Bloco de Execução (Interação Funcional)</h3>
-                    <p>Momento de execução da atividade proposta. O sistema verifica apenas a interação e o nexo operacional, sem atribuição de notas ou julgamento de erro/acerto.</p>
+                    <div class="flow-icon"><i class="fas fa-redo-alt"></i></div>
+                    <h3>Intentarlo otra vez</h3>
+                    <p>La segunda oportunidad permite retomar el razonamiento. La Biblioteca de Conceptos puede explicar un concepto relacionado de forma separada de la pista de ese ejercicio específico.</p>
                 </div>
 
                 <div class="flow-card">
                     <div class="flow-number">5</div>
-                    <div class="flow-icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <h3>Encerramento e Liberação</h3>
-                    <p>Caso a criança interaja, a rotina é concluída com sucesso. Se houver cansaço, o sistema encerra de forma gentil. Após o ciclo, o tablet fica totalmente livre e o SVEED não reaparece até o dia seguinte.</p>
+                    <div class="flow-icon"><i class="fas fa-route"></i></div>
+                    <h3>Mantener la continuidad</h3>
+                    <p>Las reglas de órbita pueden reducir temporalmente la dificultad o recuperar un prerrequisito, siempre buscando conducir al niño de vuelta a la habilidad objetivo.</p>
                 </div>
             </div>
 
             <div class="dinamica-note">
-                <p><strong>Nota:</strong> O SVEED prioriza a saúde digital e o engajamento positivo, eliminando mecanismos de frustração ou cobrança pedagógica indevida.</p>
+                <p><strong>Principio:</strong> el error es una señal para ofrecer apoyo y reorganizar la experiencia, no un mecanismo de castigo o competencia.</p>
             </div>
         </div>
     </section>
 
-    <!-- Pilares Tecnológicos -->
     <section id="pilares" class="section section-light">
         <div class="container">
-            <h2 class="section-title">Pilares Tecnológicos</h2>
+            <h2 class="section-title">Tecnología para la autonomía</h2>
             <div class="pillars-grid">
                 <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Precisão Temporal</h3>
-                    <p>Utilização de relógio monotônico para garantir registro fidedigno de tempo real de execução, independente de manipulações de sistema ou relógio de parede.</p>
+                    <div class="pillar-icon"><i class="fas fa-wifi-slash"></i></div>
+                    <h3>Offline-first</h3>
+                    <p>El contenido curricular, los grafos, las plantillas y las reglas permanecen en el dispositivo, reduciendo la dependencia de red durante el repaso.</p>
                     <div class="pillar-detail">
-                        <span class="detail-label">Método:</span> Monotonic clock API com proteção contra adulteração
+                        <span class="detail-label">Objetivo:</span> funcionar también en contextos con conectividad limitada
                     </div>
                 </div>
 
                 <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Privacidade por Design</h3>
-                    <p>Arquitetura que impede, por concepção, a coleta de dados pessoais, identificação individual ou rastreamento de usuários específicos.</p>
+                    <div class="pillar-icon"><i class="fas fa-volume-up"></i></div>
+                    <h3>TTS y accesibilidad</h3>
+                    <p>La síntesis de voz del propio sistema operativo puede leer enunciados e instrucciones, reduciendo la dependencia de un adulto lector.</p>
                     <div class="pillar-detail">
-                        <span class="detail-label">Conformidade:</span> LGPD por design, não por compliance
+                        <span class="detail-label">Uso:</span> opcional para lectores fluidos y relevante para niños con menor fluidez lectora
                     </div>
                 </div>
 
                 <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <i class="fas fa-universal-access"></i>
-                    </div>
-                    <h3>Acessibilidade Operacional</h3>
-                    <p>Interface baseada em áudio e sinais visuais simplificados, sem pressupor letramento funcional ou familiaridade com ambientes digitais. A acessibilidade aqui é estritamente operacional, não pedagógica ou curricular.</p>
+                    <div class="pillar-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Adaptación por reglas</h3>
+                    <p>La órbita utiliza OBJETIVO, OBJETIVO-1, OBJETIVO-2 y OBJETIVO+1. El grafo curricular se usa para recuperar prerrequisitos, no para avanzar hacia contenido aún no enseñado.</p>
                     <div class="pillar-detail">
-                        <span class="detail-label">Aplicação:</span> Contextos de baixa alfabetização digital
+                        <span class="detail-label">Principio:</span> lógica explícita y auditable, sin diagnóstico semántico del error
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Dashboard Público -->
     <section id="dashboard" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">Painel Público de Execução</h2>
-            
+            <h2 class="section-title">Estado actual y evidencia</h2>
+
             <div class="dashboard-demo-note">
-                <p>Painel demonstrativo com dados simulados, apresentado exclusivamente para visualização técnica de indicadores agregados de execução.</p>
+                <p>SVEED es un producto funcional en etapa previa a la validación externa. Su ingeniería ya puede ser inspeccionada; el siguiente salto de madurez es demostrar su comportamiento fuera del entorno cercano al desarrollo.</p>
             </div>
-            
+
             <div class="dashboard-disclaimer">
                 <i class="fas fa-info-circle"></i>
-                <p>Este painel apresenta exclusivamente indicadores agregados de execução operacional no contexto de políticas públicas. Não contém dados pessoais, individuais ou identificáveis.</p>
+                <p>Esta sección presenta el estado real del proyecto. No utiliza cifras simuladas de adopción, usuarios o impacto.</p>
             </div>
 
-            <!-- Filtros do Dashboard -->
-            <div class="dashboard-filters">
-                <div class="filter-group">
-                    <label for="periodoFilter">Período de Referência:</label>
-                    <select id="periodoFilter" class="filter-select">
-                        <option value="mes">Q1 2025 (dados simulados)</option>
-                        <option value="trimestre" selected>Q1 2025 (dados simulados)</option>
-                        <option value="semestre">Q1-Q2 2025 (dados simulados)</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="regiaoFilter">Região:</label>
-                    <select id="regiaoFilter" class="filter-select">
-                        <option value="todas" selected>Todas as Regiões</option>
-                        <option value="zona-urbana">Zona Urbana</option>
-                        <option value="zona-rural">Zona Rural</option>
-                        <option value="zona-norte">Zona Norte</option>
-                        <option value="zona-sul">Zona Sul</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Métricas Principais -->
             <div class="metrics-grid">
                 <div class="metric-card">
-                    <div class="metric-icon">
-                        <i class="fas fa-hourglass-half"></i>
-                    </div>
+                    <div class="metric-icon"><i class="fas fa-vial"></i></div>
                     <div class="metric-content">
-                        <p class="metric-label">Tempo Médio Diário</p>
-                        <p class="metric-value" id="metricTempo">42 min</p>
-                        <p class="metric-change positive">+8% vs período anterior</p>
+                        <p class="metric-label">Pruebas automatizadas</p>
+                        <p class="metric-value">145</p>
+                        <p class="metric-change positive">0 fallos · 0 errores · 0 skips después del Evaluation Gate</p>
                     </div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
+                    <div class="metric-icon"><i class="fas fa-layer-group"></i></div>
                     <div class="metric-content">
-                        <p class="metric-label">Sessões com Ciclo Encerrado</p>
-                        <p class="metric-value" id="metricSessoes">78%</p>
-                        <p class="metric-change positive">+3% vs período anterior</p>
-                        <p class="metric-note">Ciclo encerrado refere-se exclusivamente ao término técnico da sessão conforme parâmetros temporais do sistema, sem inferência de desempenho, conteúdo ou aprendizagem.</p>
+                        <p class="metric-label">Estructura curricular</p>
+                        <p class="metric-value">6 × 9</p>
+                        <p class="metric-change neutral">6 asignaturas · 1.º a 9.º año · curaduría en distintas etapas</p>
                     </div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-icon">
-                        <i class="fas fa-list-ol"></i>
-                    </div>
+                    <div class="metric-icon"><i class="fas fa-flask"></i></div>
                     <div class="metric-content">
-                        <p class="metric-label">Total de Sessões</p>
-                        <p class="metric-value" id="metricTotal">124.837</p>
-                        <p class="metric-change neutral">Período: Q1 2025</p>
+                        <p class="metric-label">Validación externa formal</p>
+                        <p class="metric-value">Pendiente</p>
+                        <p class="metric-change neutral">Siguiente paso: evaluación y piloto documentado</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Gráficos -->
             <div class="charts-grid">
                 <div class="chart-container">
-                    <h3 class="chart-title">Distribuição por Área de Conhecimento</h3>
-                    <div style="height: 400px;">
-                        <canvas id="areaChart"></canvas>
-                    </div>
+                    <h3 class="chart-title">Producto funcional</h3>
+                    <p>Las builds de release compilan correctamente. La firma y el empaquetado institucional final aún se están completando.</p>
                 </div>
                 <div class="chart-container">
-                    <h3 class="chart-title">Evolução Temporal de Execução</h3>
-                    <div style="height: 400px;">
-                        <canvas id="tempoChart"></canvas>
-                    </div>
+                    <h3 class="chart-title">Evidencia aún necesaria</h3>
+                    <p>El proyecto todavía necesita observar autonomía, continuidad de la rutina, uso de pistas y resultados compatibles con el alcance de repaso en un contexto externo.</p>
                 </div>
             </div>
 
             <div class="dashboard-note">
-                <p><strong>Nota técnica:</strong> Os indicadores apresentados referem-se exclusivamente a dados agregados de execução operacional. Não representam avaliação de qualidade pedagógica, desempenho individual ou eficácia de conteúdos.</p>
+                <p><strong>Posición actual:</strong> producto educativo funcional, con una arquitectura suficientemente desarrollada para justificar evaluación y piloto, pero todavía sin un estudio externo formal de resultados.</p>
             </div>
         </div>
     </section>
 
-    <!-- Para Operadoras e Integradores -->
     <section id="operadoras" class="section section-light">
         <div class="container">
-            <h2 class="section-title">Para Operadoras e Integradores</h2>
-            
+            <h2 class="section-title">Para escuelas, familias y socios</h2>
+
             <div class="operadoras-intro">
-                <p>O SVEED atua como serviço técnico complementar à infraestrutura de fornecimento de hardware da educação, oferecendo camada adicional de verificação objetiva de uso funcional.</p>
+                <p>SVEED fue diseñado para complementar el trabajo de la escuela y ampliar la autonomía del niño en casa, sin exigir que un adulto conduzca cada ejercicio.</p>
             </div>
 
             <div class="operadoras-grid">
                 <div class="operadora-card">
-                    <div class="operadora-icon">
-                        <i class="fas fa-file-contract"></i>
-                    </div>
-                    <h3>Redução de Risco Contratual</h3>
-                    <p>Fornece evidência objetiva de execução operacional dos ativos fornecidos, mitigando questionamentos sobre efetividade de entrega e uso funcional dos equipamentos.</p>
+                    <div class="operadora-icon"><i class="fas fa-school"></i></div>
+                    <h3>Escuela y profesor</h3>
+                    <p>En el modo profesor, la escuela puede indicar la habilidad curricular que debe orientar el repaso en casa de ese día.</p>
                 </div>
 
                 <div class="operadora-card">
-                    <div class="operadora-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Evidência Objetiva de Uso</h3>
-                    <p>Gera registros auditáveis de tempo de execução e encerramento técnico de sessões, independente de conectividade ou infraestrutura centralizada de monitoramento.</p>
+                    <div class="operadora-icon"><i class="fas fa-child"></i></div>
+                    <h3>Niño</h3>
+                    <p>La interfaz combina audio opcional, pistas, una segunda oportunidad y una rutina breve para favorecer un uso progresivamente autónomo.</p>
                 </div>
 
                 <div class="operadora-card">
-                    <div class="operadora-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Proteção Reputacional</h3>
-                    <p>Documenta a operação funcional dos equipamentos fornecidos, oferecendo amparo técnico para processos de recebimento e prestação de contas junto a órgãos contratantes.</p>
+                    <div class="operadora-icon"><i class="fas fa-home"></i></div>
+                    <h3>Familia</h3>
+                    <p>El panel parental ofrece un resumen simple de la sesión, incluyendo tiempo, asignatura, ejercicios, errores y uso de pistas.</p>
                 </div>
 
                 <div class="operadora-card">
-                    <div class="operadora-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Integração Técnica</h3>
-                    <p>Compatível com diferentes configurações de hardware e sistemas operacionais, sem dependência de plataformas proprietárias ou conectividade obrigatória.</p>
+                    <div class="operadora-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Socios institucionales</h3>
+                    <p>La arquitectura offline-first y el bajo costo técnico de ejecución favorecen escenarios de despliegue en dispositivos Android y contextos con conectividad limitada.</p>
                 </div>
             </div>
 
             <div class="operadoras-cta">
-                <p>O SVEED não substitui obrigações contratuais de fornecimento, suporte técnico ou conectividade. Atua exclusivamente como ferramenta de verificação complementar.</p>
+                <p>El objetivo es añadir una capa de repaso individual después de clase, no crear una escuela paralela dentro del dispositivo.</p>
             </div>
         </div>
     </section>
 
-    <!-- Conformidade e Natureza Jurídica -->
     <section id="conformidade" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">Conformidade e Natureza Jurídica</h2>
-            
+            <h2 class="section-title">Privacidad, seguridad y límites</h2>
+
             <div class="conformidade-content">
                 <div class="conformidade-main">
                     <div class="conformidade-highlight">
-                        <i class="fas fa-balance-scale"></i>
-                        <p class="highlight-text">O SVEED é infraestrutura técnica de verificação, não plataforma da educação.</p>
+                        <i class="fas fa-shield-alt"></i>
+                        <p class="highlight-text">SVEED describe la seguridad según lo que está implementado hoy, sin convertir una intención técnica en una promesa.</p>
                     </div>
 
                     <div class="conformidade-grid">
                         <div class="conformidade-item">
-                            <h4><i class="fas fa-registered"></i> Registro INPI</h4>
-                            <p>Programa de computador com registro depositado no Instituto Nacional da Propriedade Industrial (INPI), com natureza jurídica de software de infraestrutura técnica voltada à governança pública.</p>
+                            <h4><i class="fas fa-user-minus"></i> Minimización de datos</h4>
+                            <p>El repaso no requiere el nombre, documento nacional, correo electrónico ni teléfono del niño para funcionar.</p>
                         </div>
 
                         <div class="conformidade-item">
-                            <h4><i class="fas fa-code"></i> Arquitetura Determinística</h4>
-                            <p>Processamento baseado em lógica determinística e auditável, sem componentes probabilísticos, algoritmos de inferência ou processamento de linguagem natural generativo.</p>
+                            <h4><i class="fas fa-fingerprint"></i> Seudonimización</h4>
+                            <p>Existen identificadores técnicos persistentes y registros de sesión. Por eso, la descripción correcta no es anonimato absoluto.</p>
                         </div>
 
                         <div class="conformidade-item">
-                            <h4><i class="fas fa-plug"></i> Operação Offline</h4>
-                            <p>Funcionamento independente de conexão contínua à internet, sem dependência de serviços em nuvem ou sistemas de autenticação remota.</p>
+                            <h4><i class="fas fa-plug"></i> Operación offline-first</h4>
+                            <p>La sesión pedagógica funciona localmente y no depende de conectividad continua con servicios en la nube.</p>
                         </div>
 
                         <div class="conformidade-item">
-                            <h4><i class="fas fa-user-lock"></i> Conformidade LGPD</h4>
-                            <p>Arquitetura que impede, por concepção técnica, a coleta de dados pessoais ou identificação individual. Conformidade por design, não por processo.</p>
+                            <h4><i class="fas fa-robot"></i> Sin IA generativa durante la sesión</h4>
+                            <p>Las preguntas que recibe el niño se producen mediante reglas y plantillas locales, no mediante llamadas a modelos generativos.</p>
                         </div>
 
                         <div class="conformidade-item">
-                            <h4><i class="fas fa-database"></i> Dados Agregados</h4>
-                            <p>Registros exclusivamente agregados por região, período e área de conhecimento. Impossibilidade técnica de desagregação para nível individual.</p>
+                            <h4><i class="fas fa-database"></i> Registros de sesión</h4>
+                            <p>La implementación actual registra información a nivel de sesión, como tiempo, asignatura, habilidad, aciertos, errores y uso de pistas.</p>
                         </div>
 
                         <div class="conformidade-item">
-                            <h4><i class="fas fa-search"></i> Auditabilidade</h4>
-                            <p>Logs de sistema auditáveis por órgãos de controle, com trilha de processamento verificável e transparente quanto aos métodos de cálculo empregados.</p>
+                            <h4><i class="fas fa-search"></i> Límites explícitos</h4>
+                            <p>El producto no afirma actualmente ser tamper-proof, ofrecer anonimato absoluto ni garantizar integridad criptográfica frente a una manipulación intencional.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="conformidade-note">
-                    <h4>Escopo de Atuação</h4>
-                    <p>O SVEED verifica exclusivamente a execução operacional de rotinas no contexto da educação em dispositivos utilizados no âmbito de políticas públicas de educação. Não realiza:</p>
+                    <h4>Alcance responsable</h4>
+                    <p>SVEED fue diseñado para el repaso curricular individual guiado. En su estado actual, no debe presentarse como un sistema que:</p>
                     <ul>
-                        <li>Avaliação de conteúdo pedagógico</li>
-                        <li>Inferência sobre qualidade de ensino</li>
-                        <li>Mensuração de resultados de aprendizagem</li>
-                        <li>Comparação entre indivíduos ou instituições</li>
-                        <li>Processamento de dados sensíveis ou pessoais</li>
+                        <li>sustituye al docente, la clase o el currículo</li>
+                        <li>diagnostica semánticamente la causa de cada error</li>
+                        <li>introduce de forma autónoma contenido curricular aún no enseñado</li>
+                        <li>ya cuenta con validación externa formal concluida</li>
+                        <li>garantiza anonimato absoluto o inviolabilidad técnica</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <section id="documentacao" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Documentación</h2>
+
+            <div class="whitepaper-content">
+                <div class="whitepaper-header">
+                    <div class="whitepaper-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="whitepaper-text">
+                        <h3 class="whitepaper-title">White Paper SVEED</h3>
+                        <h4 class="whitepaper-subtitle">Infraestructura Offline-First para el Repaso Curricular Individual Guiado</h4>
+                        <p class="whitepaper-description">Documento técnico-institucional que presenta el problema educativo, el flujo pedagógico, la arquitectura, los límites actuales de seguridad, el nivel de madurez y los próximos pasos de evidencia.</p>
+                    </div>
+                </div>
+
+                <div class="whitepaper-actions">
+                    <a href="white-paper.html" id="whitepaperLink" class="btn-whitepaper btn-primary" target="_blank">
+                        <i class="fas fa-eye"></i> VER WHITE PAPER (PORTUGUÉS)
+                    </a>
+                    <a href="mailto:contato@sveed.com.br" class="btn-whitepaper btn-secondary">
+                        <i class="fas fa-envelope"></i> CONTACTO INSTITUCIONAL
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <img src="images/logo-sveed.jpg" alt="SVEED Logo" class="footer-logo">
                     <h3>SVEED</h3>
-                    <p class="footer-tagline">Verificação de Rotinas de Uso na Educação</p>
-                    <p class="footer-description">Infraestrutura técnica voltada à governança pública da última milha educacional.</p>
-                    <p class="footer-scope">O SVEED não coleta dados pessoais nem permite identificação individual.</p>
+                    <p class="footer-tagline">Repaso Curricular Individual Guiado</p>
+                    <p class="footer-description">Una capa de apoyo entre la enseñanza colectiva y el repaso individual en casa.</p>
+                    <p class="footer-scope">La escuela enseña. SVEED acompaña el repaso.</p>
                 </div>
                 <div class="footer-sections">
                     <div class="footer-section">
-                        <h4>Navegação</h4>
+                        <h4>Navegación</h4>
                         <ul>
-                            <li><a href="#desafio">O Desafio</a></li>
-                            <li><a href="#sobre">O SVEED</a></li>
-                            <li><a href="#dinamica">Dinâmica Operacional</a></li>
-                            <li><a href="#pilares">Pilares Tecnológicos</a></li>
-                            <li><a href="#dashboard">Dashboard Público</a></li>
+                            <li><a href="#desafio">El problema</a></li>
+                            <li><a href="#sobre">SVEED</a></li>
+                            <li><a href="#dinamica">Cómo funciona</a></li>
+                            <li><a href="#pilares">Tecnología</a></li>
+                            <li><a href="#dashboard">Evidencia</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
-                        <h4>Público</h4>
+                        <h4>Institucional</h4>
                         <ul>
-                            <li><a href="#operadoras">Operadoras e Integradores</a></li>
-                            <li><a href="#conformidade">Conformidade</a></li>
+                            <li><a href="#operadoras">Escuela y familia</a></li>
+                            <li><a href="#conformidade">Privacidad y límites</a></li>
+                            <li><a href="#documentacao">White Paper</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
-                        <h4>Contato Institucional</h4>
-                        <p>Para solicitações de nota técnica, esclarecimentos ou integração:</p>
-                        <button class="footer-cta" id="footerCta">Solicitar Contato</button>
+                        <h4>Contacto</h4>
+                        <p>Para evaluación, alianzas o consultas:</p>
+                        <a class="footer-cta" href="mailto:contato@sveed.com.br" style="display:inline-block;text-decoration:none;">contato@sveed.com.br</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 SVEED. Programa de computador de infraestrutura técnica voltada à governança pública. Todos os direitos reservados.</p>
+                <p>&copy; 2026 SVEED. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
-
-    <!-- Modal de Contato -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h3>Solicitar Nota Técnica de Viabilidade</h3>
-            <form id="contactForm" class="contact-form">
-                <div class="form-group">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="cargo">Cargo / Função</label>
-                    <input type="text" id="cargo" name="cargo" required>
-                </div>
-                <div class="form-group">
-                    <label for="instituicao">Instituição / Órgão</label>
-                    <input type="text" id="instituicao" name="instituicao" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail Institucional</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" name="telefone" required>
-                </div>
-                <div class="form-group">
-                    <label for="mensagem">Contexto / Objetivo da Solicitação</label>
-                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Enviar Solicitação</button>
-            </form>
-            <div id="formSuccess" class="form-success" style="display: none;">
-                <i class="fas fa-check-circle"></i>
-                <p>Solicitação recebida com sucesso. Retornaremos em até 48 horas úteis.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Custom JavaScript -->
-    <script src="js/main.js"></script>
 </body>
 </html>
