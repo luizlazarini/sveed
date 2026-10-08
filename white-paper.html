@@ -1,827 +1,567 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="White Paper Técnico SVEED - Aviões, Foguetes e Trens: Por Que a EdTech Tradicional Falha em Políticas Públicas de Educação no Brasil">
-    <title>White Paper Técnico - SVEED</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="images/logo-sveed.jpg">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --azul-escuro: #0A1628;
-            --laranja: #FF8C42;
-            --cyan: #00D4FF;
-            --branco: #FFFFFF;
-            --cinza-claro: #E2E8F0;
-            --cinza-medio: #94A3B8;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--azul-escuro);
-            color: var(--cinza-claro);
-            line-height: 1.8;
-        }
-
-        /* Header fixo com navegação de volta */
-        .wp-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(10, 22, 40, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            border-bottom: 2px solid var(--laranja);
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .wp-header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .wp-back-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--laranja);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            border: 2px solid var(--laranja);
-        }
-
-        .wp-back-btn:hover {
-            background: var(--laranja);
-            color: var(--azul-escuro);
-            transform: translateX(-5px);
-        }
-
-        .wp-logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .wp-logo img {
-            height: 40px;
-            border-radius: 8px;
-        }
-
-        .wp-logo h1 {
-            font-size: 1.5rem;
-            color: var(--branco);
-        }
-
-        .wp-download-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--cyan);
-            color: var(--azul-escuro);
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.5rem 1.5rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .wp-download-btn:hover {
-            background: var(--branco);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
-        }
-
-        /* Container principal */
-        .wp-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 8rem 2rem 4rem;
-        }
-
-        /* Título principal */
-        .wp-hero {
-            text-align: center;
-            margin-bottom: 4rem;
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(0, 212, 255, 0.1));
-            border-radius: 16px;
-            border: 2px solid var(--laranja);
-        }
-
-        .wp-hero h1 {
-            font-size: 2.5rem;
-            color: var(--branco);
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-
-        .wp-hero .subtitle {
-            font-size: 1.8rem;
-            color: var(--laranja);
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            line-height: 1.4;
-        }
-
-        .wp-meta {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-            color: var(--cinza-medio);
-            font-size: 0.9rem;
-        }
-
-        .wp-meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .wp-meta-item i {
-            color: var(--cyan);
-        }
-
-        /* Conteúdo */
-        .wp-content {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 3rem;
-            border-radius: 16px;
-            margin-bottom: 3rem;
-        }
-
-        .wp-section {
-            margin-bottom: 3rem;
-        }
-
-        .wp-section:last-child {
-            margin-bottom: 0;
-        }
-
-        h2 {
-            font-size: 2rem;
-            color: var(--laranja);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid var(--cyan);
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            color: var(--cyan);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        h4 {
-            font-size: 1.2rem;
-            color: var(--branco);
-            margin-top: 1.5rem;
-            margin-bottom: 0.8rem;
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-            color: var(--cinza-claro);
-        }
-
-        strong {
-            color: var(--branco);
-            font-weight: 600;
-        }
-
-        em {
-            color: var(--laranja);
-            font-style: italic;
-        }
-
-        ul, ol {
-            margin-left: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        li {
-            margin-bottom: 0.8rem;
-            color: var(--cinza-claro);
-        }
-
-        /* Boxes de destaque */
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(255, 140, 66, 0.15));
-            border: 2px solid var(--cyan);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-
-        .highlight-box h4 {
-            color: var(--cyan);
-            margin-top: 0;
-        }
-
-        .highlight-box p {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Footer da página */
-        .wp-footer {
-            text-align: center;
-            padding: 3rem 2rem;
-            border-top: 2px solid var(--laranja);
-            margin-top: 4rem;
-        }
-
-        .wp-footer-actions {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .wp-footer-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .wp-footer-btn.primary {
-            background: var(--laranja);
-            color: var(--azul-escuro);
-        }
-
-        .wp-footer-btn.primary:hover {
-            background: var(--branco);
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(255, 140, 66, 0.4);
-        }
-
-        .wp-footer-btn.secondary {
-            background: transparent;
-            color: var(--cyan);
-            border: 2px solid var(--cyan);
-        }
-
-        .wp-footer-btn.secondary:hover {
-            background: var(--cyan);
-            color: var(--azul-escuro);
-        }
-
-        .wp-copyright {
-            color: var(--cinza-medio);
-            font-size: 0.9rem;
-            margin-top: 2rem;
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .wp-header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .wp-hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .wp-hero .subtitle {
-                font-size: 1.3rem;
-            }
-
-            .wp-content {
-                padding: 2rem 1.5rem;
-            }
-
-            h2 {
-                font-size: 1.6rem;
-            }
-
-            h3 {
-                font-size: 1.3rem;
-            }
-
-            .wp-container {
-                padding-top: 10rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SVEED — White Paper v2: infraestrutura offline-first para revisão curricular individual guiada.">
+<meta name="theme-color" content="#0A2342">
+<title>SVEED — White Paper v2</title>
+<link rel="icon" type="image/jpeg" href="images/logo-sveed.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A2342;
+  --navy-2:#17395f;
+  --ink:#1d2935;
+  --muted:#5f6d79;
+  --line:#dbe3ea;
+  --paper:#ffffff;
+  --surface:#f6f8fa;
+  --accent:#e87532;
+  --accent-soft:#fff4ec;
+  --max:1160px;
+  --read:780px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--navy);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.topbar{
+  position:sticky;top:0;z-index:30;
+  border-bottom:1px solid rgba(219,227,234,.95);
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+}
+.topbar-inner{
+  max-width:var(--max);margin:auto;padding:12px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.brand{
+  display:flex;align-items:center;gap:11px;
+  color:var(--navy);text-decoration:none;font-weight:800;letter-spacing:-.01em
+}
+.brand img{
+  width:40px;height:40px;object-fit:cover;border-radius:10px;
+  border:1px solid var(--line)
+}
+.actions{display:flex;gap:10px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:42px;padding:0 16px;border-radius:9px;
+  text-decoration:none;font-weight:700;font-size:.93rem;
+  border:1px solid var(--navy);transition:.18s ease
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-secondary{background:#fff;color:var(--navy)}
+.hero{
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 86% 10%,rgba(232,117,50,.13),transparent 30%),
+    linear-gradient(180deg,#f9fbfc 0%,#ffffff 100%);
+}
+.hero-inner{max-width:var(--max);margin:auto;padding:82px 24px 72px}
+.eyebrow{
+  margin:0 0 14px;color:var(--accent);font-size:.78rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:.1em
+}
+h1{
+  margin:0;color:var(--navy);
+  max-width:950px;font-size:clamp(2.35rem,5vw,4.55rem);
+  line-height:1.04;letter-spacing:-.045em
+}
+.hero-lead{
+  max-width:860px;margin:25px 0 0;
+  color:var(--muted);font-size:clamp(1.06rem,2vw,1.3rem)
+}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:30px}
+.tag{
+  border:1px solid var(--line);background:#fff;color:var(--navy-2);
+  border-radius:999px;padding:7px 12px;font-size:.88rem;font-weight:600
+}
+.hero-note{
+  max-width:860px;margin-top:28px;padding:16px 18px;
+  border-left:4px solid var(--accent);background:var(--accent-soft);
+  border-radius:0 10px 10px 0;color:#5b4639
+}
+.layout{
+  max-width:var(--max);margin:auto;padding:52px 24px 72px;
+  display:grid;grid-template-columns:270px minmax(0,1fr);gap:58px
+}
+.toc{
+  position:sticky;top:88px;align-self:start;
+  border:1px solid var(--line);border-radius:14px;
+  background:var(--surface);padding:18px
+}
+.toc-title{display:block;color:var(--navy);font-weight:800;margin-bottom:8px}
+.toc a{
+  display:block;text-decoration:none;color:var(--muted);
+  padding:7px 0;font-size:.93rem;line-height:1.4
+}
+.toc a:hover{color:var(--navy)}
+main{min-width:0}
+section{max-width:var(--read);margin:0 0 76px}
+.kicker{
+  color:var(--accent);font-size:.76rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:.09em;margin-bottom:8px
+}
+h2{
+  color:var(--navy);font-size:clamp(1.75rem,3vw,2.35rem);
+  line-height:1.2;letter-spacing:-.025em;margin:0 0 18px
+}
+h3{color:var(--navy-2);font-size:1.22rem;line-height:1.35;margin:30px 0 10px}
+p{margin:0 0 18px}
+ul{padding-left:22px;margin:0 0 20px}
+li{margin:7px 0}
+strong{color:#142331}
+.quote{
+  color:var(--navy);font-size:1.25rem;line-height:1.55;font-weight:800;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:25px 0;margin:34px 0
+}
+.callout{
+  background:var(--accent-soft);border-left:4px solid var(--accent);
+  border-radius:0 12px 12px 0;padding:18px 20px;margin:26px 0
+}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:22px 0}
+.card{
+  border:1px solid var(--line);border-radius:14px;background:#fff;padding:20px;
+  box-shadow:0 1px 0 rgba(10,35,66,.02)
+}
+.card h3{margin:0 0 9px;font-size:1.05rem}
+.card p:last-child,.card ul:last-child{margin-bottom:0}
+.flow{counter-reset:step}
+.flow .card{position:relative;padding-left:58px}
+.flow .card:before{
+  counter-increment:step;content:counter(step);
+  position:absolute;left:18px;top:18px;width:28px;height:28px;border-radius:50%;
+  display:grid;place-items:center;background:var(--navy);color:white;
+  font-size:.82rem;font-weight:800
+}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin:22px 0}
+table{width:100%;min-width:640px;border-collapse:collapse}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--surface);color:var(--navy);font-size:.92rem}
+tr:last-child td{border-bottom:none}
+.status{
+  display:inline-block;border-radius:999px;padding:4px 9px;
+  background:#edf3f7;color:var(--navy);font-weight:800;font-size:.78rem
+}
+.rule{
+  display:grid;grid-template-columns:110px 1fr;gap:14px;
+  padding:15px 0;border-bottom:1px solid var(--line)
+}
+.rule:last-child{border-bottom:none}
+.rule strong{color:var(--navy)}
+.small{font-size:.91rem;color:var(--muted)}
+.footer{border-top:1px solid var(--line);background:var(--surface)}
+.footer-inner{
+  max-width:var(--max);margin:auto;padding:36px 24px;
+  color:var(--muted);font-size:.91rem
+}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:26px}
+  .toc{position:relative;top:auto}
+}
+@media (max-width:700px){
+  .topbar-inner{padding:10px 16px}
+  .hero-inner{padding:62px 18px 56px}
+  .layout{padding:38px 18px 58px}
+  .grid{grid-template-columns:1fr}
+  .actions .btn-secondary{display:none}
+  .rule{grid-template-columns:1fr;gap:2px}
+}
+@media print{
+  .topbar,.toc,.actions{display:none!important}
+  body{font-size:10.8pt}
+  .hero-inner,.layout{max-width:none;padding-left:0;padding-right:0}
+  .layout{display:block}
+  section{max-width:none;break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+  .card,.table-wrap{box-shadow:none}
+}
+</style>
 </head>
 <body>
-    <!-- Header fixo -->
-    <header class="wp-header">
-        <div class="wp-header-content">
-            <a href="index.html" class="wp-back-btn">
-                <i class="fas fa-arrow-left"></i>
-                Voltar ao Site
-            </a>
-            <div class="wp-logo">
-                <img src="images/logo-sveed.jpg" alt="SVEED Logo">
-                <h1>SVEED</h1>
-            </div>
-            <a href="white-paper-sveed.pdf" class="wp-download-btn" download>
-                <i class="fas fa-download"></i>
-                Baixar PDF
-            </a>
-        </div>
-    </header>
-
-    <!-- Container principal -->
-    <div class="wp-container">
-        <!-- Hero -->
-        <div class="wp-hero">
-            <h1>WHITE PAPER TÉCNICO</h1>
-            <p class="subtitle">Aviões, Foguetes e Trens: Por Que a EdTech Tradicional Falha em Políticas Públicas de Educação no Brasil</p>
-            <p style="font-size: 1.1rem; color: var(--branco); margin-bottom: 0.5rem;">E Como a Infraestrutura Determinística Resolve o Gap de Auditabilidade</p>
-            <div class="wp-meta">
-                <div class="wp-meta-item">
-                    <i class="fas fa-calendar"></i>
-                    Versão 1.1 | Janeiro de 2026
-                </div>
-                <div class="wp-meta-item">
-                    <i class="fas fa-users"></i>
-                    Autoria: Equipe SVEED
-                </div>
-                <div class="wp-meta-item">
-                    <i class="fas fa-registered"></i>
-                    Registro INPI: BR 51 2026 000328-8
-                </div>
-            </div>
-        </div>
-
-        <!-- Conteúdo -->
-        <div class="wp-content">
-            <!-- Sumário Executivo -->
-            <section class="wp-section">
-                <h2>Sumário Executivo</h2>
-                <p>
-                    A distribuição massiva de dispositivos educacionais em políticas públicas brasileiras enfrenta um paradoxo crítico: <strong>evidência de entrega física não equivale a evidência de uso funcional</strong>. Embora notas fiscais, termos de recebimento e registros logísticos comprovem a aquisição e a distribuição de ativos tecnológicos, tais instrumentos são insuficientes para demonstrar sua execução operacional no contexto educacional.
-                </p>
-                <p>
-                    À medida que o Tribunal de Contas da União (TCU) e a Controladoria-Geral da União (CGU) intensificam auditorias sobre a efetividade dos investimentos em tecnologia educacional, gestores públicos, fornecedores e integradores carecem de instrumentos técnicos capazes de comprovar, de forma objetiva e auditável, o uso funcional dos dispositivos contratados.
-                </p>
-                <p>
-                    Este documento analisa por que soluções EdTech tradicionais — concebidas para ambientes de alta conectividade, hardware atualizado e infraestrutura robusta — <strong>falham sistematicamente</strong> quando aplicadas à realidade brasileira, caracterizada por conectividade intermitente, hardware legado e exigências rigorosas de conformidade com a Lei Geral de Proteção de Dados (LGPD).
-                </p>
-                <p>
-                    Apresenta-se o conceito de <strong>infraestrutura determinística de verificação</strong> como alternativa técnica viável e necessária, demonstrando como arquiteturas offline-first, agnósticas a conteúdo pedagógico e baseadas em processamento local resolvem o problema da auditabilidade sem comprometer a privacidade dos usuários nem depender de condições ideais de operação.
-                </p>
-
-                <div class="highlight-box">
-                    <h4>Principais Conclusões</h4>
-                    <p><strong>Primeira conclusão.</strong> Soluções EdTech globais (como GoGuardian, Lightspeed, Securly e MDMs corporativos) foram projetadas para ambientes controlados e altamente conectados — os "aviões e foguetes" — e não operam de forma eficaz nas "vielas e na mata fechada" da educação pública brasileira.</p>
-                    <p><strong>Segunda conclusão.</strong> O gap de auditabilidade identificado pelo TCU (Acórdãos nº 326/2022 e nº 286/2025) permanece sem resposta técnica adequada no mercado.</p>
-                    <p><strong>Terceira conclusão.</strong> A infraestrutura determinística de verificação fornece evidência objetiva de uso funcional, sem coleta de dados pessoais, alinhando-se às exigências regulatórias, operacionais e jurídicas do setor público.</p>
-                </div>
-            </section>
-
-            <!-- 1. O Problema -->
-            <section class="wp-section">
-                <h2>1. O Problema: Evidência de Entrega ≠ Evidência de Uso</h2>
-                
-                <h3>1.1 Contexto das Políticas Públicas de Tecnologia Educacional</h3>
-                <p>
-                    Desde o lançamento do Programa Nacional de Tecnologia Educacional (ProInfo), em 1997, o governo federal brasileiro investe recursos significativos na aquisição e distribuição de dispositivos tecnológicos para escolas públicas. Entre 2012 e 2015, o Fundo Nacional de Desenvolvimento da Educação (FNDE) coordenou a aquisição de aproximadamente <strong>600 mil tablets educacionais</strong> destinados a professores do ensino médio.
-                </p>
-                <p>
-                    Apesar do volume expressivo de investimentos, auditorias conduzidas por órgãos de controle identificaram lacunas críticas na comprovação da utilização efetiva desses ativos. O TCU, em auditoria operacional realizada em 2022 (<strong>Acórdão nº 326/2022-TCU-Plenário</strong>), apontou o risco de desalinhamento entre a aquisição de TIC e os requisitos das políticas públicas de educação digital, comprometendo a efetividade dos investimentos realizados.
-                </p>
-                <p>
-                    O <strong>Acórdão nº 286/2025-TCU-Plenário</strong> reforçou esse diagnóstico ao destacar a necessidade de mecanismos capazes de comprovar não apenas a entrega física, mas a execução funcional dos dispositivos no contexto educacional.
-                </p>
-
-                <h3>1.2 O Desafio da Comprovação Operacional</h3>
-                <p>
-                    O problema central pode ser sintetizado da seguinte forma:
-                </p>
-                <div class="highlight-box">
-                    <p style="text-align: center; font-size: 1.2rem; font-weight: 600; margin: 0;">
-                        Nota Fiscal + Termo de Recebimento ≠ Evidência de Uso Funcional
-                    </p>
-                </div>
-                <p>
-                    Gestores públicos são confrontados com questionamentos recorrentes:
-                </p>
-                <ul>
-                    <li>Os dispositivos estão sendo utilizados pelos beneficiários finais (alunos e professores)?</li>
-                    <li>O uso ocorre com regularidade mínima compatível com os objetivos da política pública?</li>
-                    <li>É possível comprovar a execução operacional sem violar direitos de privacidade?</li>
-                    <li>Como auditar o uso em contextos de baixa conectividade, nos quais relatórios em tempo real são inviáveis?</li>
-                </ul>
-                <p>
-                    Para fornecedores e operadoras, a ausência de evidência objetiva de uso funcional representa <strong>risco contratual e reputacional</strong>, podendo resultar em questionamentos por órgãos de controle, retenção de pagamentos e prejuízos em futuras licitações.
-                </p>
-
-                <h3>1.3 Dados de Contexto Operacional</h3>
-                <p>
-                    A infraestrutura educacional brasileira impõe restrições técnicas que inviabilizam a adoção direta de soluções EdTech convencionais:
-                </p>
-                
-                <h4>Conectividade</h4>
-                <p>
-                    De acordo com o <strong>Censo Escolar 2023 (INEP)</strong>, cerca de 35% das escolas públicas não possuem acesso adequado à internet ou apresentam conectividade intermitente. Em áreas rurais e periferias urbanas, esse percentual ultrapassa 50%.
-                </p>
-
-                <h4>Hardware</h4>
-                <p>
-                    Grande parte dos dispositivos distribuídos opera em Android 7 ou versões anteriores, com 1,5 GB a 2 GB de memória RAM. Os ciclos de atualização de hardware variam entre cinco e sete anos, incompatíveis com os requisitos de plataformas SaaS modernas.
-                </p>
-
-                <h4>Regulação e privacidade</h4>
-                <p>
-                    A LGPD (Lei nº 13.709/2018) impõe restrições severas à coleta e ao tratamento de dados pessoais de menores de idade. Soluções baseadas em monitoramento de conteúdo, comportamento ou comunicações individuais enfrentam barreiras jurídicas significativas no contexto da educação pública.
-                </p>
-            </section>
-
-            <!-- 2. Aviões e Foguetes -->
-            <section class="wp-section">
-                <h2>2. Aviões e Foguetes: Por Que a EdTech Global Não Resolve o Problema</h2>
-
-                <h3>2.1 Plataformas de Monitoramento Comportamental</h3>
-                <p>
-                    Plataformas como <strong>GoGuardian, Lightspeed Systems, Securly e Gaggle</strong> foram desenvolvidas para monitorar a atividade estudantil em ambientes escolares altamente conectados, com foco em segurança digital e vigilância comportamental.
-                </p>
-                <p>
-                    Essas soluções <strong>dependem de conectividade contínua</strong>, realizam coleta extensiva de dados pessoais e priorizam monitoramento de conteúdo, não verificação operacional. Em contextos de baixa conectividade, tornam-se inoperantes; sob a ótica da LGPD, apresentam riscos jurídicos estruturais; e, do ponto de vista da auditoria pública, não respondem à pergunta central: <em>o dispositivo está sendo utilizado funcionalmente para fins educacionais?</em>
-                </p>
-
-                <h3>2.2 Mobile Device Management (MDM) Corporativo</h3>
-                <p>
-                    Ferramentas de MDM foram concebidas para gestão patrimonial e segurança de frotas corporativas. Embora úteis para inventário e controle de dispositivos, <strong>não verificam a execução de atividades educacionais específicas</strong>, tampouco distinguem uso educacional de uso recreativo.
-                </p>
-                <p>
-                    Relatórios genéricos de "tempo de tela" não constituem evidência auditável de execução operacional, e a associação entre dispositivo e usuário cria riscos adicionais de identificação individual incompatíveis com políticas públicas educacionais.
-                </p>
-
-                <h3>2.3 Plataformas Educacionais com Analytics</h3>
-                <p>
-                    Sistemas como <strong>Google Classroom, Moodle e Canvas LMS</strong> mensuram engajamento dentro de suas próprias plataformas, mas não verificam o uso funcional do dispositivo como ativo público. Além disso, dependem de conectividade contínua e não são agnósticos a conteúdo pedagógico.
-                </p>
-
-                <h3>2.4 O Viés Estratégico Comum</h3>
-                <p>
-                    Essas soluções compartilham um viés de origem: foram projetadas para contextos do primeiro mundo, com conectividade ubíqua, hardware padronizado, equipes de TI dedicadas e orçamentos recorrentes. <strong>Adaptá-las a contextos emergentes equivale a tentar pousar aviões em terrenos sem pista.</strong>
-                </p>
-            </section>
-
-            <!-- 3. Trilhos e Trens -->
-            <section class="wp-section">
-                <h2>3. Trilhos e Trens: Infraestrutura Determinística de Verificação</h2>
-
-                <h3>3.1 Redefinição do Problema</h3>
-                <p>
-                    A solução não está em sofisticar aviões, mas em <strong>construir trilhos</strong>. O desafio é comprovar uso operacional de dispositivos educacionais em larga escala, em contextos adversos, sem violar a LGPD e com evidência auditável.
-                </p>
-                <p>
-                    A resposta é a <strong>infraestrutura determinística de verificação</strong>, caracterizada por:
-                </p>
-                <ul>
-                    <li>Operação offline-first</li>
-                    <li>Verificação de nexo operacional mínimo</li>
-                    <li>Geração de registros agregados e auditáveis</li>
-                </ul>
-
-                <h3>3.2 Pilares Arquiteturais</h3>
-                <p>
-                    A arquitetura determinística de verificação fundamenta-se em seis pilares técnicos interdependentes:
-                </p>
-
-                <h4>Pilar 1: Offline-first com sincronização assíncrona</h4>
-                <p>
-                    O sistema opera integralmente sem conexão à internet, armazenando registros localmente e sincronizando apenas quando há conectividade Wi-Fi disponível. Essa abordagem elimina a dependência de infraestrutura de rede e garante funcionamento em qualquer contexto operacional.
-                </p>
-
-                <h4>Pilar 2: Timer monotônico inviolável</h4>
-                <p>
-                    A medição de tempo utiliza o <strong>relógio monotônico do sistema operacional</strong> (SystemClock.elapsedRealtime), imune a manipulações do relógio de parede pelo usuário. Qualquer tentativa de adulteração temporal é detectada e registrada, garantindo a integridade dos dados de execução.
-                </p>
-
-                <h4>Pilar 3: Gatekeeper temporal</h4>
-                <p>
-                    O sistema respeita integralmente a rotina educacional, operando exclusivamente fora do horário escolar, em dias letivos. Finais de semana, feriados e férias permanecem livres. Essa arquitetura elimina conflitos com a prática pedagógica e garante que a verificação não interfira no processo de ensino.
-                </p>
-
-                <h4>Pilar 4: Detecção de nexo operacional</h4>
-                <p>
-                    A verificação ocorre por meio de <strong>checkpoints que exigem confirmação humana explícita</strong>, sem inferência automática de tópico ou conteúdo. O sistema verifica a interação funcional, não o desempenho pedagógico. Não há avaliação de certo ou errado, apenas confirmação de execução.
-                </p>
-
-                <h4>Pilar 5: Agregação regional com hash criptográfico</h4>
-                <p>
-                    Os dados são agregados por região (MCC/MNC da operadora) e período, utilizando <strong>hash SHA-256</strong> que impossibilita tecnicamente a desagregação para identificação individual. A conformidade com a LGPD é garantida por design, não por processo administrativo.
-                </p>
-
-                <h4>Pilar 6: Geolocalização por MCC/MNC</h4>
-                <p>
-                    A identificação regional utiliza os códigos de país e operadora da rede móvel, sem acesso a GPS ou dados de localização precisa. Essa abordagem permite agregação geográfica para fins estatísticos sem comprometer a privacidade do usuário.
-                </p>
-
-                <h3>3.3 Fluxo Operacional Determinístico</h3>
-                <p>
-                    O ciclo de verificação segue uma sequência predefinida e invariável:
-                </p>
-
-                <h4>Etapa 1: Orientação por áudio</h4>
-                <p>
-                    O sistema apresenta instruções em linguagem acessível, utilizando síntese de voz local (TTS), sem pressupor letramento funcional do usuário.
-                </p>
-
-                <h4>Etapa 2: Bloco de reforço</h4>
-                <p>
-                    Período dedicado à exposição de conteúdo relacionado à última lição estudada, sem avaliação ou cobrança de desempenho. O foco é o tempo de contato com o tema, não a absorção de conhecimento.
-                </p>
-
-                <h4>Etapa 3: Pausa obrigatória</h4>
-                <p>
-                    Interrupção programada para hidratação e alongamento, promovendo saúde digital e mitigando comportamentos de simulação de estudo por fadiga.
-                </p>
-
-                <h4>Etapa 4: Bloco de execução</h4>
-                <p>
-                    Momento de interação funcional com exercícios análogos à lição, verificando nexo operacional por meio de checkpoints com confirmação humana explícita.
-                </p>
-
-                <h4>Etapa 5: Encerramento e liberação</h4>
-                <p>
-                    Conclusão do ciclo com registro dos dados de execução e liberação total do dispositivo até o próximo dia letivo.
-                </p>
-            </section>
-
-            <!-- 4. Evidências de Demanda -->
-            <section class="wp-section">
-                <h2>4. Evidências de Demanda Não Atendida</h2>
-
-                <h3>4.1 Auditorias do TCU</h3>
-                <p>
-                    O <strong>Acórdão nº 326/2022-TCU-Plenário</strong> identificou riscos de desalinhamento entre aquisições de TIC e requisitos de políticas públicas educacionais, recomendando a adoção de mecanismos de verificação de efetividade.
-                </p>
-                <p>
-                    O <strong>Acórdão nº 286/2025-TCU-Plenário</strong> reiterou a necessidade de comprovação de execução funcional, não apenas de entrega física, dos ativos tecnológicos distribuídos.
-                </p>
-
-                <h3>4.2 Dados do FNDE e CETIC.br</h3>
-                <p>
-                    Pesquisas do Centro Regional de Estudos para o Desenvolvimento da Sociedade da Informação (CETIC.br) indicam subutilização sistemática de dispositivos distribuídos em políticas públicas, com taxas de ociosidade que comprometem a efetividade dos investimentos realizados.
-                </p>
-
-                <h3>4.3 Lacuna de Mercado</h3>
-                <p>
-                    Não há, no mercado brasileiro ou internacional, solução técnica que atenda simultaneamente aos requisitos de:
-                </p>
-                <ul>
-                    <li>Operação offline</li>
-                    <li>Conformidade com LGPD</li>
-                    <li>Auditabilidade por órgãos de controle</li>
-                    <li>Compatibilidade com hardware legado</li>
-                </ul>
-                <p>
-                    <strong>O gap de auditabilidade permanece sem resposta adequada.</strong>
-                </p>
-            </section>
-
-            <!-- 5. O Caso SVEED -->
-            <section class="wp-section">
-                <h2>5. Trilhos Já Existem: O Caso SVEED</h2>
-                <p>
-                    O Sistema de Verificação de Execução Educacional em Dispositivos (SVEED) é uma implementação concreta da arquitetura determinística de verificação, desenvolvida especificamente para o contexto brasileiro.
-                </p>
-
-                <h3>5.1 Registro e Proteção Legal</h3>
-                <p>
-                    O SVEED possui <strong>registro de programa de computador concedido</strong> pelo Instituto Nacional da Propriedade Industrial (INPI), processo <strong>BR 51 2026 000328-8</strong>, publicado na Revista da Propriedade Industrial nº 2873 de 27 de janeiro de 2026, com proteção válida por 50 anos.
-                </p>
-
-                <h3>5.2 Especificações Técnicas</h3>
-                <ul>
-                    <li><strong>Plataforma:</strong> Android 7.0 ou superior</li>
-                    <li><strong>Requisito mínimo:</strong> 1,5 GB de RAM</li>
-                    <li><strong>Tamanho do aplicativo:</strong> ~7,5 MB</li>
-                    <li><strong>Banco de dados:</strong> Room/SQLite com janela móvel de 5 dias</li>
-                    <li><strong>Sincronização:</strong> Exclusivamente via Wi-Fi quando disponível</li>
-                </ul>
-
-                <h3>5.3 Natureza Jurídica</h3>
-                <p>
-                    O SVEED é classificado como <strong>GovTech (infraestrutura técnica de governança pública)</strong>, não EdTech (plataforma educacional).
-                </p>
-                <ul>
-                    <li>❌ Não realiza ensino</li>
-                    <li>❌ Não executa avaliação pedagógica</li>
-                    <li>❌ Não coleta dados pessoais</li>
-                    <li>✅ Atua exclusivamente na camada de verificação de processos operacionais</li>
-                </ul>
-
-                <h3>5.4 Validação Técnica</h3>
-                <p>
-                    O sistema encontra-se em processo de obtenção de <strong>Laudo de Validação de Protocolo Determinístico</strong> por empresa terceirizada independente, atestando o funcionamento dos seis pilares arquiteturais em condições reais de operação.
-                </p>
-            </section>
-
-            <!-- 6. Implicações -->
-            <section class="wp-section">
-                <h2>6. Implicações para Stakeholders</h2>
-
-                <h3>6.1 Gestores Públicos</h3>
-                <p>
-                    A adoção de infraestrutura determinística de verificação <strong>reduz significativamente o risco de questionamentos</strong> em auditorias do TCU e CGU, fornecendo evidência objetiva de execução funcional dos ativos tecnológicos contratados. A transparência na prestação de contas é ampliada sem comprometer a privacidade dos beneficiários.
-                </p>
-
-                <h3>6.2 Fornecedores e Integradores</h3>
-                <p>
-                    A disponibilidade de evidência auditável de uso funcional representa <strong>proteção contratual objetiva</strong>, mitigando riscos de retenção de pagamentos e questionamentos sobre efetividade de entrega. Constitui diferencial competitivo em processos licitatórios que passem a exigir verificação de execução.
-                </p>
-
-                <h3>6.3 Órgãos de Controle</h3>
-                <p>
-                    A infraestrutura determinística fornece dados agregados, auditáveis e compatíveis com a LGPD, permitindo avaliação objetiva da efetividade de políticas públicas de tecnologia educacional sem acesso a informações individuais de beneficiários.
-                </p>
-
-                <h3>6.4 Operadoras de Telecomunicações</h3>
-                <p>
-                    Empresas que fornecem conectividade e dispositivos em contratos com o setor público podem agregar a verificação de execução como camada adicional de valor, demonstrando compromisso com a efetividade dos investimentos e não apenas com a entrega física de ativos.
-                </p>
-            </section>
-
-            <!-- 7. Roadmap -->
-            <section class="wp-section">
-                <h2>7. Roadmap de Adoção</h2>
-
-                <h3>7.1 Fase 1: Prova de Conceito Municipal</h3>
-                <p>
-                    Implementação piloto em município de médio porte, com acompanhamento técnico e geração de relatórios de validação.
-                </p>
-                <ul>
-                    <li><strong>Duração estimada:</strong> 90 dias</li>
-                    <li><strong>Objetivo:</strong> demonstrar viabilidade operacional e gerar evidências para escala</li>
-                </ul>
-
-                <h3>7.2 Fase 2: Escala Regional</h3>
-                <p>
-                    Expansão para rede estadual ou conjunto de municípios, com integração a sistemas de gestão educacional existentes.
-                </p>
-                <ul>
-                    <li><strong>Duração estimada:</strong> 180 dias</li>
-                    <li><strong>Objetivo:</strong> validar escalabilidade e refinar processos de implantação</li>
-                </ul>
-
-                <h3>7.3 Fase 3: Adoção como Padrão Nacional</h3>
-                <p>
-                    Inclusão de requisitos de verificação de execução em editais federais de aquisição de dispositivos educacionais, estabelecendo a auditabilidade como condição de conformidade contratual.
-                </p>
-                <p>
-                    <strong>Mecanismo:</strong> impugnação de editais que não contemplem verificação de execução, com base no princípio constitucional de economicidade (art. 70, CF/88).
-                </p>
-            </section>
-
-            <!-- 8. Conclusão -->
-            <section class="wp-section">
-                <h2>8. Conclusão</h2>
-                <p>
-                    Políticas públicas de tecnologia educacional não precisam de mais sofisticação algorítmica, mas de <strong>infraestrutura robusta, determinística e auditável</strong>. O paradigma de "aviões e foguetes" — soluções de alta complexidade projetadas para contextos ideais — falha sistematicamente quando confrontado com a realidade da educação pública brasileira.
-                </p>
-                <p>
-                    A metáfora dos "trilhos e trens" oferece uma alternativa pragmática: infraestrutura simples, confiável e escalável, que funciona independentemente das condições adversas do terreno. O SVEED demonstra que essa abordagem é tecnicamente viável, juridicamente compatível e operacionalmente escalável.
-                </p>
-                <p>
-                    O gap de auditabilidade identificado pelo TCU há anos permanece sem resposta adequada do mercado. A infraestrutura determinística de verificação preenche essa lacuna, fornecendo aos gestores públicos, fornecedores e órgãos de controle o instrumento técnico que faltava para transformar evidência de entrega em evidência de uso.
-                </p>
-                <div class="highlight-box" style="text-align: center; background: rgba(255, 140, 66, 0.2); border-color: var(--laranja);">
-                    <h4 style="color: var(--laranja); font-size: 1.5rem; margin-bottom: 1rem;">O trem está nos trilhos. Resta embarcar os passageiros.</h4>
-                </div>
-            </section>
-
-            <!-- Referências -->
-            <section class="wp-section">
-                <h2>Referências</h2>
-                <ul style="line-height: 2;">
-                    <li>Tribunal de Contas da União. <strong>Acórdão nº 326/2022-TCU-Plenário</strong>. Auditoria operacional sobre políticas públicas de educação digital.</li>
-                    <li>Tribunal de Contas da União. <strong>Acórdão nº 286/2025-TCU-Plenário</strong>. Auditoria sobre efetividade de investimentos em tecnologia educacional.</li>
-                    <li>Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP). <strong>Censo Escolar 2023</strong>.</li>
-                    <li>Centro Regional de Estudos para o Desenvolvimento da Sociedade da Informação (<strong>CETIC.br</strong>). Pesquisa TIC Educação.</li>
-                    <li><strong>Lei nº 13.709/2018</strong>. Lei Geral de Proteção de Dados Pessoais (LGPD).</li>
-                    <li><strong>Constituição Federal de 1988, art. 70</strong>. Princípio da economicidade.</li>
-                    <li>Instituto Nacional da Propriedade Industrial (INPI). <strong>Registro de Programa de Computador BR 51 2026 000328-8</strong>, RPI 2873 de 27/01/2026.</li>
-                </ul>
-
-                <h3 style="margin-top: 3rem;">Informações de Contato</h3>
-                <p>
-                    <strong>Site institucional:</strong> <a href="https://www.sveed.com.br" style="color: var(--cyan); text-decoration: none;">https://www.sveed.com.br</a><br>
-                    <strong>Consulta INPI:</strong> <a href="https://busca.inpi.gov.br" style="color: var(--cyan); text-decoration: none;">https://busca.inpi.gov.br</a> — Processo BR 51 2026 000328-8
-                </p>
-            </section>
-        </div>
-
-        <!-- Footer da página -->
-        <footer class="wp-footer">
-            <div class="wp-footer-actions">
-                <a href="index.html" class="wp-footer-btn primary">
-                    <i class="fas fa-arrow-left"></i>
-                    Voltar ao Site Principal
-                </a>
-                <a href="white-paper-sveed.pdf" class="wp-footer-btn secondary" download>
-                    <i class="fas fa-download"></i>
-                    Baixar PDF Completo
-                </a>
-            </div>
-            <p class="wp-copyright">
-                Documento técnico-institucional, sem caráter comercial ou pedagógico.<br>
-                © 2026 SVEED. Todos os direitos reservados.<br>
-                Registro INPI BR 51 2026 000328-8 | RPI 2873 de 27/01/2026
-            </p>
-        </footer>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html" aria-label="Voltar ao site SVEED">
+      <img src="images/logo-sveed.jpg" alt="Logo SVEED">
+      <span>SVEED</span>
+    </a>
+    <div class="actions">
+      <a class="btn btn-secondary" href="index.html">Voltar ao site</a>
+      <a class="btn btn-primary" href="#estado-atual">Estado atual</a>
     </div>
+  </div>
+</header>
 
-    <!-- Sistema de Tradução Multi-idioma -->
-    <script>
-        // Detectar idioma da URL ou usar padrão
-        const urlParams = new URLSearchParams(window.location.search);
-        const lang = urlParams.get('lang') || 'pt';
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">White Paper · Versão 2.0 · Outubro de 2026</p>
+    <h1>Infraestrutura Offline-First para Revisão Curricular Individual Guiada</h1>
+    <p class="hero-lead">
+      Um sistema de revisão curta, adaptação por regras e recuperação de pré-requisitos,
+      projetado para ampliar a autonomia da criança depois da aula sem substituir professor,
+      escola ou currículo.
+    </p>
+    <div class="tags" aria-label="Características principais">
+      <span class="tag">Android</span>
+      <span class="tag">Offline-first</span>
+      <span class="tag">BNCC</span>
+      <span class="tag">Sem IA generativa na sessão</span>
+      <span class="tag">Sem gamificação</span>
+      <span class="tag">Revisão individual guiada</span>
+    </div>
+    <div class="hero-note">
+      Este documento descreve o produto no estágio atual e distingue explicitamente
+      funcionalidades implementadas, limitações conhecidas e pontos que ainda dependem de
+      validação externa.
+    </div>
+  </div>
+</section>
 
-        // Textos traduzidos para elementos principais
-        const translations = {
-            pt: {
-                backBtn: 'Voltar ao Site',
-                downloadBtn: 'Baixar PDF',
-                title: 'WHITE PAPER TÉCNICO',
-                subtitle: 'Aviões, Foguetes e Trens: Por Que a EdTech Tradicional Falha em Políticas Públicas de Educação no Brasil',
-                subtitleComplement: 'E Como a Infraestrutura Determinística Resolve o Gap de Auditabilidade',
-                version: 'Versão 1.1 | Janeiro de 2026',
-                authorship: 'Autoria: Equipe SVEED',
-                footerBackBtn: 'Voltar ao Site Principal',
-                footerDownloadBtn: 'Baixar PDF Completo',
-                footerCopyright: 'Documento técnico-institucional, sem caráter comercial ou pedagógico.'
-            },
-            en: {
-                backBtn: 'Back to Site',
-                downloadBtn: 'Download PDF',
-                title: 'TECHNICAL WHITE PAPER',
-                subtitle: 'Airplanes, Rockets and Trains: Why Traditional EdTech Fails in Public Education Policies in Brazil',
-                subtitleComplement: 'And How Deterministic Infrastructure Solves the Auditability Gap',
-                version: 'Version 1.1 | January 2026',
-                authorship: 'Authors: SVEED Team',
-                footerBackBtn: 'Back to Main Site',
-                footerDownloadBtn: 'Download Complete PDF',
-                footerCopyright: 'Technical-institutional document, without commercial or pedagogical character.'
-            },
-            es: {
-                backBtn: 'Volver al Sitio',
-                downloadBtn: 'Descargar PDF',
-                title: 'WHITE PAPER TÉCNICO',
-                subtitle: 'Aviones, Cohetes y Trenes: Por Qué la EdTech Tradicional Falla en Políticas Públicas de Educación en Brasil',
-                subtitleComplement: 'Y Cómo la Infraestructura Determinística Resuelve el Gap de Auditabilidad',
-                version: 'Versión 1.1 | Enero de 2026',
-                authorship: 'Autoría: Equipo SVEED',
-                footerBackBtn: 'Volver al Sitio Principal',
-                footerDownloadBtn: 'Descargar PDF Completo',
-                footerCopyright: 'Documento técnico-institucional, sin carácter comercial o pedagógico.'
-            }
-        };
+<div class="layout">
+  <aside class="toc" aria-label="Sumário do white paper">
+    <span class="toc-title">Neste documento</span>
+    <a href="#resumo">Resumo executivo</a>
+    <a href="#problema">1. O problema</a>
+    <a href="#papel">2. Escopo</a>
+    <a href="#funcionamento">3. Como funciona</a>
+    <a href="#orbita">4. Órbita e pré-requisitos</a>
+    <a href="#autonomia">5. Autonomia e acessibilidade</a>
+    <a href="#rotina">6. Rotina e concentração</a>
+    <a href="#arquitetura">7. Arquitetura técnica</a>
+    <a href="#dados">8. Dados, privacidade e segurança</a>
+    <a href="#professor">9. Modo professor</a>
+    <a href="#estado-atual">10. Estado atual</a>
+    <a href="#evidencia">11. Evidência e próximos passos</a>
+    <a href="#governanca">12. Escalabilidade e governança</a>
+  </aside>
 
-        // Aplicar tradução
-        const t = translations[lang] || translations.pt;
+  <main>
+    <section id="resumo">
+      <p class="kicker">Resumo executivo</p>
+      <h2>Uma camada de apoio entre a aula coletiva e a revisão individual</h2>
+      <p>
+        O SVEED parte de uma constatação simples: a escola ensina coletivamente, mas a revisão
+        acontece individualmente. Cada criança esquece etapas diferentes, encontra obstáculos
+        diferentes e precisa de quantidades diferentes de apoio para continuar.
+      </p>
+      <p>
+        Em casa, esse apoio depende frequentemente da disponibilidade de um adulto com tempo,
+        conhecimento e condições de acompanhar a criança. Quando esse apoio não existe, a
+        continuidade entre aula e estudo individual pode ficar sem estrutura.
+      </p>
+      <div class="quote">A escola ensina. O SVEED acompanha a revisão.</div>
+      <p>
+        O produto foi concebido para ocupar essa “última milha” educacional com uma rotina curta,
+        previsível e individual. A complexidade fica sob o capô; para a criança, a interação
+        deve permanecer simples.
+      </p>
+    </section>
 
-        // Atualizar elementos da página
-        document.querySelector('.wp-back-btn').innerHTML = `<i class="fas fa-arrow-left"></i> ${t.backBtn}`;
-        document.querySelector('.wp-download-btn').innerHTML = `<i class="fas fa-download"></i> ${t.downloadBtn}`;
-        document.querySelector('.wp-hero h1').textContent = t.title;
-        document.querySelector('.wp-hero .subtitle').textContent = t.subtitle;
-        document.querySelectorAll('.wp-hero p')[0].textContent = t.subtitleComplement;
-        document.querySelectorAll('.wp-meta-item')[0].innerHTML = `<i class="fas fa-calendar"></i> ${t.version}`;
-        document.querySelectorAll('.wp-meta-item')[1].innerHTML = `<i class="fas fa-users"></i> ${t.authorship}`;
-        document.querySelectorAll('.wp-footer-btn')[0].innerHTML = `<i class="fas fa-arrow-left"></i> ${t.footerBackBtn}`;
-        document.querySelectorAll('.wp-footer-btn')[1].innerHTML = `<i class="fas fa-download"></i> ${t.footerDownloadBtn}`;
-        document.querySelectorAll('.wp-copyright')[0].innerHTML = `${t.footerCopyright}<br>© 2026 SVEED. Todos os direitos reservados.<br>Registro INPI BR 51 2026 000328-8 | RPI 2873 de 27/01/2026`;
-    </script>
+    <section id="problema">
+      <p class="kicker">1 · Problema</p>
+      <h2>Ensinar em grupo não elimina a necessidade de revisão individual</h2>
+      <p>
+        Em uma turma, o professor precisa conduzir um grupo inteiro. Mesmo quando a aula foi
+        adequada, não é realisticamente possível oferecer todos os dias alguns minutos de
+        revisão individual para cada aluno, no momento exato em que ele encontra uma lacuna.
+      </p>
+      <p>
+        O problema que o SVEED procura enfrentar não é a falta de conteúdo educacional. É a
+        falta de uma infraestrutura simples de acompanhamento da revisão depois da aula,
+        especialmente quando a criança está sozinha ou sem apoio acadêmico disponível em casa.
+      </p>
+    </section>
+
+    <section id="papel">
+      <p class="kicker">2 · Escopo</p>
+      <h2>O SVEED revisa; não substitui escola, professor ou currículo</h2>
+      <p>
+        O SVEED é uma infraestrutura de revisão curricular individual guiada. Seu escopo é
+        deliberadamente limitado: revisar, praticar, oferecer pistas, recuperar pré-requisitos
+        quando necessário e manter uma rotina curta de estudo.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>O que o SVEED faz</h3>
+          <ul>
+            <li>revisa habilidades curriculares já trabalhadas;</li>
+            <li>gera exercícios localmente a partir de regras e templates;</li>
+            <li>oferece pistas progressivas quando disponíveis;</li>
+            <li>disponibiliza conceitos de apoio separados das pistas;</li>
+            <li>reduz temporariamente a dificuldade quando há fricção;</li>
+            <li>retorna à habilidade-alvo depois da estabilização.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Limites deliberados</h3>
+          <ul>
+            <li>não substitui professor ou aula;</li>
+            <li>não deve introduzir autonomamente conteúdo curricular inédito;</li>
+            <li>não diagnostica semanticamente a causa de cada erro;</li>
+            <li>não usa pontos, moedas, ranking ou streaks como motor da sessão;</li>
+            <li>não depende de IA generativa para criar questões para a criança.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="funcionamento">
+      <p class="kicker">3 · Fluxo pedagógico</p>
+      <h2>Erro, pista, nova tentativa e continuidade</h2>
+      <div class="grid flow">
+        <div class="card">
+          <h3>Habilidade-alvo</h3>
+          <p>O sistema parte de uma habilidade previamente identificada pelo fluxo do aluno ou pelo modo professor.</p>
+        </div>
+        <div class="card">
+          <h3>Exercício análogo</h3>
+          <p>A criança pratica uma instância gerada localmente dentro de um universo curricular fechado.</p>
+        </div>
+        <div class="card">
+          <h3>Primeiro erro</h3>
+          <p>Quando há pista disponível, o SVEED oferece ajuda sem transformar imediatamente o erro em punição visual.</p>
+        </div>
+        <div class="card">
+          <h3>Segunda chance</h3>
+          <p>A criança pode usar a pista e tentar novamente. Em caso de novo erro, recebe feedback necessário para seguir.</p>
+        </div>
+      </div>
+      <p>
+        As pistas podem existir em até três níveis, conforme o conteúdo disponível. A
+        <strong>Biblioteca de Conceitos</strong> é uma camada diferente: enquanto a pista orienta
+        o raciocínio naquele exercício, a biblioteca explica o conceito relacionado.
+      </p>
+      <div class="callout">
+        O erro não é tratado apenas como pontuação. Ele funciona como sinal para ajustar a
+        experiência, oferecer suporte e preservar a continuidade da revisão.
+      </div>
+    </section>
+
+    <section id="orbita">
+      <p class="kicker">4 · Adaptação por regras</p>
+      <h2>Órbita, respiro cognitivo e recuperação de pré-requisitos</h2>
+      <p>
+        A revisão trabalha em torno de uma habilidade-alvo com pequena variação local. A órbita
+        é composta por <strong>ALVO, ALVO-1, ALVO-2 e ALVO+1</strong>.
+      </p>
+      <div class="rule"><strong>ALVO</strong><span>Habilidade principal que a criança precisa revisar.</span></div>
+      <div class="rule"><strong>ALVO-1</strong><span>Redução temporária de complexidade para manter fluidez e aliviar a carga.</span></div>
+      <div class="rule"><strong>ALVO-2</strong><span>Segundo degrau de redução quando a dificuldade persiste.</span></div>
+      <div class="rule"><strong>ALVO+1</strong><span>Sondagem controlada acima do alvo. Se houver dificuldade, o sistema retorna rapidamente.</span></div>
+      <p style="margin-top:22px">
+        Descer não significa abandonar o objetivo. Pode funcionar como um <strong>respiro
+        cognitivo</strong>: a criança volta a operar em uma faixa relativamente mais simples,
+        interrompe uma sequência frustrante de erros e depois retorna ao alvo.
+      </p>
+      <p>
+        Quando a dificuldade persiste, o grafo curricular pode ser usado para recuar a um
+        pré-requisito associado. O grafo é usado <strong>somente para baixo</strong>; não é um
+        mecanismo para empurrar a criança para progressões curriculares inéditas.
+      </p>
+      <div class="callout">
+        Formulação operacional: quando erros sucessivos indicam dificuldade para prosseguir, o
+        SVEED pode recuar, por regras predefinidas, para um pré-requisito curricular associado e
+        depois conduzir o aluno de volta à trajetória original.
+      </div>
+    </section>
+
+    <section id="autonomia">
+      <p class="kicker">5 · Experiência da criança</p>
+      <h2>Simples na superfície, complexo apenas onde precisa ser</h2>
+      <p>
+        A criança não precisa entender órbita, grafo, templates ou regras de recuperação.
+        Ela encontra uma sequência previsível, poucos comandos e ajuda no momento necessário.
+      </p>
+      <h3>TTS como camada de autonomia</h3>
+      <p>
+        A síntese de voz do próprio sistema operacional pode ler enunciados e instruções. Para
+        crianças com baixa fluência leitora, isso reduz a dependência de um adulto que leia o
+        exercício. Alunos mais velhos e fluentes podem simplesmente ignorar o áudio.
+      </p>
+      <h3>Sem gamificação e sem placar durante a revisão</h3>
+      <p>
+        O SVEED não usa moedas, ranking, avatares ou recompensas artificiais como núcleo de
+        engajamento. Também evita exibir continuamente um placar de acertos e erros durante a
+        sessão. O feedback mostrado é o necessário para conduzir a revisão.
+      </p>
+    </section>
+
+    <section id="rotina">
+      <p class="kicker">6 · Rotina e concentração</p>
+      <h2>Uma sessão curta, previsível e com saída segura</h2>
+      <p>
+        O núcleo do produto é uma revisão diária curta, concebida em torno de aproximadamente
+        15 minutos. A intenção é criar uma rotina possível de repetir, não uma segunda jornada escolar.
+      </p>
+      <p>
+        Durante a revisão, o SVEED pode ativar um modo de concentração que reduz trocas impulsivas
+        para aplicativos concorrentes. Esse modo não é um bloqueio absoluto: chamadas recebidas
+        permanecem possíveis e uma saída de emergência permite encerrar a sessão quando necessário.
+      </p>
+      <p>
+        A rotina também prevê convites limitados ao longo do dia e um horário de encerramento,
+        evitando que a criança seja pressionada a cumprir a atividade a qualquer hora da noite.
+      </p>
+    </section>
+
+    <section id="arquitetura">
+      <p class="kicker">7 · Engenharia</p>
+      <h2>Conteúdo local, regras explícitas e baixa dependência de infraestrutura</h2>
+      <p>
+        O aplicativo foi concebido para operar localmente em Android. Conteúdo curricular,
+        grafos de pré-requisitos, templates e regras ficam embarcados no dispositivo.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Offline-first</h3>
+          <p>A execução pedagógica não depende de conectividade contínua.</p>
+        </div>
+        <div class="card">
+          <h3>Geração local</h3>
+          <p>Questões são produzidas por regras e templates, com variação controlada e sem chamada a modelos generativos.</p>
+        </div>
+        <div class="card">
+          <h3>Lógica pedagógica explícita</h3>
+          <p>Órbita, retorno ao alvo, pistas e recuperação de pré-requisitos seguem regras definidas no produto.</p>
+        </div>
+        <div class="card">
+          <h3>Baixo custo marginal técnico</h3>
+          <p>A arquitetura reduz consumo de rede, dependência de backend e custo computacional por sessão.</p>
+        </div>
+      </div>
+      <p class="small">
+        A lógica pedagógica é regrada e auditável, mas a geração de variações utiliza aleatoriedade
+        local. Por isso, esta versão não descreve o sistema como reprodução exata ou determinismo
+        integral de cada exercício.
+      </p>
+    </section>
+
+    <section id="dados">
+      <p class="kicker">8 · Dados e segurança</p>
+      <h2>Minimização de dados, com limites descritos de forma explícita</h2>
+      <p>
+        O SVEED não exige nome, CPF, e-mail ou telefone da criança para executar a revisão.
+        A arquitetura, porém, utiliza identificadores técnicos persistentes e registros de sessão.
+        A descrição correta, portanto, é <strong>minimização e pseudonimização</strong>, não
+        anonimização absoluta.
+      </p>
+      <p>
+        Os registros atuais permitem acompanhar elementos como tempo, matéria, habilidade,
+        acertos, erros e uso de dicas em nível de sessão. Eles não reconstroem atualmente toda a
+        cadeia de eventos de cada exercício individual.
+      </p>
+      <div class="callout">
+        O produto não deve ser descrito como “tamper-proof”, “anonimato absoluto” ou “integridade
+        criptográfica garantida” enquanto os mecanismos correspondentes não estiverem efetivamente
+        conectados e validados no fluxo de produção.
+      </div>
+    </section>
+
+    <section id="professor">
+      <p class="kicker">9 · Integração com a escola</p>
+      <h2>Modo professor: a escola define o alvo; o SVEED conduz a revisão</h2>
+      <p>
+        O modo professor permite informar datas e códigos de habilidades curriculares para
+        orientar a revisão domiciliar. O objetivo é preservar o alinhamento com o que está sendo
+        trabalhado em sala.
+      </p>
+      <p>
+        No estado atual do produto, a entrada aceita mais de uma habilidade no planejamento, mas
+        a execução diária ainda utiliza a primeira habilidade válida do dia. Essa limitação está
+        descrita aqui para evitar uma promessa maior que a implementação existente.
+      </p>
+    </section>
+
+    <section id="estado-atual">
+      <p class="kicker">10 · Maturidade atual</p>
+      <h2>Produto funcional, com estrutura curricular ampla e curadoria em diferentes estágios</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Dimensão</th><th>Estado atual</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Aplicativo Android</td><td><span class="status">Funcional</span> Builds de release compilando com sucesso; assinatura e empacotamento institucional final ainda em fechamento.</td></tr>
+            <tr><td>Testes automatizados</td><td><span class="status">145 testes</span> 0 falhas, 0 erros e 0 skips após o Evaluation Gate.</td></tr>
+            <tr><td>Estrutura curricular ampla</td><td>6 disciplinas, do 1º ao 9º ano, com ativos BNCC, grafos e templates em diferentes estágios de curadoria.</td></tr>
+            <tr><td>Curadoria profunda</td><td>Matemática do 2º e 7º anos concentra o refinamento mais avançado até o momento.</td></tr>
+            <tr><td>Uso formativo</td><td>Testes internos com crianças próximas ao desenvolvimento do produto.</td></tr>
+            <tr><td>Validação externa formal</td><td><strong>Ainda não realizada.</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        A amplitude estrutural não deve ser confundida com maturidade uniforme de conteúdo:
+        a profundidade de curadoria ainda varia entre disciplinas e anos.
+      </p>
+    </section>
+
+    <section id="evidencia">
+      <p class="kicker">11 · Evidência</p>
+      <h2>O próximo salto de maturidade é externo, não apenas técnico</h2>
+      <p>
+        O estágio atual combina produto funcional, testes técnicos e observação formativa, mas
+        ainda não possui estudo externo formal de resultados. O próximo passo adequado é uma
+        avaliação proporcional à natureza do produto.
+      </p>
+      <p>
+        Uma avaliação útil pode observar, entre outros pontos, a autonomia da criança ao longo dos
+        primeiros dias de uso, a continuidade da rotina, o uso de pistas, a recuperação após
+        dificuldade e resultados de aprendizagem compatíveis com o escopo de revisão.
+      </p>
+      <p>
+        A estratégia proposta é sequencial: consolidar o produto e sua apresentação institucional;
+        obter orientação externa sobre o desenho de evidência; executar um piloto documentado; e
+        então avaliar expansão e parcerias.
+      </p>
+      <div class="quote">
+        Simples para a criança usar. Complexo apenas onde precisa ser: na lógica que mantém a revisão adequada, contínua e pouco frustrante.
+      </div>
+    </section>
+
+    <section id="governanca">
+      <p class="kicker">12 · Escalabilidade e governança</p>
+      <h2>A camada GovTech continua relevante — mas não é mais a identidade principal</h2>
+      <p>
+        A arquitetura offline-first, os registros de sessão e a possibilidade de agregação de
+        dados podem ser úteis em implantações com escolas, redes públicas, operadoras e parceiros
+        institucionais. Essa camada de auditabilidade permanece importante.
+      </p>
+      <p>
+        A ordem estratégica, porém, é diferente: primeiro um produto pedagógico claro e
+        externamente avaliado; depois, quando houver contexto e parceiros adequados, a
+        auditabilidade pode funcionar como capacidade adicional para implantação em escala.
+      </p>
+      <p>
+        O SVEED não reivindica, nesta versão, que sua arquitetura seja exigência legal específica
+        de órgãos de controle, nem que o uso do sistema constitua por si só prova de conformidade.
+      </p>
+    </section>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <strong>SVEED — White Paper v2</strong><br>
+    Documento técnico-institucional em revisão. Outubro de 2026.<br>
+    Contato: <a href="mailto:contato@sveed.com.br">contato@sveed.com.br</a><br>
+    Esta versão prioriza precisão sobre marketing: funcionalidades implementadas, limitações
+    atuais e necessidades de validação são apresentadas separadamente.
+  </div>
+</footer>
 </body>
 </html>
