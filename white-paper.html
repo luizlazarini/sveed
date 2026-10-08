@@ -72,18 +72,18 @@ a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius
     radial-gradient(circle at 86% 10%,rgba(232,117,50,.13),transparent 30%),
     linear-gradient(180deg,#f9fbfc 0%,#ffffff 100%);
 }
-.hero-inner{max-width:var(--max);margin:auto;padding:82px 24px 72px}
+.hero-inner{max-width:var(--max);margin:auto;padding:72px 24px 64px 352px}
 .eyebrow{
   margin:0 0 14px;color:var(--accent);font-size:.78rem;font-weight:800;
   text-transform:uppercase;letter-spacing:.1em
 }
 h1{
   margin:0;color:var(--navy);
-  max-width:950px;font-size:clamp(2.35rem,5vw,4.55rem);
-  line-height:1.04;letter-spacing:-.045em
+  max-width:780px;font-size:clamp(2.35rem,4vw,3.85rem);
+  line-height:1.06;letter-spacing:-.04em
 }
 .hero-lead{
-  max-width:860px;margin:25px 0 0;
+  max-width:780px;margin:25px 0 0;
   color:var(--muted);font-size:clamp(1.06rem,2vw,1.3rem)
 }
 .tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:30px}
@@ -92,7 +92,7 @@ h1{
   border-radius:999px;padding:7px 12px;font-size:.88rem;font-weight:600
 }
 .hero-note{
-  max-width:860px;margin-top:28px;padding:16px 18px;
+  max-width:780px;margin-top:28px;padding:16px 18px;
   border-left:4px solid var(--accent);background:var(--accent-soft);
   border-radius:0 10px 10px 0;color:#5b4639
 }
@@ -172,6 +172,7 @@ tr:last-child td{border-bottom:none}
   color:var(--muted);font-size:.91rem
 }
 @media (max-width:900px){
+  .hero-inner{padding:62px 24px 56px}
   .layout{grid-template-columns:1fr;gap:26px}
   .toc{position:relative;top:auto}
 }
