@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SVEED — White Paper v2: infraestrutura offline-first para revisão curricular individual guiada.">
+<meta name="description" content="SVEED — White Paper v2: infraestrutura offline-first para a última milha da aprendizagem, com revisão curricular individual guiada.">
 <meta name="theme-color" content="#0A2342">
 <link rel="canonical" href="https://sveed.com.br/white-paper.html">
 <link rel="alternate" hreflang="pt-BR" href="https://sveed.com.br/white-paper.html">
@@ -217,11 +217,11 @@ tr:last-child td{border-bottom:none}
 <section class="hero">
   <div class="hero-inner">
     <p class="eyebrow">White Paper · Versão 2.0 · Outubro de 2026</p>
-    <h1>Infraestrutura Offline-First para Revisão Curricular Individual Guiada</h1>
+    <h1>Infraestrutura Offline-First para a Última Milha da Aprendizagem</h1>
     <p class="hero-lead">
-      Um sistema de revisão curta, adaptação por regras e recuperação de pré-requisitos,
-      projetado para ampliar a autonomia da criança depois da aula sem substituir professor,
-      escola ou currículo.
+      Revisão curricular individual guiada para dar continuidade, fora da sala de aula,
+      ao que a escola já ensinou — com menor dependência de conectividade contínua e de
+      apoio acadêmico constante em casa.
     </p>
     <div class="tags" aria-label="Características principais">
       <span class="tag">Android</span>
@@ -230,6 +230,7 @@ tr:last-child td{border-bottom:none}
       <span class="tag">Sem IA generativa na sessão</span>
       <span class="tag">Sem gamificação</span>
       <span class="tag">Revisão individual guiada</span>
+      <span class="tag">Última milha educacional</span>
     </div>
     <div class="hero-note">
       Este documento descreve o produto no estágio atual e distingue explicitamente
@@ -243,7 +244,7 @@ tr:last-child td{border-bottom:none}
   <aside class="toc" aria-label="Sumário do white paper">
     <span class="toc-title">Neste documento</span>
     <a href="#resumo">Resumo executivo</a>
-    <a href="#problema">1. O problema</a>
+    <a href="#problema">1. A última milha</a>
     <a href="#papel">2. Escopo</a>
     <a href="#funcionamento">3. Como funciona</a>
     <a href="#orbita">4. Órbita e pré-requisitos</a>
@@ -260,48 +261,104 @@ tr:last-child td{border-bottom:none}
   <main>
     <section id="resumo">
       <p class="kicker">Resumo executivo</p>
-      <h2>Uma camada de apoio entre a aula coletiva e a revisão individual</h2>
+      <h2>Continuidade da aprendizagem depois da aula</h2>
       <p>
-        O SVEED parte de uma constatação simples: a escola ensina coletivamente, mas a revisão
-        acontece individualmente. Cada criança esquece etapas diferentes, encontra obstáculos
-        diferentes e precisa de quantidades diferentes de apoio para continuar.
+        A escola ensina coletivamente, mas parte da prática, revisão e consolidação acontece
+        individualmente depois da aula. Historicamente, a revisão domiciliar e a lição de casa
+        ajudam a cumprir essa função. O problema é que a capacidade de continuar aprendendo em
+        casa depende de condições que não estão igualmente disponíveis para todas as crianças.
       </p>
       <p>
-        Em casa, esse apoio depende frequentemente da disponibilidade de um adulto com tempo,
-        conhecimento e condições de acompanhar a criança. Quando esse apoio não existe, a
-        continuidade entre aula e estudo individual pode ficar sem estrutura.
+        Organismos internacionais utilizam o conceito de <em>last mile</em> em diferentes
+        dimensões da educação: a OCDE discute a última milha da conectividade chegando até a casa
+        e os dispositivos dos estudantes; a UNICEF trata de <em>last-mile learners</em>; e o
+        Banco Mundial utiliza a expressão <em>last-mile families</em> ao discutir acesso a
+        materiais de aprendizagem em casa.
+      </p>
+      <p class="small">
+        <a href="https://www.oecd.org/en/publications/oecd-digital-education-outlook-2023_c74f03de-en/full-report/hardware-the-provision-of-connectivity-and-digital-devices_477c756b.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fonte: OCDE 2023 ↗</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.unicef.org/indonesia/press-releases/digital-learning-all-symposium-explores-ways-reach-those-left-behind-education" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fonte: UNICEF 2022 ↗</a>
+        &nbsp;·&nbsp;
+        <a href="https://documents1.worldbank.org/curated/en/907461627633168785/pdf/Read-at-Home-Materials-Guidance.pdf" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fonte: Banco Mundial — Read@Home ↗</a>
       </p>
       <div class="quote">A escola ensina. O SVEED acompanha a revisão.</div>
       <p>
-        O produto foi concebido para ocupar essa “última milha” educacional com uma rotina curta,
-        previsível e individual. A complexidade fica sob o capô; para a criança, a interação
-        deve permanecer simples.
+        O SVEED atua em uma expressão concreta dessa última milha: o intervalo entre o conteúdo
+        ensinado em sala e sua revisão e consolidação individual fora dela. A revisão curricular
+        guiada é o mecanismo; a continuidade da aprendizagem é a função.
       </p>
     </section>
 
     <section id="problema">
-      <p class="kicker">1 · Problema</p>
-      <h2>Ensinar em grupo não elimina a necessidade de revisão individual</h2>
+      <p class="kicker">1 · A última milha</p>
+      <h2>A última milha não termina no portão da escola</h2>
       <p>
-        Em uma turma, o professor precisa conduzir um grupo inteiro. Mesmo quando a aula foi
-        adequada, não é realisticamente possível oferecer todos os dias alguns minutos de
-        revisão individual para cada aluno, no momento exato em que ele encontra uma lacuna.
+        “Última milha” não é uma expressão criada pelo SVEED. A OCDE dedica uma seção do
+        <em>Digital Education Outlook 2023</em> ao <em>last mile problem</em> da educação digital
+        e observa que essa última milha pode se estender da escola até a casa e os dispositivos
+        pessoais dos estudantes.
+        <a href="https://www.oecd.org/en/publications/oecd-digital-education-outlook-2023_c74f03de-en/full-report/hardware-the-provision-of-connectivity-and-digital-devices_477c756b.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fonte: OCDE 2023 ↗</a>
       </p>
       <p>
-        O problema que o SVEED procura enfrentar não é a falta de conteúdo educacional. É a
-        falta de uma infraestrutura simples de acompanhamento da revisão depois da aula,
-        especialmente quando a criança está sozinha ou sem apoio acadêmico disponível em casa.
+        A UNICEF usa a expressão <em>last-mile learners</em> para se referir a crianças que estão
+        ficando para trás e são mais difíceis de alcançar. A UNESCO também utiliza a linguagem da
+        última milha ao discutir o desafio de alcançar os alunos mais desfavorecidos e difíceis de
+        atingir.
+        <a href="https://www.unicef.org/indonesia/press-releases/digital-learning-all-symposium-explores-ways-reach-those-left-behind-education" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fonte: UNICEF 2022 ↗</a>
+        &nbsp;
+        <a href="https://uis.unesco.org/sites/default/files/documents/teaching-and-learning-achieving-quality-for-all-gmr-2013-2014-en.pdf" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fonte: UNESCO — EFA Global Monitoring Report ↗</a>
       </p>
+
+      <h3>A revisão domiciliar já cumpria parte dessa função</h3>
+      <p>
+        A necessidade de continuidade depois da aula não é nova. A lição de casa é uma prática
+        educacional de longa data e pode estender conceitos trabalhados em sala, favorecer
+        autorregulação e apoiar a aprendizagem. A OCDE recomenda atenção ao desenho das tarefas e
+        destaca que atividades regulares e curtas podem oferecer benefícios sem ampliar
+        desnecessariamente desigualdades.
+        <a href="https://www.oecd.org/en/publications/pisa-2022-results-volume-v_c2e44201-en/full-report/component-19.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fonte: PISA 2022 ↗</a>
+      </p>
+      <p>
+        O problema é que as condições para realizar essa revisão não são distribuídas igualmente.
+        O PISA 2018 relaciona menor participação de alunos desfavorecidos na lição de casa à falta
+        de espaço silencioso, diferenças de acesso a internet e computador e menor disponibilidade
+        de apoio parental. No recorte específico sobre o Brasil, a OCDE também documenta
+        desigualdades importantes no acesso a recursos educacionais em casa.
+        <a href="https://www.oecd.org/en/publications/pisa-2018-results-volume-v_ca768d40-en/full-report/component-12.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fonte: PISA 2018 ↗</a>
+        &nbsp;
+        <a href="https://www.oecd.org/en/publications/education-in-brazil_60a667f7-en/full-report/component-10.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fonte: OCDE — Education in Brazil ↗</a>
+      </p>
+      <p>
+        O Banco Mundial enfrenta uma dimensão semelhante por meio do programa Read@Home, voltado
+        a levar materiais de leitura e aprendizagem aos domicílios e a alcançar famílias
+        vulneráveis com pouco acesso a esses recursos.
+        <a href="https://www.worldbank.org/en/brief/2025/01/23/read-at-home" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fonte: Banco Mundial — Read@Home ↗</a>
+      </p>
+      <div class="callout">
+        O SVEED não parte da ideia de que escola, professor ou família “falharam”. Ele parte de um
+        problema estrutural: a continuidade da aprendizagem depois da aula depende de condições
+        que variam muito entre os alunos. Sua proposta é reduzir algumas dessas dependências com
+        uma infraestrutura simples de revisão guiada.
+      </div>
     </section>
 
     <section id="papel">
       <p class="kicker">2 · Escopo</p>
       <h2>O SVEED revisa; não substitui escola, professor ou currículo</h2>
       <p>
-        O SVEED é uma infraestrutura de revisão curricular individual guiada. Seu escopo é
-        deliberadamente limitado: revisar, praticar, oferecer pistas, recuperar pré-requisitos
-        quando necessário e manter uma rotina curta de estudo.
+        O SVEED é uma infraestrutura leve de continuidade da aprendizagem para Android. Seu
+        mecanismo central é a revisão curricular individual guiada: revisar, praticar, oferecer
+        pistas, recuperar pré-requisitos quando necessário e manter uma rotina curta de estudo
+        sobre habilidades que a escola já trabalhou.
       </p>
+      <div class="callout">
+        O SVEED não afirma resolver sozinho toda a última milha educacional. Ele não instala
+        conectividade, não distribui dispositivos e não substitui políticas públicas. Foi
+        projetado para <strong>reduzir barreiras concretas</strong>: dependência de internet
+        contínua, necessidade constante de mediação adulta e descontinuidade entre a aula e a
+        revisão individual em casa.
+      </div>
       <div class="grid">
         <div class="card">
           <h3>O que o SVEED faz</h3>
