@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SVEED — White Paper v2: offline-first infrastructure for guided individual curriculum review.">
+<meta name="description" content="SVEED — White Paper v2: offline-first infrastructure for the last mile of learning, using guided individual curriculum review to support continuity after class.">
 <meta name="theme-color" content="#0A2342">
 <link rel="canonical" href="https://sveed.com.br/white-paper-en.html">
 <link rel="alternate" hreflang="pt-BR" href="https://sveed.com.br/white-paper.html">
@@ -217,11 +217,10 @@ tr:last-child td{border-bottom:none}
 <section class="hero">
   <div class="hero-inner">
     <p class="eyebrow">White Paper · Version 2.0 · October 2026</p>
-    <h1>Offline-First Infrastructure for Guided Individual Curriculum Review</h1>
+    <h1>Offline-First Infrastructure for the Last Mile of Learning</h1>
     <p class="hero-lead">
-      A short-review system with rule-based adaptation and prerequisite recovery,
-      designed to increase a child's autonomy after class without replacing teachers,
-      schools, or the curriculum.
+      Guided individual curriculum review designed to extend learning beyond the classroom —
+      with less dependence on continuous connectivity or constant academic support at home.
     </p>
     <div class="tags" aria-label="Main characteristics">
       <span class="tag">Android</span>
@@ -230,6 +229,7 @@ tr:last-child td{border-bottom:none}
       <span class="tag">No generative AI during the session</span>
       <span class="tag">No gamification</span>
       <span class="tag">Guided individual review</span>
+      <span class="tag">Education's last mile</span>
     </div>
     <div class="hero-note">
       This document describes the product at its current stage and explicitly distinguishes
@@ -243,7 +243,7 @@ tr:last-child td{border-bottom:none}
   <aside class="toc" aria-label="White paper table of contents">
     <span class="toc-title">In this document</span>
     <a href="#resumo">Executive summary</a>
-    <a href="#problema">1. The problem</a>
+    <a href="#problema">1. The last mile</a>
     <a href="#papel">2. Scope</a>
     <a href="#funcionamento">3. How it works</a>
     <a href="#orbita">4. Orbit and prerequisites</a>
@@ -260,48 +260,101 @@ tr:last-child td{border-bottom:none}
   <main>
     <section id="resumo">
       <p class="kicker">Executive summary</p>
-      <h2>A support layer between classroom teaching and individual review</h2>
+      <h2>Learning continuity after class</h2>
       <p>
-        SVEED starts from a simple observation: school teaches collectively, while review
-        happens individually. Each child forgets different steps, encounters different
-        obstacles, and needs different amounts of support to keep going.
+        Schools teach in groups, but much of practice, review, and consolidation happens
+        individually after class. Homework and other forms of at-home review have long helped
+        serve that function. The challenge is that the conditions required to continue learning
+        at home are not equally available to every child.
       </p>
       <p>
-        At home, that support often depends on an adult having the time, knowledge, and
-        conditions to accompany the child. When that support is unavailable, the continuity
-        between classroom instruction and individual study can be left without structure.
+        International organizations use the concept of the <em>last mile</em> across several
+        dimensions of education: the OECD discusses connectivity reaching students' homes and
+        personal devices; UNICEF refers to <em>last-mile learners</em>; and the World Bank uses
+        the term <em>last-mile families</em> when addressing access to learning materials at home.
+      </p>
+      <p class="small">
+        <a href="https://www.oecd.org/en/publications/oecd-digital-education-outlook-2023_c74f03de-en/full-report/hardware-the-provision-of-connectivity-and-digital-devices_477c756b.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: OECD 2023 ↗</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.unicef.org/indonesia/press-releases/digital-learning-all-symposium-explores-ways-reach-those-left-behind-education" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: UNICEF 2022 ↗</a>
+        &nbsp;·&nbsp;
+        <a href="https://documents1.worldbank.org/curated/en/907461627633168785/pdf/Read-at-Home-Materials-Guidance.pdf" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: World Bank — Read@Home ↗</a>
       </p>
       <div class="quote">School teaches. SVEED supports the review.</div>
       <p>
-        The product was designed to occupy this educational “last mile” with a short,
-        predictable, individual routine. The complexity stays under the hood; for the child,
-        the interaction should remain simple.
+        SVEED addresses one concrete expression of that last mile: the gap between content taught
+        in the classroom and the individual review and consolidation that happens afterward.
+        Guided curriculum review is the mechanism; continuity of learning is the function.
       </p>
     </section>
 
     <section id="problema">
-      <p class="kicker">1 · Problem</p>
-      <h2>Teaching in groups does not eliminate the need for individual review</h2>
+      <p class="kicker">1 · The last mile</p>
+      <h2>The last mile extends beyond the school building</h2>
       <p>
-        In a classroom, the teacher has to guide an entire group. Even when the lesson is
-        appropriate, it is not realistically possible to provide every student with a few
-        minutes of individual review every day, exactly when a gap appears.
+        “Last mile” is not a term invented by SVEED. The OECD devotes a section of its
+        <em>Digital Education Outlook 2023</em> to the <em>last mile problem</em> in digital
+        education and notes that this last mile can extend from schools into students' homes
+        and personal devices.
+        <a href="https://www.oecd.org/en/publications/oecd-digital-education-outlook-2023_c74f03de-en/full-report/hardware-the-provision-of-connectivity-and-digital-devices_477c756b.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: OECD 2023 ↗</a>
       </p>
       <p>
-        The problem SVEED seeks to address is not a lack of educational content. It is the
-        lack of a simple infrastructure for supporting review after class, especially when
-        the child is alone or does not have academic support available at home.
+        UNICEF uses the term <em>last-mile learners</em> for children who are being left behind
+        and are among the hardest to reach. UNESCO also uses last-mile language when discussing
+        the challenge of reaching the most disadvantaged and hardest-to-reach learners.
+        <a href="https://www.unicef.org/indonesia/press-releases/digital-learning-all-symposium-explores-ways-reach-those-left-behind-education" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: UNICEF 2022 ↗</a>
+        &nbsp;
+        <a href="https://uis.unesco.org/sites/default/files/documents/teaching-and-learning-achieving-quality-for-all-gmr-2013-2014-en.pdf" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: UNESCO — EFA Global Monitoring Report ↗</a>
       </p>
+
+      <h3>At-home review has long served part of this function</h3>
+      <p>
+        The need for continuity after class is not new. Homework is a long-standing instructional
+        practice that can extend classroom concepts, support self-regulation, and contribute to
+        learning. OECD evidence also points to the importance of task design and indicates that
+        short, regular assignments can provide benefits without unnecessarily widening inequities.
+        <a href="https://www.oecd.org/en/publications/pisa-2022-results-volume-v_c2e44201-en/full-report/component-19.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: PISA 2022 ↗</a>
+      </p>
+      <p>
+        The challenge is that the conditions needed to complete that review are not equally
+        distributed. PISA 2018 links lower homework participation among disadvantaged students
+        to factors such as lack of a quiet place to study, unequal access to internet and
+        computers, and less available parental support. In its Brazil-specific analysis, the
+        OECD also documents substantial inequalities in access to learning resources at home.
+        <a href="https://www.oecd.org/en/publications/pisa-2018-results-volume-v_ca768d40-en/full-report/component-12.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: PISA 2018 ↗</a>
+        &nbsp;
+        <a href="https://www.oecd.org/en/publications/education-in-brazil_60a667f7-en/full-report/component-10.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: OECD — Education in Brazil ↗</a>
+      </p>
+      <p>
+        The World Bank addresses a related dimension through Read@Home, an initiative designed
+        to bring reading and learning materials into households and reach vulnerable families
+        with limited access to those resources.
+        <a href="https://www.worldbank.org/en/brief/2025/01/23/read-at-home" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: World Bank — Read@Home ↗</a>
+      </p>
+      <div class="callout">
+        SVEED does not begin from the assumption that schools, teachers, or families have
+        “failed.” It begins from a structural reality: learning continuity after class depends
+        on conditions that vary widely across students. Its purpose is to reduce some of those
+        dependencies through a simple, guided review system.
+      </div>
     </section>
 
     <section id="papel">
       <p class="kicker">2 · Scope</p>
       <h2>SVEED reviews; it does not replace school, teachers, or the curriculum</h2>
       <p>
-        SVEED is an infrastructure for guided individual curriculum review. Its scope is
-        deliberately limited: review, practice, offer hints, recover prerequisites when
-        needed, and maintain a short study routine.
+        SVEED is a lightweight Android-based system for continuity of learning. Its central
+        mechanism is guided individual curriculum review: revisiting, practicing, offering
+        hints, recovering prerequisites when needed, and maintaining a short study routine
+        around skills the school has already taught.
       </p>
+      <div class="callout">
+        SVEED does not claim to solve education's entire last-mile problem on its own. It does
+        not provide internet access, distribute devices, or replace public policy. It was
+        designed to <strong>reduce concrete barriers</strong>: dependence on continuous
+        connectivity, constant adult mediation, and the break between classroom instruction
+        and individual review at home.
+      </div>
       <div class="grid">
         <div class="card">
           <h3>What SVEED does</h3>
@@ -502,8 +555,8 @@ tr:last-child td{border-bottom:none}
             <tr><th>Dimension</th><th>Current state</th></tr>
           </thead>
           <tbody>
-            <tr><td>Android application</td><td><span class="status">Functional</span> Release builds compile successfully; final institutional signing and packaging are still being completed.</td></tr>
-            <tr><td>Automated tests</td><td><span class="status">145 tests</span> 0 failures, 0 errors, and 0 skips after the Evaluation Gate.</td></tr>
+            <tr><td>Android application</td><td><span class="status">Functional</span>. Release builds compile successfully; final institutional signing and packaging are still being completed.</td></tr>
+            <tr><td>Automated tests</td><td><span class="status">145 tests</span> · 0 failures · 0 errors · 0 skips after the Evaluation Gate.</td></tr>
             <tr><td>Broad curriculum structure</td><td>6 subjects, Grades 1–9, with BNCC assets, graphs, and templates at different curation stages.</td></tr>
             <tr><td>Deep curation</td><td>Mathematics in Grades 2 and 7 currently has the most advanced refinement.</td></tr>
             <tr><td>Formative use</td><td>Internal testing with children close to the product development environment.</td></tr>
