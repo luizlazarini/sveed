@@ -216,7 +216,7 @@ tr:last-child td{border-bottom:none}
 
 <section class="hero">
   <div class="hero-inner">
-    <p class="eyebrow">White Paper · Versão 2.0 · Outubro de 2026</p>
+    <p class="eyebrow">White Paper · Versão 2.1 · Outubro de 2026</p>
     <h1>Infraestrutura Offline-First para a Última Milha da Aprendizagem</h1>
     <p class="hero-lead">
       Revisão curricular individual guiada para dar continuidade, fora da sala de aula,
@@ -233,9 +233,9 @@ tr:last-child td{border-bottom:none}
       <span class="tag">Última milha educacional</span>
     </div>
     <div class="hero-note">
-      Este documento descreve o produto no estágio atual e distingue explicitamente
-      funcionalidades implementadas, limitações conhecidas e pontos que ainda dependem de
-      validação externa.
+      Este documento apresenta a abrangência do sistema curricular e distingue o APK demonstrativo,
+      as funcionalidades implementadas, as capacidades institucionais previstas e os pontos que
+      ainda dependem de conclusão ou validação externa.
     </div>
   </div>
 </section>
@@ -282,7 +282,7 @@ tr:last-child td{border-bottom:none}
         &nbsp;·&nbsp;
         <a href="https://documents1.worldbank.org/curated/en/907461627633168785/pdf/Read-at-Home-Materials-Guidance.pdf" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fonte: Banco Mundial — Read@Home ↗</a>
       </p>
-      <div class="quote">A escola ensina. O SVEED acompanha a revisão.</div>
+      <div class="quote">A escola ensina. O SVEED viabiliza a revisão. As avaliações educacionais verificam a proficiência.</div>
       <p>
         O SVEED atua em uma expressão concreta dessa última milha: o intervalo entre o conteúdo
         ensinado em sala e sua revisão e consolidação individual fora dela. A revisão curricular
@@ -382,6 +382,9 @@ tr:last-child td{border-bottom:none}
           </ul>
         </div>
       </div>
+      <h3>Abrangência curricular e recorte demonstrativo</h3>
+      <p>O SVEED — Sistema de Viabilização de Estudo Estruturado Domiciliar — possui uma estrutura curricular brasileira do 1º ao 9º ano do Ensino Fundamental: Matemática, Português, Ciências, História e Geografia nessa faixa, e Inglês do 6º ao 9º ano. Os ativos curriculares existentes estão em diferentes estágios de revisão pedagógica especializada.</p>
+      <p>O APK de avaliação disponibiliza Matemática do 2º e do 7º ano como recorte demonstrativo. A demonstração permite examinar esse recorte e o fluxo de revisão; não limita o escopo do sistema nem comprova qualidade uniforme de todo o acervo.</p>
     </section>
 
     <section id="funcionamento">
@@ -469,8 +472,8 @@ tr:last-child td{border-bottom:none}
       <p class="kicker">6 · Rotina e concentração</p>
       <h2>Uma sessão curta, previsível e com saída segura</h2>
       <p>
-        O núcleo do produto é uma revisão diária curta, concebida em torno de aproximadamente
-        15 minutos. A intenção é criar uma rotina possível de repetir, não uma segunda jornada escolar.
+        O núcleo do produto é uma sessão diária de revisão de 15 minutos cronológicos,
+        independentemente da velocidade das respostas. A intenção é criar uma rotina possível de repetir, não uma segunda jornada escolar.
       </p>
       <p>
         Durante a revisão, o SVEED pode ativar um modo de concentração que reduz trocas impulsivas
@@ -549,6 +552,7 @@ tr:last-child td{border-bottom:none}
         a execução diária ainda utiliza a primeira habilidade válida do dia. Essa limitação está
         descrita aqui para evitar uma promessa maior que a implementação existente.
       </p>
+      <p><strong>Professor → revisão → registro.</strong> A habilidade indicada orienta a atividade domiciliar, e o registro da sessão permite acompanhar sua execução. Esse encadeamento pode apoiar a continuidade curricular entre escola e domicílio. O registro não certifica proficiência nem comprova, isoladamente, que determinada aula foi ministrada.</p>
     </section>
 
     <section id="estado-atual">
@@ -562,7 +566,7 @@ tr:last-child td{border-bottom:none}
           <tbody>
             <tr><td>Aplicativo Android</td><td><span class="status">Funcional</span>. Builds de release compilando com sucesso; assinatura e empacotamento institucional final ainda em fechamento.</td></tr>
             <tr><td>Testes automatizados</td><td><span class="status">145 testes</span> · 0 falhas · 0 erros · 0 skips após o Evaluation Gate.</td></tr>
-            <tr><td>Estrutura curricular ampla</td><td>6 disciplinas, do 1º ao 9º ano, com ativos BNCC, grafos e templates em diferentes estágios de curadoria.</td></tr>
+            <tr><td>Estrutura curricular ampla</td><td>Matemática, Português, Ciências, História e Geografia do 1º ao 9º ano; Inglês do 6º ao 9º. Ativos BNCC, grafos e templates em diferentes estágios de curadoria.</td></tr>
             <tr><td>Curadoria profunda</td><td>Matemática do 2º e 7º anos concentra o refinamento mais avançado até o momento.</td></tr>
             <tr><td>Uso formativo</td><td>Testes internos com crianças próximas ao desenvolvimento do produto.</td></tr>
             <tr><td>Validação externa formal</td><td><strong>Ainda não realizada.</strong></td></tr>
@@ -589,9 +593,10 @@ tr:last-child td{border-bottom:none}
         dificuldade e resultados de aprendizagem compatíveis com o escopo de revisão.
       </p>
       <p>
-        A estratégia proposta é sequencial: consolidar o produto e sua apresentação institucional;
-        obter orientação externa sobre o desenho de evidência; executar um piloto documentado; e
-        então avaliar expansão e parcerias.
+        A estratégia é obter orientação externa, inclusive por meio do Quick Assessment do Learning
+        Cabinet, e buscar parceiros pedagógicos, técnicos e operacionais para concluir a revisão
+        especializada, realizar um piloto documentado e preparar a implantação. A submissão inicial
+        busca orientação sobre adequação e lacunas; não pressupõe aprovação ou avaliação completa.
       </p>
       <div class="quote">
         Simples para a criança usar. Complexo apenas onde precisa ser: na lógica que mantém a revisão adequada, contínua e pouco frustrante.
@@ -600,21 +605,11 @@ tr:last-child td{border-bottom:none}
 
     <section id="governanca">
       <p class="kicker">12 · Escalabilidade e governança</p>
-      <h2>A camada GovTech continua relevante — mas não é mais a identidade principal</h2>
-      <p>
-        A arquitetura offline-first, os registros de sessão e a possibilidade de agregação de
-        dados podem ser úteis em implantações com escolas, redes públicas, operadoras e parceiros
-        institucionais. Essa camada de auditabilidade permanece importante.
-      </p>
-      <p>
-        A ordem estratégica, porém, é diferente: primeiro um produto pedagógico claro e
-        externamente avaliado; depois, quando houver contexto e parceiros adequados, a
-        auditabilidade pode funcionar como capacidade adicional para implantação em escala.
-      </p>
-      <p>
-        O SVEED não reivindica, nesta versão, que sua arquitetura seja exigência legal específica
-        de órgãos de controle, nem que o uso do sistema constitua por si só prova de conformidade.
-      </p>
+      <h2>Aplicação institucional e desenvolvimento previsto</h2>
+      <p>A dimensão institucional faz parte da concepção do SVEED: a criança realiza a revisão, e os registros associados podem apoiar o acompanhamento de sua execução por escolas e redes. A atividade central continua sendo a revisão curricular domiciliar.</p>
+      <p>Em uma implantação institucional concluída, informações agregadas sobre participação, regularidade e conteúdos revisados podem apoiar professores, coordenação e gestão da rede. A consolidação desses indicadores depende de integração, governança de dados, proteção da criança e validação da integridade dos registros, ainda necessárias para esse uso em escala.</p>
+      <p>Disponibilização, utilização e resultado educacional são dimensões distintas. Os registros podem fornecer evidências operacionais de utilização; não substituem avaliações de aprendizagem, auditorias ou requisitos específicos de prestação de contas.</p>
+      <p>O SVEED busca parceiros para concluir e implantar essa estrutura, preservando o funcionamento offline-first, a proteção de dados e a ausência de gamificação. A aplicação a outros países exige adaptação curricular, linguística e validação local.</p>
     </section>
   </main>
 </div>
