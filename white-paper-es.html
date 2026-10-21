@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SVEED — White Paper v2: infraestructura offline-first para la última milla del aprendizaje, mediante repaso curricular individual guiado después de clase.">
+<meta name="description" content="SVEED — White Paper v2.2: repaso estructurado en casa, fundamentación educativa, arquitectura offline-first y evidencia necesaria.">
 <meta name="theme-color" content="#0A2342">
 <link rel="canonical" href="https://sveed.com.br/white-paper-es.html">
 <link rel="alternate" hreflang="pt-BR" href="https://sveed.com.br/white-paper.html">
 <link rel="alternate" hreflang="en" href="https://sveed.com.br/white-paper-en.html">
 <link rel="alternate" hreflang="es" href="https://sveed.com.br/white-paper-es.html">
 <link rel="alternate" hreflang="x-default" href="https://sveed.com.br/white-paper.html">
-<title>SVEED — White Paper v2</title>
+<title>SVEED — White Paper v2.2</title>
 <link rel="icon" type="image/jpeg" href="images/logo-sveed.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#0A2342;
@@ -204,7 +204,7 @@ tr:last-child td{border-bottom:none}
 <header class="topbar">
   <div class="topbar-inner">
     <a class="brand" href="index-es.html" aria-label="Volver al sitio de SVEED">
-      <img src="images/logo-sveed.jpg" alt="Logo SVEED">
+      <img src="images/logo-sveed.jpg" alt="Logotipo de SVEED">
       <span>SVEED</span>
     </a>
     <div class="actions">
@@ -216,13 +216,9 @@ tr:last-child td{border-bottom:none}
 
 <section class="hero">
   <div class="hero-inner">
-    <p class="eyebrow">White Paper · Versión 2.0 · Octubre de 2026</p>
+    <p class="eyebrow">White Paper · Versión 2.2 · Octubre de 2026</p>
     <h1>Infraestructura Offline-First para la Última Milla del Aprendizaje</h1>
-    <p class="hero-lead">
-      Repaso curricular individual guiado para dar continuidad, fuera del aula, a lo que la
-      escuela ya ha enseñado — con menor dependencia de conectividad continua y de apoyo
-      académico constante en casa.
-    </p>
+    <p class="hero-lead">Repaso curricular en casa, estructurado y autónomo, para apoyar la consolidación del aprendizaje, con ejercicios, pistas y menor dependencia de conexión continua y de explicaciones de un adulto durante la actividad.</p>
     <div class="tags" aria-label="Características principales">
       <span class="tag">Android</span>
       <span class="tag">Offline-first</span>
@@ -232,11 +228,7 @@ tr:last-child td{border-bottom:none}
       <span class="tag">Repaso individual guiado</span>
       <span class="tag">Última milla educativa</span>
     </div>
-    <div class="hero-note">
-      Este documento describe el producto en su etapa actual y distingue explícitamente
-      las funcionalidades implementadas, las limitaciones conocidas y los puntos que todavía
-      dependen de validación externa.
-    </div>
+    <div class="hero-note">Este documento presenta el alcance del sistema curricular y distingue el APK demostrativo, las funciones implementadas, las capacidades institucionales previstas y los aspectos que todavía requieren desarrollo o validación externa.</div>
   </div>
 </section>
 
@@ -247,16 +239,17 @@ tr:last-child td{border-bottom:none}
     <a href="#problema">1. La última milla</a>
     <a href="#papel">2. Alcance</a>
     <a href="#funcionamento">3. Cómo funciona</a>
-    <a href="#orbita">4. Órbita y prerrequisitos</a>
+    <a href="#orbita">4. Órbita y conocimientos previos</a>
     <a href="#autonomia">5. Autonomía y accesibilidad</a>
     <a href="#rotina">6. Rutina y concentración</a>
     <a href="#arquitetura">7. Arquitectura técnica</a>
     <a href="#dados">8. Datos, privacidad y seguridad</a>
-    <a href="#professor">9. Modo profesor</a>
+    <a href="#professor">9. Modo docente</a>
     <a href="#estado-atual">10. Estado actual</a>
     <a href="#evidencia">11. Evidencia y próximos pasos</a>
     <a href="#governanca">12. Escalabilidad y gobernanza</a>
-  </aside>
+  <a href="#referencias-revisao">13. Referencias sobre el repaso</a>
+</aside>
 
   <main>
     <section id="resumo">
@@ -264,8 +257,7 @@ tr:last-child td{border-bottom:none}
       <h2>Continuidad del aprendizaje después de clase</h2>
       <p>
         La escuela enseña de forma colectiva, pero una parte importante de la práctica, el repaso
-        y la consolidación ocurre de manera individual después de clase. Los deberes y otras
-        formas de repaso en casa han cumplido históricamente parte de esa función. El reto es que
+        y la consolidación ocurre de manera individual después de clase. Las tareas para casa y otras formas de repaso han cumplido históricamente parte de esa función. El reto es que
         las condiciones necesarias para seguir aprendiendo en casa no están disponibles por igual
         para todos los niños.
       </p>
@@ -278,18 +270,15 @@ tr:last-child td{border-bottom:none}
       </p>
       <p class="small">
         <a href="https://www.oecd.org/en/publications/oecd-digital-education-outlook-2023_c74f03de-en/full-report/hardware-the-provision-of-connectivity-and-digital-devices_477c756b.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fuente: OCDE 2023 ↗</a>
-        &nbsp;·&nbsp;
+         · 
         <a href="https://www.unicef.org/indonesia/press-releases/digital-learning-all-symposium-explores-ways-reach-those-left-behind-education" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fuente: UNICEF 2022 ↗</a>
-        &nbsp;·&nbsp;
+         · 
         <a href="https://documents1.worldbank.org/curated/en/907461627633168785/pdf/Read-at-Home-Materials-Guidance.pdf" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fuente: Banco Mundial — Read@Home ↗</a>
       </p>
-      <div class="quote">La escuela enseña. SVEED acompaña el repaso.</div>
-      <p>
-        SVEED actúa sobre una expresión concreta de esa última milla: la distancia entre el
-        contenido trabajado en el aula y su repaso y consolidación individual después de clase.
-        El repaso curricular guiado es el mecanismo; la continuidad del aprendizaje es la función.
-      </p>
-    </section>
+      <div class="quote">La escuela enseña. SVEED hace posible el repaso. Las evaluaciones educativas miden el dominio de los aprendizajes.</div>
+      <p>SVEED es un sistema para Android diseñado para hacer posible un repaso curricular en casa estructurado, regular y autónomo, con la finalidad educativa de apoyar la consolidación del aprendizaje. Ofrece ejercicios y apoyo ante las dificultades para reducir la necesidad de que un adulto explique contenidos ya trabajados en la escuela.</p>
+    <p>Contribuir al aprendizaje es su finalidad educativa. Su función operativa es hacer posible el repaso; no está diseñado para medir ni certificar el dominio de los aprendizajes. Los efectos específicos de SVEED sobre la regularidad del estudio y el aprendizaje todavía no se han medido sistemáticamente.</p>
+</section>
 
     <section id="problema">
       <p class="kicker">1 · La última milla</p>
@@ -307,28 +296,29 @@ tr:last-child td{border-bottom:none}
         emplea el lenguaje de la última milla al abordar el reto de llegar al alumnado más
         desfavorecido y difícil de alcanzar.
         <a href="https://www.unicef.org/indonesia/press-releases/digital-learning-all-symposium-explores-ways-reach-those-left-behind-education" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fuente: UNICEF 2022 ↗</a>
-        &nbsp;
+         
         <a href="https://uis.unesco.org/sites/default/files/documents/teaching-and-learning-achieving-quality-for-all-gmr-2013-2014-en.pdf" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fuente: UNESCO — EFA Global Monitoring Report ↗</a>
       </p>
 
       <h3>El repaso en casa lleva mucho tiempo cumpliendo parte de esta función</h3>
       <p>
-        La necesidad de dar continuidad al aprendizaje después de clase no es nueva. Los deberes
-        son una práctica educativa de larga trayectoria: pueden prolongar conceptos trabajados
-        en el aula, favorecer la autorregulación y contribuir al aprendizaje. La evidencia de la
+        La necesidad de dar continuidad al aprendizaje después de clase no es nueva. Las tareas para casa son una práctica educativa de larga trayectoria: permiten seguir trabajando los conceptos abordados en el aula, favorecer la autorregulación y contribuir al aprendizaje. La evidencia de la
         OCDE también subraya la importancia del diseño de las tareas e indica que actividades
         breves y regulares pueden aportar beneficios sin ampliar innecesariamente las desigualdades.
         <a href="https://www.oecd.org/en/publications/pisa-2022-results-volume-v_c2e44201-en/full-report/component-19.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fuente: PISA 2022 ↗</a>
       </p>
-      <p>
+      <h3 id="fundamentacao">Fundamentación: práctica curricular y tareas para casa</h3>
+<p>La síntesis <em>Homework</em> de la Education Endowment Foundation (EEF) identifica efectos positivos medios de las tareas para casa, mayores en secundaria que en primaria. Destaca la relación de las actividades con lo trabajado en clase, la retroalimentación y la calidad por encima de la cantidad. La propia EEF califica la solidez de esta evidencia como baja; los resultados varían según el contexto y la etapa educativa. <a href="https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit/homework" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fuente: EEF — Homework ↗</a></p>
+<p>Esta investigación fundamenta la intención pedagógica de ofrecer práctica curricular con apoyo. Aplicar estos principios a SVEED es una hipótesis de diseño que debe evaluarse: los efectos observados en otras intervenciones no se trasladan automáticamente a la aplicación. Las fuentes citadas no constituyen una evaluación ni un aval de SVEED.</p>
+<p>
         El problema es que las condiciones necesarias para realizar ese repaso no se distribuyen
-        por igual. PISA 2018 relaciona una menor participación en los deberes entre estudiantes
+        por igual. PISA 2018 relaciona una menor realización de tareas para casa entre estudiantes
         desfavorecidos con factores como la falta de un lugar tranquilo para estudiar, las
-        diferencias de acceso a internet y ordenadores y una menor disponibilidad de apoyo
+        diferencias de acceso a internet y computadoras y una menor disponibilidad de apoyo
         familiar. En su análisis específico sobre Brasil, la OCDE también documenta desigualdades
         importantes en el acceso a recursos educativos en el hogar.
         <a href="https://www.oecd.org/en/publications/pisa-2018-results-volume-v_ca768d40-en/full-report/component-12.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fuente: PISA 2018 ↗</a>
-        &nbsp;
+         
         <a href="https://www.oecd.org/en/publications/education-in-brazil_60a667f7-en/full-report/component-10.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Fuente: OCDE — Education in Brazil ↗</a>
       </p>
       <p>
@@ -347,13 +337,8 @@ tr:last-child td{border-bottom:none}
 
     <section id="papel">
       <p class="kicker">2 · Alcance</p>
-      <h2>SVEED repasa; no sustituye a la escuela, al docente ni al currículo</h2>
-      <p>
-        SVEED es un sistema ligero para Android orientado a dar continuidad al aprendizaje. Su
-        mecanismo central es el repaso curricular individual guiado: repasar, practicar, ofrecer
-        pistas, recuperar prerrequisitos cuando sea necesario y mantener una rutina breve de
-        estudio sobre habilidades que la escuela ya ha trabajado.
-      </p>
+      <h2>Un repaso que complementa a la escuela, al docente y al currículo</h2>
+      <p>SVEED busca que el niño pueda realizar el repaso: practicar habilidades ya trabajadas en la escuela, recibir pistas y retroalimentación, retomar conocimientos previos cuando sea necesario y mantener una rutina de estudio. Estos mecanismos responden a la finalidad de apoyar la consolidación del aprendizaje; sus resultados deben evaluarse durante el uso del producto.</p>
       <div class="callout">
         SVEED no afirma resolver por sí solo toda la última milla educativa. No proporciona
         conectividad, no distribuye dispositivos y no sustituye a las políticas públicas. Está
@@ -369,8 +354,8 @@ tr:last-child td{border-bottom:none}
             <li>genera ejercicios localmente a partir de reglas y plantillas;</li>
             <li>ofrece pistas progresivas cuando están disponibles;</li>
             <li>proporciona conceptos de apoyo separados de las pistas;</li>
-            <li>reduce temporalmente la dificultad cuando aparece fricción;</li>
-            <li>vuelve a la habilidad objetivo después de la estabilización.</li>
+            <li>ofrece temporalmente ejercicios más sencillos cuando el niño encuentra dificultades;</li>
+            <li>vuelve a la habilidad objetivo cuando el niño está en condiciones de retomarla.</li>
           </ul>
         </div>
         <div class="card">
@@ -378,13 +363,16 @@ tr:last-child td{border-bottom:none}
           <ul>
             <li>no sustituye al docente ni a la clase;</li>
             <li>no debe introducir de forma autónoma contenido curricular nuevo;</li>
-            <li>no diagnostica semánticamente la causa de cada error;</li>
+            <li>no identifica la causa específica de cada error;</li>
             <li>no utiliza puntos, monedas, clasificaciones o rachas como motor de la sesión;</li>
             <li>no depende de IA generativa para crear preguntas para el niño.</li>
           </ul>
         </div>
       </div>
-    </section>
+    <h3>Cobertura curricular y muestra demostrativa</h3>
+<p>SVEED — Sistema de Viabilização de Estudo Estruturado Domiciliar (sistema que hace posible el estudio estructurado en casa) — cuenta con una estructura curricular brasileña del 1.º al 9.º año de Ensino Fundamental (la etapa brasileña que comprende primaria y secundaria inferior): Matemáticas, Portugués, Ciencias, Historia y Geografía en todos esos años, e Inglés del 6.º al 9.º. Los materiales curriculares existentes se encuentran en distintas etapas de revisión pedagógica especializada.</p>
+<p>El APK de evaluación incluye Matemáticas de 2.º y 7.º año como muestra demostrativa. Permite examinar ese contenido y el funcionamiento del repaso; no limita el alcance del sistema ni demuestra una calidad uniforme en todo el conjunto de materiales.</p>
+</section>
 
     <section id="funcionamento">
       <p class="kicker">3 · Flujo pedagógico</p>
@@ -392,11 +380,11 @@ tr:last-child td{border-bottom:none}
       <div class="grid flow">
         <div class="card">
           <h3>Habilidad objetivo</h3>
-          <p>El sistema parte de una habilidad previamente identificada por el flujo del alumno o por el modo profesor.</p>
+          <p>El sistema parte de una habilidad previamente identificada por el alumno o a través del modo docente.</p>
         </div>
         <div class="card">
-          <h3>Ejercicio análogo</h3>
-          <p>El niño practica una instancia generada localmente dentro de un universo curricular cerrado.</p>
+          <h3>Ejercicio de práctica</h3>
+          <p>El niño resuelve un ejercicio generado en el dispositivo dentro de un conjunto definido de contenidos curriculares.</p>
         </div>
         <div class="card">
           <h3>Primer error</h3>
@@ -420,9 +408,9 @@ tr:last-child td{border-bottom:none}
 
     <section id="orbita">
       <p class="kicker">4 · Adaptación por reglas</p>
-      <h2>Órbita, respiro cognitivo y recuperación de prerrequisitos</h2>
+      <h2>La órbita: ajuste de la dificultad y refuerzo de conocimientos previos</h2>
       <p>
-        El repaso trabaja alrededor de una habilidad objetivo con una pequeña variación local.
+        El repaso se organiza en torno a una habilidad objetivo, con variaciones acotadas.
         La órbita está compuesta por <strong>OBJETIVO, OBJETIVO-1, OBJETIVO-2 y OBJETIVO+1</strong>.
       </p>
       <div class="rule"><strong>OBJETIVO</strong><span>Habilidad principal que el niño necesita repasar.</span></div>
@@ -436,13 +424,12 @@ tr:last-child td{border-bottom:none}
       </p>
       <p>
         Cuando la dificultad persiste, el grafo curricular puede utilizarse para retroceder a
-        un prerrequisito asociado. El grafo se utiliza <strong>solo hacia abajo</strong>; no es un
+        un conocimiento previo relacionado. El grafo se utiliza <strong>solo hacia abajo</strong>; no es un
         mecanismo para empujar al niño hacia progresiones curriculares nuevas.
       </p>
       <div class="callout">
         Formulación operativa: cuando errores sucesivos indican dificultad para continuar,
-        SVEED puede retroceder, mediante reglas predefinidas, a un prerrequisito curricular
-        asociado y luego conducir al alumno de vuelta a la trayectoria original.
+        SVEED puede retroceder, mediante reglas predefinidas, a un conocimiento previo relacionado con el contenido y luego conducir al alumno de vuelta a la trayectoria original.
       </div>
     </section>
 
@@ -451,9 +438,11 @@ tr:last-child td{border-bottom:none}
       <h2>Simple en la superficie, complejo solo donde es necesario</h2>
       <p>
         El niño no necesita comprender la órbita, el grafo, las plantillas o las reglas de
-        recuperación. Encuentra una secuencia previsible, pocos comandos y ayuda en el momento necesario.
+        recuperación. Encuentra una secuencia previsible, pocos controles y ayuda en el momento necesario.
       </p>
-      <h3>TTS como capa de autonomía</h3>
+      <h3>Autonomía durante la actividad</h3>
+<p>Autonomía significa realizar el repaso con menor necesidad de apoyo pedagógico de un adulto, tanto para leer instrucciones como para afrontar dificultades. No presupone que el niño empiece espontáneamente: un familiar o cuidador puede pedirle que comience y organizar la rutina. El objetivo es reducir la necesidad de que ese adulto explique y supervise cada ejercicio.</p>
+<h3>Síntesis de voz para apoyar la autonomía</h3>
       <p>
         La síntesis de voz del propio sistema operativo puede leer enunciados e instrucciones.
         Para niños con menor fluidez lectora, esto reduce la dependencia de un adulto lector.
@@ -461,8 +450,7 @@ tr:last-child td{border-bottom:none}
       </p>
       <h3>Sin gamificación y sin marcador durante el repaso</h3>
       <p>
-        SVEED no utiliza monedas, rankings, avatares o recompensas artificiales como núcleo del
-        compromiso. Tampoco muestra de forma continua un marcador de aciertos y errores durante
+        SVEED no utiliza monedas, clasificaciones, avatares o recompensas artificiales para motivar la participación. Tampoco muestra de forma continua un marcador de aciertos y errores durante
         la sesión. La retroalimentación visible es la necesaria para conducir el repaso.
       </p>
     </section>
@@ -470,19 +458,15 @@ tr:last-child td{border-bottom:none}
     <section id="rotina">
       <p class="kicker">6 · Rutina y concentración</p>
       <h2>Una sesión breve, previsible y con salida segura</h2>
-      <p>
-        El núcleo del producto es un repaso diario breve, concebido alrededor de aproximadamente
-        15 minutos. La intención es crear una rutina que pueda repetirse, no una segunda jornada escolar.
-      </p>
+      <p>El núcleo del producto es una sesión diaria de repaso de 15 minutos, independientemente de la rapidez de las respuestas. Esa duración es una decisión operativa para establecer una rutina breve y previsible, no una duración pedagógicamente óptima demostrada para todas las edades y asignaturas.</p>
       <p>
         Durante el repaso, SVEED puede activar un modo de concentración que reduce los cambios
-        impulsivos hacia aplicaciones competidoras. No se trata de un bloqueo absoluto: las
+        impulsivos a otras aplicaciones. No se trata de un bloqueo absoluto: las
         llamadas entrantes siguen disponibles y una salida de emergencia permite terminar la
         sesión cuando sea necesario.
       </p>
       <p>
-        La rutina también prevé un número limitado de invitaciones a lo largo del día y una hora
-        de cierre, evitando presionar al niño para completar la actividad a cualquier hora de la noche.
+        La rutina también prevé un número limitado de avisos a lo largo del día y una hora límite diaria, evitando presionar al niño para completar la actividad a cualquier hora de la noche.
       </p>
     </section>
 
@@ -491,7 +475,7 @@ tr:last-child td{border-bottom:none}
       <h2>Contenido local, reglas explícitas y baja dependencia de infraestructura</h2>
       <p>
         La aplicación fue concebida para operar localmente en Android. El contenido curricular,
-        los grafos de prerrequisitos, las plantillas y las reglas quedan integrados en el dispositivo.
+        los grafos de conocimientos previos, las plantillas y las reglas quedan integrados en el dispositivo.
       </p>
       <div class="grid">
         <div class="card">
@@ -504,10 +488,10 @@ tr:last-child td{border-bottom:none}
         </div>
         <div class="card">
           <h3>Lógica pedagógica explícita</h3>
-          <p>La órbita, el regreso al objetivo, las pistas y la recuperación de prerrequisitos siguen reglas definidas en el producto.</p>
+          <p>La órbita, el regreso al objetivo, las pistas y la refuerzo de conocimientos previos siguen reglas definidas en el producto.</p>
         </div>
         <div class="card">
-          <h3>Bajo costo marginal técnico</h3>
+          <h3>Bajo costo técnico por sesión adicional</h3>
           <p>La arquitectura reduce el consumo de red, la dependencia de infraestructura de servidor y el costo computacional por sesión.</p>
         </div>
       </div>
@@ -528,12 +512,12 @@ tr:last-child td{border-bottom:none}
         <strong>minimización y seudonimización</strong>, no anonimización absoluta.
       </p>
       <p>
-        Los registros actuales permiten acompañar elementos como tiempo, asignatura, habilidad,
+        Los registros actuales permiten consultar datos como tiempo, asignatura, habilidad,
         aciertos, errores y uso de pistas a nivel de sesión. Actualmente no reconstruyen toda
         la cadena de eventos de cada ejercicio individual.
       </p>
       <div class="callout">
-        El producto no debe describirse como “tamper-proof”, “anonimato absoluto” o “integridad
+        El producto no debe describirse como “a prueba de manipulaciones”, “anonimato absoluto” o “integridad
         criptográfica garantizada” mientras los mecanismos correspondientes no estén efectivamente
         conectados y validados en el flujo de producción.
       </div>
@@ -541,22 +525,22 @@ tr:last-child td{border-bottom:none}
 
     <section id="professor">
       <p class="kicker">9 · Integración con la escuela</p>
-      <h2>Modo profesor: la escuela define el objetivo; SVEED conduce el repaso</h2>
+      <h2>Modo docente: la escuela define el objetivo; SVEED conduce el repaso</h2>
       <p>
-        El modo profesor permite informar fechas y códigos de habilidades curriculares para
+        El modo docente permite introducir fechas y códigos de habilidades curriculares para
         orientar el repaso en casa. El objetivo es preservar la alineación con lo que se está
         trabajando en el aula.
       </p>
       <p>
-        En el estado actual del producto, la entrada admite más de una habilidad en la
-        planificación, pero la ejecución diaria todavía utiliza la primera habilidad válida
-        del día. Esta limitación se describe aquí para evitar una promesa mayor que la implementación existente.
+        En el estado actual del producto, el plan admite más de una habilidad, pero la ejecución diaria todavía utiliza la primera habilidad válida
+        del día. Esta limitación se describe aquí para reflejar con precisión las funciones disponibles.
       </p>
-    </section>
+    <p><strong>Docente → repaso → registro de la sesión.</strong> La habilidad seleccionada orienta la actividad en casa, y el registro permite hacer un seguimiento de su realización. Esta relación puede apoyar la continuidad curricular entre la escuela y el hogar. El registro no certifica el dominio de los aprendizajes ni demuestra, por sí solo, que se haya impartido una clase determinada.</p>
+</section>
 
     <section id="estado-atual">
       <p class="kicker">10 · Madurez actual</p>
-      <h2>Producto funcional, con estructura curricular amplia y curaduría en diferentes etapas</h2>
+      <h2>Producto funcional con una estructura curricular amplia y distintos niveles de revisión del contenido</h2>
       <div class="table-wrap">
         <table>
           <thead>
@@ -564,67 +548,56 @@ tr:last-child td{border-bottom:none}
           </thead>
           <tbody>
             <tr><td>Aplicación Android</td><td><span class="status">Funcional</span>. Las compilaciones de lanzamiento se generan correctamente; la firma y el empaquetado institucional final todavía están en proceso.</td></tr>
-            <tr><td>Pruebas automatizadas</td><td><span class="status">145 pruebas</span> · 0 fallos · 0 errores · 0 omitidas después del Evaluation Gate.</td></tr>
-            <tr><td>Estructura curricular amplia</td><td>6 asignaturas, de 1.º a 9.º año, con activos BNCC, grafos y plantillas en diferentes etapas de curaduría.</td></tr>
-            <tr><td>Curaduría profunda</td><td>Matemáticas de 2.º y 7.º años concentra actualmente el refinamiento más avanzado.</td></tr>
-            <tr><td>Uso formativo</td><td>Pruebas internas con niños cercanos al entorno de desarrollo del producto.</td></tr>
+            <tr><td>Pruebas automatizadas</td><td><span class="status">145 pruebas</span> · 0 fallos · 0 errores · 0 pruebas omitidas después del Evaluation Gate.</td></tr>
+            <tr><td>Estructura curricular amplia</td><td>Matemáticas, Portugués, Ciencias, Historia y Geografía del 1.º al 9.º año; Inglés del 6.º al 9.º. Materiales curriculares de la BNCC, grafos y plantillas en distintas etapas de revisión.</td></tr>
+            <tr><td>Revisión exhaustiva del contenido</td><td>Los contenidos de Matemáticas de 2.º y 7.º año son los que han recibido una revisión más profunda hasta el momento.</td></tr>
+            <tr><td>Uso formativo</td><td>Según el relato del fundador, dos niños que utilizan SVEED en casa consiguen completar las sesiones sin intervención pedagógica adulta una vez que se les pide que comiencen. Se trata de una observación informal, todavía sin evaluación independiente.</td></tr>
             <tr><td>Validación externa formal</td><td><strong>Aún no realizada.</strong></td></tr>
           </tbody>
         </table>
       </div>
       <p>
         La amplitud estructural no debe confundirse con una madurez uniforme del contenido:
-        la profundidad de curaduría todavía varía entre asignaturas y años.
+        el grado de revisión del contenido todavía varía entre asignaturas y años escolares.
       </p>
     </section>
 
     <section id="evidencia">
       <p class="kicker">11 · Evidencia</p>
-      <h2>El próximo salto de madurez es externo, no solamente técnico</h2>
-      <p>
-        La etapa actual combina un producto funcional, pruebas técnicas y observación formativa,
-        pero todavía no cuenta con un estudio externo formal de resultados. El siguiente paso
-        adecuado es una evaluación proporcional a la naturaleza del producto.
-      </p>
-      <p>
-        Una evaluación útil puede observar, entre otros puntos, la autonomía del niño durante
-        los primeros días de uso, la continuidad de la rutina, el uso de pistas, la recuperación
-        después de una dificultad y resultados de aprendizaje compatibles con el alcance del repaso.
-      </p>
-      <p>
-        La estrategia propuesta es secuencial: consolidar el producto y su presentación institucional;
-        obtener orientación externa sobre el diseño de evidencia; ejecutar un piloto documentado;
-        y después evaluar expansión y alianzas.
-      </p>
-      <div class="quote">
+      <h2>El siguiente paso es la evaluación externa</h2>
+      <p>Es necesario examinar por separado tres niveles de evidencia:</p>
+<ol><li><strong>Fundamentación educativa:</strong> la investigación sobre tareas para casa respalda la propuesta de práctica curricular con retroalimentación, con efectos variables y límites descritos en la <a href="#fundamentacao">fundamentación</a>.</li>
+<li><strong>Viabilidad operativa:</strong> el relato de uso familiar ofrece un indicio inicial de realización autónoma de las sesiones. La evaluación externa deberá examinar la finalización de las actividades, la necesidad de intervención adulta, el uso de pistas y la continuidad de la rutina en otras familias.</li>
+<li><strong>Efectos específicos:</strong> todavía es necesario medir si SVEED contribuye a la regularidad del repaso y al aprendizaje, en qué medida y bajo qué condiciones, con instrumentos adecuados y comparaciones que permitan valorar su contribución.</li>
+</ol>
+<p>La hipótesis del producto es que reducir la dependencia de las explicaciones adultas facilite el repaso regular y amplíe las oportunidades de práctica que pueden ayudar a consolidar el aprendizaje. Esta secuencia orienta la evaluación; todavía no es un resultado demostrado. Los registros de sesión aportan evidencia de realización, sujeta a su integridad, y no de mejoras del aprendizaje.</p>
+<p>La estrategia es obtener orientación externa, también mediante el Quick Assessment de Learning Cabinet, y buscar socios pedagógicos, técnicos y operativos para concluir la revisión especializada, realizar un piloto documentado y preparar la implementación. La presentación inicial busca orientación sobre la adecuación de la propuesta y sus carencias; no presupone aprobación ni una evaluación completa.</p>
+<div class="quote">
         Simple para que el niño lo use. Complejo solo donde es necesario: en la lógica que mantiene el repaso adecuado, continuo y con poca frustración.
       </div>
     </section>
 
     <section id="governanca">
       <p class="kicker">12 · Escalabilidad y gobernanza</p>
-      <h2>La capa GovTech sigue siendo relevante — pero ya no es la identidad principal</h2>
-      <p>
-        La arquitectura offline-first, los registros de sesión y la posibilidad de agregar
-        datos pueden ser útiles en implementaciones con escuelas, redes públicas, operadores
-        y socios institucionales. Esta capa de auditabilidad sigue siendo relevante.
-      </p>
-      <p>
-        Sin embargo, el orden estratégico es diferente: primero, un producto pedagógico claro y
-        evaluado externamente; después, cuando existan el contexto y los socios adecuados, la
-        auditabilidad puede funcionar como una capacidad adicional para la implementación a escala.
-      </p>
-      <p>
-        En esta versión, SVEED no afirma que su arquitectura sea una exigencia legal específica
-        de organismos de control, ni que el uso del sistema constituya por sí solo una prueba de conformidad.
-      </p>
-    </section>
-  </main>
+      <h2>Uso institucional y desarrollo previsto</h2>
+      <p>La dimensión institucional forma parte del diseño de SVEED: el niño realiza el repaso, y los registros asociados pueden ayudar a escuelas y autoridades educativas a seguir su realización. La actividad central sigue siendo el repaso curricular en casa.</p>
+<p>En una implementación institucional completa, la información agregada sobre participación, regularidad y contenidos repasados podría apoyar a docentes, equipos directivos y autoridades educativas. La consolidación de estos indicadores requiere integración, gobernanza de datos, protección de la infancia y validación de la integridad de los registros, todavía necesarias para su uso a escala.</p>
+<p>Disponibilidad, uso y resultados educativos son dimensiones distintas. Los registros pueden aportar evidencia operativa de uso; no sustituyen las evaluaciones del aprendizaje, las auditorías ni los requisitos específicos de rendición de cuentas.</p>
+<p>SVEED busca socios para completar e implementar este sistema, preservando el funcionamiento offline-first, la protección de datos y la ausencia de gamificación. Su uso en otros países requiere adaptación curricular y lingüística, además de validación local.</p>
+</section>
+  <section id="referencias-revisao"><p class="kicker">13 · Referencias sobre el repaso</p>
+<h2>Fuentes de la fundamentación educativa</h2>
+<ul><li>Education Endowment Foundation. <a href="https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit/homework" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;"><em>Teaching and Learning Toolkit: Homework</em> ↗</a>. Síntesis sobre tareas para casa, condiciones de implementación y límites de la evidencia.</li>
+<li>OCDE. <a href="https://www.oecd.org/en/publications/pisa-2022-results-volume-v_c2e44201-en/full-report/component-19.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;"><em>PISA 2022 Results (Volume V): From data to insights</em> ↗</a>. Recuadro V.11.1, apartado «Interacting through homework»: diseño de las tareas, apoyo familiar y actividades breves y regulares.</li>
+</ul>
+<p class="small">Fuentes consultadas el 21 de octubre de 2026. Las referencias sobre acceso, desigualdad y última milla siguen enlazadas en los apartados correspondientes de este documento.</p>
+</section>
+</main>
 </div>
 
 <footer class="footer">
   <div class="footer-inner">
-    <strong>SVEED — White Paper v2</strong><br>
+    <strong>SVEED — White Paper v2.2</strong><br>
     Documento técnico-institucional en revisión. Octubre de 2026.<br>
     Contacto: <a href="mailto:contato@sveed.com.br">contato@sveed.com.br</a><br>
     Esta versión prioriza la precisión sobre el marketing: las funcionalidades implementadas,
