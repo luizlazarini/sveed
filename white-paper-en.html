@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SVEED — White Paper v2: offline-first infrastructure for the last mile of learning, using guided individual curriculum review to support continuity after class.">
+<meta name="description" content="SVEED — White Paper v2.2: structured review at home, its educational rationale, offline-first architecture, and evidence needed.">
 <meta name="theme-color" content="#0A2342">
 <link rel="canonical" href="https://sveed.com.br/white-paper-en.html">
 <link rel="alternate" hreflang="pt-BR" href="https://sveed.com.br/white-paper.html">
 <link rel="alternate" hreflang="en" href="https://sveed.com.br/white-paper-en.html">
 <link rel="alternate" hreflang="es" href="https://sveed.com.br/white-paper-es.html">
 <link rel="alternate" hreflang="x-default" href="https://sveed.com.br/white-paper.html">
-<title>SVEED — White Paper v2</title>
+<title>SVEED — White Paper v2.2</title>
 <link rel="icon" type="image/jpeg" href="images/logo-sveed.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#0A2342;
@@ -216,26 +216,19 @@ tr:last-child td{border-bottom:none}
 
 <section class="hero">
   <div class="hero-inner">
-    <p class="eyebrow">White Paper · Version 2.0 · October 2026</p>
+    <p class="eyebrow">White Paper · Version 2.2 · October 2026</p>
     <h1>Offline-First Infrastructure for the Last Mile of Learning</h1>
-    <p class="hero-lead">
-      Guided individual curriculum review designed to extend learning beyond the classroom —
-      with less dependence on continuous connectivity or constant academic support at home.
-    </p>
+    <p class="hero-lead">Structured, independent review at home to help children consolidate what they have learned — with exercises, hints, and less dependence on continuous connectivity or adult explanations during the activity.</p>
     <div class="tags" aria-label="Main characteristics">
       <span class="tag">Android</span>
       <span class="tag">Offline-first</span>
-      <span class="tag">Brazil's National Common Curricular Base (BNCC)</span>
+      <span class="tag">Brazil’s national curriculum (BNCC)</span>
       <span class="tag">No generative AI during the session</span>
       <span class="tag">No gamification</span>
       <span class="tag">Guided individual review</span>
       <span class="tag">Education's last mile</span>
     </div>
-    <div class="hero-note">
-      This document describes the product at its current stage and explicitly distinguishes
-      implemented functionality, known limitations, and points that still depend on
-      external validation.
-    </div>
+    <div class="hero-note">This document describes the scope of the curriculum system and distinguishes the demonstration APK, implemented features, planned institutional capabilities, and areas that still require completion or external validation.</div>
   </div>
 </section>
 
@@ -247,7 +240,7 @@ tr:last-child td{border-bottom:none}
     <a href="#papel">2. Scope</a>
     <a href="#funcionamento">3. How it works</a>
     <a href="#orbita">4. Orbit and prerequisites</a>
-    <a href="#autonomia">5. Autonomy and accessibility</a>
+    <a href="#autonomia">5. Independence and accessibility</a>
     <a href="#rotina">6. Routine and focus</a>
     <a href="#arquitetura">7. Technical architecture</a>
     <a href="#dados">8. Data, privacy, and security</a>
@@ -255,7 +248,8 @@ tr:last-child td{border-bottom:none}
     <a href="#estado-atual">10. Current state</a>
     <a href="#evidencia">11. Evidence and next steps</a>
     <a href="#governanca">12. Scalability and governance</a>
-  </aside>
+  <a href="#referencias-revisao">13. References on review and homework</a>
+</aside>
 
   <main>
     <section id="resumo">
@@ -275,18 +269,15 @@ tr:last-child td{border-bottom:none}
       </p>
       <p class="small">
         <a href="https://www.oecd.org/en/publications/oecd-digital-education-outlook-2023_c74f03de-en/full-report/hardware-the-provision-of-connectivity-and-digital-devices_477c756b.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: OECD 2023 ↗</a>
-        &nbsp;·&nbsp;
+         · 
         <a href="https://www.unicef.org/indonesia/press-releases/digital-learning-all-symposium-explores-ways-reach-those-left-behind-education" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: UNICEF 2022 ↗</a>
-        &nbsp;·&nbsp;
+         · 
         <a href="https://documents1.worldbank.org/curated/en/907461627633168785/pdf/Read-at-Home-Materials-Guidance.pdf" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: World Bank — Read@Home ↗</a>
       </p>
-      <div class="quote">School teaches. SVEED supports the review.</div>
-      <p>
-        SVEED addresses one concrete expression of that last mile: the gap between content taught
-        in the classroom and the individual review and consolidation that happens afterward.
-        Guided curriculum review is the mechanism; continuity of learning is the function.
-      </p>
-    </section>
+      <div class="quote">Schools teach. SVEED makes review possible. Educational assessments measure proficiency.</div>
+      <p>SVEED is an Android system designed to make structured, regular, independent review at home possible, with the educational aim of helping children consolidate what they have learned. It provides exercises and support when difficulties arise, reducing the need for an adult to explain content already taught at school.</p>
+    <p>Contributing to learning is its educational aim. Its operational role is to make review possible; it is not designed to measure or certify proficiency. SVEED’s specific effects on study regularity and learning have not yet been measured systematically.</p>
+</section>
 
     <section id="problema">
       <p class="kicker">1 · The last mile</p>
@@ -303,7 +294,7 @@ tr:last-child td{border-bottom:none}
         and are among the hardest to reach. UNESCO also uses last-mile language when discussing
         the challenge of reaching the most disadvantaged and hardest-to-reach learners.
         <a href="https://www.unicef.org/indonesia/press-releases/digital-learning-all-symposium-explores-ways-reach-those-left-behind-education" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: UNICEF 2022 ↗</a>
-        &nbsp;
+         
         <a href="https://uis.unesco.org/sites/default/files/documents/teaching-and-learning-achieving-quality-for-all-gmr-2013-2014-en.pdf" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: UNESCO — EFA Global Monitoring Report ↗</a>
       </p>
 
@@ -315,14 +306,17 @@ tr:last-child td{border-bottom:none}
         short, regular assignments can provide benefits without unnecessarily widening inequities.
         <a href="https://www.oecd.org/en/publications/pisa-2022-results-volume-v_c2e44201-en/full-report/component-19.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: PISA 2022 ↗</a>
       </p>
-      <p>
+      <h3 id="fundamentacao">Educational rationale: curriculum-based practice and homework</h3>
+<p>The Education Endowment Foundation’s (EEF) <em>Homework</em> evidence review reports positive average effects, with larger effects in secondary than in primary education. It emphasizes tasks connected to classroom learning, feedback, and quality rather than quantity. The EEF rates the security of this evidence as low; outcomes vary across settings and educational stages. <a href="https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit/homework" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: EEF — Homework ↗</a></p>
+<p>This research supports the educational rationale for offering curriculum-based practice with guidance. Applying these principles to SVEED is a design hypothesis to be evaluated: effects found in other interventions do not automatically apply to this app. The cited sources do not constitute an evaluation or endorsement of SVEED.</p>
+<p>
         The challenge is that the conditions needed to complete that review are not equally
         distributed. PISA 2018 links lower homework participation among disadvantaged students
         to factors such as lack of a quiet place to study, unequal access to internet and
         computers, and less available parental support. In its Brazil-specific analysis, the
         OECD also documents substantial inequalities in access to learning resources at home.
         <a href="https://www.oecd.org/en/publications/pisa-2018-results-volume-v_ca768d40-en/full-report/component-12.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: PISA 2018 ↗</a>
-        &nbsp;
+         
         <a href="https://www.oecd.org/en/publications/education-in-brazil_60a667f7-en/full-report/component-10.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;">Source: OECD — Education in Brazil ↗</a>
       </p>
       <p>
@@ -341,18 +335,13 @@ tr:last-child td{border-bottom:none}
 
     <section id="papel">
       <p class="kicker">2 · Scope</p>
-      <h2>SVEED reviews; it does not replace school, teachers, or the curriculum</h2>
-      <p>
-        SVEED is a lightweight Android-based system for continuity of learning. Its central
-        mechanism is guided individual curriculum review: revisiting, practicing, offering
-        hints, recovering prerequisites when needed, and maintaining a short study routine
-        around skills the school has already taught.
-      </p>
+      <h2>Reviewing taught content without replacing schools, teachers, or the curriculum</h2>
+      <p>SVEED aims to make review manageable for children: practicing skills already taught at school, receiving hints and feedback, revisiting prerequisites when needed, and maintaining a study routine. These mechanisms serve the aim of consolidating learning; their effects need to be evaluated in use.</p>
       <div class="callout">
         SVEED does not claim to solve education's entire last-mile problem on its own. It does
         not provide internet access, distribute devices, or replace public policy. It was
         designed to <strong>reduce concrete barriers</strong>: dependence on continuous
-        connectivity, constant adult mediation, and the break between classroom instruction
+        connectivity, constant adult guidance, and the break between classroom instruction
         and individual review at home.
       </div>
       <div class="grid">
@@ -363,8 +352,8 @@ tr:last-child td{border-bottom:none}
             <li>generates exercises locally from rules and templates;</li>
             <li>offers progressive hints when available;</li>
             <li>provides supporting concepts separately from hints;</li>
-            <li>temporarily reduces difficulty when friction appears;</li>
-            <li>returns to the target skill after stabilization.</li>
+            <li>temporarily reduces difficulty when the child struggles;</li>
+            <li>returns to the target skill once the child is ready to return.</li>
           </ul>
         </div>
         <div class="card">
@@ -372,13 +361,16 @@ tr:last-child td{border-bottom:none}
           <ul>
             <li>does not replace a teacher or classroom instruction;</li>
             <li>should not autonomously introduce new curriculum content;</li>
-            <li>does not semantically diagnose the cause of each error;</li>
-            <li>does not use points, coins, rankings, or streaks as the engine of the session;</li>
+            <li>does not identify the underlying reason for each incorrect answer;</li>
+            <li>does not use points, coins, rankings, or streaks to drive the session;</li>
             <li>does not depend on generative AI to create questions for the child.</li>
           </ul>
         </div>
       </div>
-    </section>
+    <h3>Curriculum coverage and demonstration sample</h3>
+<p>SVEED — Sistema de Viabilização de Estudo Estruturado Domiciliar (a system for enabling structured study at home) — has a Brazilian curriculum structure covering Years 1–9 of Brazil’s Ensino Fundamental (primary and lower secondary education): Mathematics, Portuguese, Science, History, and Geography across those years, and English in Years 6–9. The existing curriculum materials are at different stages of specialist educational review.</p>
+<p>The evaluation APK provides Mathematics for Years 2 and 7 as a demonstration sample. It allows reviewers to examine this content and the review workflow; it neither limits the scope of the system nor demonstrates consistent quality across the entire collection.</p>
+</section>
 
     <section id="funcionamento">
       <p class="kicker">3 · Pedagogical flow</p>
@@ -386,11 +378,11 @@ tr:last-child td{border-bottom:none}
       <div class="grid flow">
         <div class="card">
           <h3>Target skill</h3>
-          <p>The system starts from a skill previously identified through the student flow or teacher mode.</p>
+          <p>The system starts from a skill previously identified by the child or through teacher mode.</p>
         </div>
         <div class="card">
-          <h3>Analogous exercise</h3>
-          <p>The child practices an instance generated locally within a closed curriculum universe.</p>
+          <h3>Practice exercise</h3>
+          <p>The child works through an exercise generated on the device within a defined set of curriculum content.</p>
         </div>
         <div class="card">
           <h3>First error</h3>
@@ -414,7 +406,7 @@ tr:last-child td{border-bottom:none}
 
     <section id="orbita">
       <p class="kicker">4 · Rule-based adaptation</p>
-      <h2>Orbit, cognitive breathing room, and prerequisite recovery</h2>
+      <h2>The orbit: adjusting difficulty and revisiting prerequisites</h2>
       <p>
         Review works around a target skill with limited local variation. The orbit consists of
         <strong>TARGET, TARGET-1, TARGET-2, and TARGET+1</strong>.
@@ -445,9 +437,11 @@ tr:last-child td{border-bottom:none}
       <h2>Simple on the surface, complex only where necessary</h2>
       <p>
         The child does not need to understand the orbit, graph, templates, or recovery rules.
-        The experience presents a predictable sequence, few controls, and support when needed.
+        The child follows a predictable sequence with a small number of controls and help when needed.
       </p>
-      <h3>TTS as an autonomy layer</h3>
+      <h3>Independent participation</h3>
+<p>Independence means being able to complete review activities with less educational support from an adult, including help with reading instructions and working through difficulties. It does not assume that children will start spontaneously: a parent or caregiver may prompt them to begin and organize the routine. The aim is to reduce the need for that adult to explain and supervise every exercise.</p>
+<h3>Text-to-speech to support independent use</h3>
       <p>
         The operating system's text-to-speech can read prompts and instructions. For children
         with lower reading fluency, this reduces dependence on an adult reader. Older, fluent
@@ -455,8 +449,7 @@ tr:last-child td{border-bottom:none}
       </p>
       <h3>No gamification and no scoreboard during review</h3>
       <p>
-        SVEED does not use coins, rankings, avatars, or artificial rewards as the core of
-        engagement. It also avoids continuously displaying a score of correct and incorrect
+        SVEED does not use coins, rankings, avatars, or artificial rewards to drive engagement. It also avoids continuously displaying a score of correct and incorrect
         answers during the session. The feedback shown is what is necessary to conduct the review.
       </p>
     </section>
@@ -464,18 +457,14 @@ tr:last-child td{border-bottom:none}
     <section id="rotina">
       <p class="kicker">6 · Routine and focus</p>
       <h2>A short, predictable session with a safe exit</h2>
-      <p>
-        The core product is a short daily review designed around approximately 15 minutes.
-        The intention is to create a routine that can be repeated, not a second school day.
-      </p>
+      <p>The core of the product is a daily review session lasting 15 minutes, regardless of how quickly the child answers. The duration is an operational choice intended to make the routine short and predictable, not an established optimum for every age group and subject.</p>
       <p>
         During review, SVEED can activate a focus mode that reduces impulsive switching to
         competing apps. This is not an absolute lock: incoming calls remain available, and
         an emergency exit allows the session to end when necessary.
       </p>
       <p>
-        The routine also includes a limited number of invitations throughout the day and a
-        closing time, avoiding pressure on the child to complete the activity at any hour of the night.
+        The routine also includes a limited number of prompts throughout the day and a daily cutoff time, avoiding pressure on the child to complete the activity at any hour of the night.
       </p>
     </section>
 
@@ -500,7 +489,7 @@ tr:last-child td{border-bottom:none}
           <p>Orbit, return to target, hints, and prerequisite recovery follow rules defined in the product.</p>
         </div>
         <div class="card">
-          <h3>Low technical marginal cost</h3>
+          <h3>Low technical cost per additional session</h3>
           <p>The architecture reduces network use, backend dependence, and compute cost per session.</p>
         </div>
       </div>
@@ -544,11 +533,12 @@ tr:last-child td{border-bottom:none}
         daily execution still uses the first valid skill for that day. This limitation is
         described here to avoid making a promise beyond the current implementation.
       </p>
-    </section>
+    <p><strong>Teacher → review → session record.</strong> The selected skill guides the activity at home, and the session record allows its completion to be tracked. This connection can support continuity between classroom learning and review at home. The record does not certify proficiency or establish, on its own, that a particular lesson was taught.</p>
+</section>
 
     <section id="estado-atual">
       <p class="kicker">10 · Current maturity</p>
-      <h2>Functional product, with broad curriculum structure and curation at different stages</h2>
+      <h2>A working product with broad curriculum coverage and content review at different stages</h2>
       <div class="table-wrap">
         <table>
           <thead>
@@ -556,69 +546,57 @@ tr:last-child td{border-bottom:none}
           </thead>
           <tbody>
             <tr><td>Android application</td><td><span class="status">Functional</span>. Release builds compile successfully; final institutional signing and packaging are still being completed.</td></tr>
-            <tr><td>Automated tests</td><td><span class="status">145 tests</span> · 0 failures · 0 errors · 0 skips after the Evaluation Gate.</td></tr>
-            <tr><td>Broad curriculum structure</td><td>6 subjects, Grades 1–9, with BNCC assets, graphs, and templates at different curation stages.</td></tr>
-            <tr><td>Deep curation</td><td>Mathematics in Grades 2 and 7 currently has the most advanced refinement.</td></tr>
-            <tr><td>Formative use</td><td>Internal testing with children close to the product development environment.</td></tr>
+            <tr><td>Automated tests</td><td><span class="status">145 tests</span> · 0 failures · 0 errors · 0 skipped tests after the Evaluation Gate.</td></tr>
+            <tr><td>Broad curriculum structure</td><td>Mathematics, Portuguese, Science, History, and Geography in Years 1–9; English in Years 6–9. BNCC curriculum materials, graphs, and templates are at different stages of content review.</td></tr>
+            <tr><td>In-depth content review</td><td>Mathematics for Years 2 and 7 has undergone the most extensive refinement so far.</td></tr>
+            <tr><td>Formative use</td><td>The founder reports that two children using SVEED at home can complete sessions without adult educational intervention once prompted to begin. This is an informal observation that has not yet been independently evaluated.</td></tr>
             <tr><td>Formal external validation</td><td><strong>Not yet conducted.</strong></td></tr>
           </tbody>
         </table>
       </div>
       <p>
         Structural breadth should not be confused with uniform content maturity:
-        the depth of curation still varies across subjects and grade levels.
+        the depth of content review still varies across subjects and year groups.
       </p>
     </section>
 
     <section id="evidencia">
       <p class="kicker">11 · Evidence</p>
-      <h2>The next maturity step is external, not merely technical</h2>
-      <p>
-        The current stage combines a functional product, technical testing, and formative
-        observation, but it does not yet include a formal external outcomes study. The
-        appropriate next step is an evaluation proportionate to the nature of the product.
-      </p>
-      <p>
-        A useful evaluation may observe, among other points, the child's autonomy over the
-        first days of use, continuity of the routine, hint use, recovery after difficulty,
-        and learning outcomes compatible with the review scope.
-      </p>
-      <p>
-        The proposed strategy is sequential: consolidate the product and its institutional
-        presentation; obtain external guidance on evidence design; run a documented pilot;
-        and then evaluate expansion and partnerships.
-      </p>
-      <div class="quote">
-        Simple for the child to use. Complex only where necessary: in the logic that keeps review appropriate, continuous, and low-friction.
+      <h2>The next step is external evaluation</h2>
+      <p>Three levels of evidence need to be considered separately:</p>
+<ol><li><strong>Educational rationale:</strong> research on homework supports the approach of curriculum-based practice with feedback, with variable effects and limitations described in the <a href="#fundamentacao">educational rationale</a>.</li>
+<li><strong>Operational feasibility:</strong> the report of family use is an initial indication that children can complete sessions independently. External evaluation should examine session completion, the need for adult intervention, hint use, and continuity of the routine in other families.</li>
+<li><strong>Specific effects:</strong> it remains necessary to measure whether, to what extent, and under what conditions SVEED contributes to regular review and learning, using suitable measures and comparisons that allow its contribution to be assessed.</li>
+</ol>
+<p>The product’s hypothesis is that reducing dependence on adult explanations makes regular review easier, increasing opportunities for practice that may help consolidate learning. This proposed sequence guides evaluation; it is not yet a demonstrated result. Session records provide evidence of activity, subject to their integrity, rather than evidence of learning gains.</p>
+<p>The strategy is to seek external guidance, including through the Learning Cabinet’s Quick Assessment, and find educational, technical, and operational partners to complete specialist review, run a documented pilot, and prepare implementation. The initial submission seeks feedback on suitability and gaps; it does not assume approval or a full assessment.</p>
+<div class="quote">
+        Simple for the child to use. Complex only where necessary: in the logic that keeps review appropriate, continuous, and less frustrating.
       </div>
     </section>
 
     <section id="governanca">
       <p class="kicker">12 · Scalability and governance</p>
-      <h2>The GovTech layer remains relevant — but it is no longer the primary identity</h2>
-      <p>
-        The offline-first architecture, session records, and the possibility of aggregating
-        data can be useful in deployments with schools, public education systems, operators,
-        and institutional partners. This auditability layer remains relevant.
-      </p>
-      <p>
-        The strategic order, however, is different: first, a clear educational product that is
-        externally evaluated; then, when the appropriate context and partners exist,
-        auditability can function as an additional capability for deployment at scale.
-      </p>
-      <p>
-        In this version, SVEED does not claim that its architecture is a specific legal
-        requirement imposed by oversight bodies, nor that use of the system by itself
-        constitutes proof of compliance.
-      </p>
-    </section>
-  </main>
+      <h2>Institutional use and planned development</h2>
+      <p>Institutional use is part of SVEED’s design: children complete review activities, and the associated records can help schools and education authorities track participation. Curriculum-based review at home remains the central activity.</p>
+<p>In a fully implemented institutional deployment, aggregated information on participation, regularity, and content reviewed could support teachers, school leaders, and education authorities. Consolidating these indicators requires integration, data governance, child protection, and validation of record integrity, which are still needed for use at scale.</p>
+<p>Availability, use, and educational outcomes are distinct dimensions. Records can provide operational evidence of use; they do not replace learning assessments, audits, or specific reporting requirements.</p>
+<p>SVEED seeks partners to complete and implement this system while preserving offline-first operation, data protection, and the absence of gamification. Use in other countries requires curriculum and language adaptation, along with local validation.</p>
+</section>
+  <section id="referencias-revisao"><p class="kicker">13 · References on review and homework</p>
+<h2>Sources for the educational rationale</h2>
+<ul><li>Education Endowment Foundation. <a href="https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit/homework" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;"><em>Teaching and Learning Toolkit: Homework</em> ↗</a>. Evidence review covering homework, implementation conditions, and limitations of the evidence.</li>
+<li>OECD. <a href="https://www.oecd.org/en/publications/pisa-2022-results-volume-v_c2e44201-en/full-report/component-19.html" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;"><em>PISA 2022 Results (Volume V): From data to insights</em> ↗</a>. Box V.11.1, “Interacting through homework”: task design, family support, and short, regular assignments.</li>
+</ul>
+<p class="small">Sources accessed on October 21, 2026. References on access, inequality, and the last mile remain linked in the relevant sections of this document.</p>
+</section>
+</main>
 </div>
 
 <footer class="footer">
   <div class="footer-inner">
-    <strong>SVEED — White Paper v2</strong><br>
-    Technical-institutional document under revision. October 2026.<br>
+    <strong>SVEED — White Paper v2.2</strong><br>
+    Technical and institutional document under review. October 2026.<br>
     Contact: <a href="mailto:contato@sveed.com.br">contato@sveed.com.br</a><br>
     This version prioritizes accuracy over marketing: implemented functionality, current
     limitations, and validation needs are presented separately.
