@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVEED — Política de Privacidad</title><meta name="description" content="Política de Privacidad — SVEED">
+<link rel="canonical" href="https://sveed.com.br/privacy-es.html">
+<link rel="alternate" hreflang="pt-BR" href="https://sveed.com.br/privacy.html">
+<link rel="alternate" hreflang="en" href="https://sveed.com.br/privacy-en.html">
+<link rel="alternate" hreflang="es" href="https://sveed.com.br/privacy-es.html">
+<link rel="alternate" hreflang="x-default" href="https://sveed.com.br/privacy.html">
+<link rel="icon" href="images/logo-sveed.jpg"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A2342;
+  --navy-2:#17395f;
+  --ink:#1d2935;
+  --muted:#5f6d79;
+  --line:#dbe3ea;
+  --paper:#ffffff;
+  --surface:#f6f8fa;
+  --accent:#e87532;
+  --accent-soft:#fff4ec;
+  --max:1160px;
+  --read:780px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--navy);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.topbar{
+  position:sticky;top:0;z-index:30;
+  border-bottom:1px solid rgba(219,227,234,.95);
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+}
+.topbar-inner{
+  max-width:var(--max);margin:auto;padding:12px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.brand{
+  display:flex;align-items:center;gap:11px;
+  color:var(--navy);text-decoration:none;font-weight:800;letter-spacing:-.01em
+}
+.brand img{
+  width:40px;height:40px;object-fit:cover;border-radius:10px;
+  border:1px solid var(--line)
+}
+.actions{display:flex;gap:10px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:42px;padding:0 16px;border-radius:9px;
+  text-decoration:none;font-weight:700;font-size:.93rem;
+  border:1px solid var(--navy);transition:.18s ease
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-secondary{background:#fff;color:var(--navy)}
+.hero{
+  max-width:none;
+  margin:0;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 86% 10%,rgba(232,117,50,.13),transparent 30%),
+    linear-gradient(180deg,#f9fbfc 0%,#ffffff 100%);
+}
+.hero-inner{max-width:1080px;margin:auto;padding:72px 24px 64px}
+.eyebrow{
+  margin:0 0 14px;color:var(--accent);font-size:.78rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:.1em
+}
+h1{
+  margin:0;color:var(--navy);
+  max-width:960px;font-size:clamp(2.35rem,4vw,3.85rem);
+  line-height:1.06;letter-spacing:-.04em
+}
+.hero-lead{
+  max-width:920px;margin:25px 0 0;
+  color:var(--muted);font-size:clamp(1.06rem,2vw,1.3rem)
+}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:30px}
+.tag{
+  border:1px solid var(--line);background:#fff;color:var(--navy-2);
+  border-radius:999px;padding:7px 12px;font-size:.88rem;font-weight:600
+}
+.hero-note{
+  max-width:920px;margin-top:28px;padding:16px 18px;
+  border-left:4px solid var(--accent);background:var(--accent-soft);
+  border-radius:0 10px 10px 0;color:#5b4639
+}
+.layout{
+  max-width:var(--max);margin:auto;padding:52px 24px 72px;
+  display:grid;grid-template-columns:220px minmax(0,1fr);gap:44px
+}
+.toc{
+  position:sticky;top:88px;align-self:start;
+  border:1px solid var(--line);border-radius:14px;
+  background:var(--surface);padding:18px
+}
+.toc-title{display:block;color:var(--navy);font-weight:800;margin-bottom:8px}
+.toc a{
+  display:block;text-decoration:none;color:var(--muted);
+  padding:7px 0;font-size:.93rem;line-height:1.4
+}
+.toc a:hover{color:var(--navy)}
+main{min-width:0}
+main section{max-width:var(--read);margin:0 0 76px}
+.kicker{
+  color:var(--accent);font-size:.76rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:.09em;margin-bottom:8px
+}
+h2{
+  color:var(--navy);font-size:clamp(1.75rem,3vw,2.35rem);
+  line-height:1.2;letter-spacing:-.025em;margin:0 0 18px
+}
+h3{color:var(--navy-2);font-size:1.22rem;line-height:1.35;margin:30px 0 10px}
+p{margin:0 0 18px}
+ul{padding-left:22px;margin:0 0 20px}
+li{margin:7px 0}
+strong{color:#142331}
+.quote{
+  color:var(--navy);font-size:1.25rem;line-height:1.55;font-weight:800;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:25px 0;margin:34px 0
+}
+.callout{
+  background:var(--accent-soft);border-left:4px solid var(--accent);
+  border-radius:0 12px 12px 0;padding:18px 20px;margin:26px 0
+}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:22px 0}
+.card{
+  border:1px solid var(--line);border-radius:14px;background:#fff;padding:20px;
+  box-shadow:0 1px 0 rgba(10,35,66,.02)
+}
+.card h3{margin:0 0 9px;font-size:1.05rem}
+.card p:last-child,.card ul:last-child{margin-bottom:0}
+.flow{counter-reset:step}
+.flow .card{position:relative;padding-left:58px}
+.flow .card:before{
+  counter-increment:step;content:counter(step);
+  position:absolute;left:18px;top:18px;width:28px;height:28px;border-radius:50%;
+  display:grid;place-items:center;background:var(--navy);color:white;
+  font-size:.82rem;font-weight:800
+}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin:22px 0}
+table{width:100%;min-width:640px;border-collapse:collapse}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--surface);color:var(--navy);font-size:.92rem}
+tr:last-child td{border-bottom:none}
+.status{
+  display:inline-block;border-radius:999px;padding:4px 9px;
+  background:#edf3f7;color:var(--navy);font-weight:800;font-size:.78rem
+}
+.rule{
+  display:grid;grid-template-columns:110px 1fr;gap:14px;
+  padding:15px 0;border-bottom:1px solid var(--line)
+}
+.rule:last-child{border-bottom:none}
+.rule strong{color:var(--navy)}
+.small{font-size:.91rem;color:var(--muted)}
+.footer{border-top:1px solid var(--line);background:var(--surface)}
+.footer-inner{
+  max-width:var(--max);margin:auto;padding:36px 24px;
+  color:var(--muted);font-size:.91rem
+}
+@media (max-width:900px){
+  .hero-inner{padding:62px 24px 56px}
+  .layout{grid-template-columns:1fr;gap:26px}
+  .toc{position:relative;top:auto}
+}
+@media (max-width:700px){
+  .topbar-inner{padding:10px 16px}
+  .hero-inner{padding:62px 18px 56px}
+  .layout{padding:38px 18px 58px}
+  .grid{grid-template-columns:1fr}
+  .actions .btn-secondary{display:none}
+  .rule{grid-template-columns:1fr;gap:2px}
+}
+@media print{
+  .topbar,.toc,.actions{display:none!important}
+  body{font-size:10.8pt}
+  .hero-inner,.layout{max-width:none;padding-left:0;padding-right:0}
+  .layout{display:block}
+  section{max-width:none;break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+  .card,.table-wrap{box-shadow:none}
+}
+
+.policy{max-width:828px;margin:auto;padding:48px 24px}.policy section{margin-bottom:38px}.policy h2{font-size:1.45rem}.language-links{display:flex;gap:16px;flex-wrap:wrap}.topbar-inner{flex-wrap:wrap}.policy h1{font-size:clamp(2rem,6vw,3rem);margin-bottom:20px}
+</style></head><body>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="index-es.html"><img src="images/logo-sveed.jpg" alt="SVEED"><span>SVEED</span></a><nav class="language-links" aria-label="Idioma / Language"><a href="privacy.html" lang="pt-BR">Português</a><a href="privacy-en.html" lang="en">English</a><a href="privacy-es.html" lang="es" aria-current="page">Español</a></nav></div></header>
+<main class="policy"><h1>Política de Privacidad</h1><p class="small">24 de octubre de 2026</p><p>Esta política abarca la versión de evaluación institucional de SVEED y el sitio sveed.com.br. La aplicación permite repasar contenidos curriculares en casa. A continuación se distingue el uso de información en el dispositivo del tratamiento asociado al sitio web.</p>
+<section><h2>1. Responsable y contacto</h2><p>SVEED es desarrollado por Luiz Antonio Lazarini, desarrollador independiente en Brasil. Para consultas y solicitudes sobre privacidad, escriba a <a href="mailto:contato@sveed.com.br">contato@sveed.com.br</a>.</p></section>
+<section><h2>2. Información utilizada y finalidades</h2><p>El repaso no requiere el nombre, el número de identificación fiscal brasileño (CPF), el correo electrónico ni el teléfono del menor. La aplicación utiliza ajustes, identificadores técnicos persistentes y registros locales de sesiones, como fecha, duración, asignatura, habilidad curricular, aciertos, errores y uso de pistas. Esta información permite organizar la rutina, ejecutar las actividades y mostrar el seguimiento local. No constituye un diagnóstico ni una certificación del aprendizaje. Los identificadores técnicos y los registros no se describen como absolutamente anónimos.</p></section>
+<section><h2>3. Almacenamiento, conexión y copias de seguridad</h2><p>El contenido y la lógica del repaso se ejecutan en el dispositivo Android. Los registros de sesiones y los ajustes se almacenan localmente; no se necesita una cuenta en línea para repasar. En la configuración de evaluación documentada, el manifiesto del proyecto no declara permiso de internet y las copias de seguridad están desactivadas, con reglas de exclusión para copias en la nube y transferencias entre dispositivos. La atención por correo electrónico no permite al desarrollador acceder de forma remota a los registros locales.</p></section>
+<section><h2>4. Lectura por voz y permisos</h2><p>La lectura de enunciados utiliza el servicio de síntesis de voz instalado en Android. El texto se transmite a ese servicio para su lectura; su funcionamiento local o mediante red depende del motor y de la voz seleccionados en el dispositivo. Consulte la configuración y la política de privacidad del proveedor de voz. SVEED utiliza funciones de Android para vibración, recordatorios, notificaciones y la protección de la concentración mediante una capa superpuesta durante la sesión. La configuración documentada también incluye un permiso de almacenamiento limitado a Android 9 y versiones anteriores para eliminar archivos antiguos de SVEED.</p></section>
+<section><h2>5. Menores, publicidad y comunicación de datos</h2><p>La minimización de datos y la protección del menor orientan el diseño de SVEED. La versión de evaluación no incluye publicidad ni utiliza los registros de repaso para vender datos o dirigir anuncios. Su arquitectura local no requiere enviar esos registros al desarrollador para realizar el repaso. El servicio de voz y el sitio web tienen los comportamientos específicos descritos en esta política. Evite enviar información que identifique a menores en las solicitudes de asistencia cuando no sea necesaria.</p></section>
+<section><h2>6. Conservación y eliminación</h2><p>El proceso de cierre de sesión solicita eliminar los registros de sesiones cuya fecha sea anterior a la fecha actual menos 15 días. La limpieza depende de que se ejecute ese proceso; no garantiza la eliminación en una fecha determinada mientras la aplicación no se utilice. Esta regla se refiere a los registros de sesiones y no establece el mismo plazo para los ajustes y los identificadores.</p>
+<p>Para eliminar los datos privados locales, vaya a Ajustes de Android → Aplicaciones → SVEED → Almacenamiento → Borrar datos, o desinstale la aplicación. Los nombres de los menús pueden variar. La eliminación borra el historial y los ajustes locales. Los archivos que se hayan copiado o compartido fuera de la aplicación deben eliminarse por separado en su destino.</p></section>
+<section><h2>7. Sitio institucional y servicios externos</h2><p>Visitar el sitio web es distinto de utilizar el repaso en la aplicación. Las páginas cargan fuentes de Google Fonts; las páginas de inicio también cargan iconos de jsDelivr. Para entregar estos recursos, los proveedores reciben solicitudes del navegador con información técnica, como la dirección IP y los datos de la solicitud. La infraestructura de alojamiento también puede tratar registros técnicos de acceso conforme a sus propias prácticas.</p>
+<p>Las páginas actuales no incluyen herramientas de publicidad o análisis de visitantes gestionadas por SVEED. La navegación entre idiomas se realiza mediante enlaces. Consulte la información de los proveedores: <a href="https://developers.google.com/fonts/faq/privacy">Google Fonts</a> y <a href="https://www.jsdelivr.com/terms/privacy-policy">jsDelivr</a>.</p></section>
+<section><h2>8. Atención y derechos</h2><p>Los padres, tutores y demás titulares de datos pueden solicitar información y ejercer los derechos aplicables previstos en la LGPD de Brasil, incluidos la confirmación del tratamiento, el acceso, la rectificación y la eliminación, a través del correo indicado. Se explicarán las medidas posibles en cada caso. Como los registros de la aplicación permanecen en el dispositivo, no podemos consultarlos, corregirlos ni eliminarlos de forma remota; podemos orientar sobre su gestión local.</p>
+<p>Al enviar un correo electrónico, el remitente proporciona su dirección y el contenido del mensaje para atender la solicitud. Esta información se utiliza para responder y dar seguimiento, y se conserva durante el tiempo necesario para atender la solicitud y cumplir las obligaciones aplicables. Las solicitudes de eliminación de estos mensajes pueden enviarse al mismo contacto. Una consulta general no requiere el historial del menor.</p></section>
+<section><h2>9. Actualizaciones</h2><p>Esta política podrá actualizarse cuando cambien las prácticas descritas. La fecha de la versión vigente figura en esta página. Las nuevas funciones que modifiquen el tratamiento de datos deberán ir acompañadas de información actualizada.</p></section>
+<p><a href="index-es.html">Volver al sitio</a> · <a href="white-paper-es.html">White Paper</a></p></main>
+<footer class="footer"><div class="footer-inner">© 2026 SVEED · <a href="mailto:contato@sveed.com.br">contato@sveed.com.br</a></div></footer></body></html>
