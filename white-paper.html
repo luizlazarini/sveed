@@ -290,7 +290,7 @@ tr:last-child td{border-bottom:none}
       <p>
         Contribuir para a aprendizagem é sua finalidade educacional. Viabilizar a revisão é sua
         função operacional; medir ou certificar proficiência não é sua função. Os efeitos específicos
-        do SVEED sobre a regularidade do estudo e a aprendizagem ainda não foram medidos sistematicamente.
+        do SVEED sobre a regularidade do estudo e a aprendizagem ainda não foram medidos sistematicamente. Sua arquitetura também reúne registros de execução e componentes já implementados para Verificação de Uso Educacional em programas de dispositivos. Essa base institucional, apresentada no capítulo 12, abre uma frente de integração e implantação para o sócio executor.
       </p>
     </section>
 
@@ -642,11 +642,11 @@ tr:last-child td{border-bottom:none}
 
     <section id="governanca">
       <p class="kicker">12 · Escalabilidade e governança</p>
-      <h2>Aplicação institucional e desenvolvimento previsto</h2>
-      <p>A dimensão institucional faz parte da concepção do SVEED: a criança realiza a revisão, e os registros associados podem apoiar o acompanhamento de sua execução por escolas e redes. A atividade central continua sendo a revisão curricular domiciliar.</p>
-      <p>Em uma implantação institucional concluída, informações agregadas sobre participação, regularidade e conteúdos revisados podem apoiar professores, coordenação e gestão da rede. A consolidação desses indicadores depende de integração, governança de dados, proteção da criança e validação da integridade dos registros, ainda necessárias para esse uso em escala.</p>
-      <p>Disponibilização, utilização e resultado educacional são dimensões distintas. Os registros podem fornecer evidências operacionais de utilização; não substituem avaliações de aprendizagem, auditorias ou requisitos específicos de prestação de contas.</p>
-      <p>O SVEED busca parceiros para concluir e implantar essa estrutura, preservando o funcionamento offline-first, a proteção de dados e a ausência de gamificação. A aplicação a outros países exige adaptação curricular, linguística e validação local.</p>
+      <h2>Da revisão à Verificação de Uso Educacional</h2>
+      <p>O SVEED conecta a revisão escolar ao uso educacional dos dispositivos. Para a criança, oferece uma rotina curricular estruturada que funciona offline. Para programas que distribuem aparelhos, sua arquitetura já reúne registros de execução e componentes destinados à verificação desse uso. O sócio executor dará continuidade a essa base, conduzindo sua integração e implantação institucional. A utilidade institucional é acompanhar quantos dos aparelhos destinados a um programa efetivamente registraram revisão curricular, por escola, ano e turma.</p>
+      <p>A base existente inclui registros locais de sessão e contexto escolar, preparação de dados para envio, fila de sincronização e funções criptográficas. Os componentes de sincronização permanecem desativados na configuração atual. O fechamento da sessão utiliza um hash local; as funções adicionais de HMAC e Android Keystore ainda precisam ser integradas e validadas no protocolo institucional. Esse trabalho já construído oferece o ponto de partida para a próxima etapa.</p>
+      <p>Para colocar essa aplicação em operação, é necessário concluir a integração com o serviço institucional, o vínculo entre instalação e aparelho do inventário, a contagem de dispositivos distintos no período e a verificação da integridade dos registros. O identificador atual é de instalação; o token diário existente não resolve sozinho a contagem entre dias. O protocolo deverá selecionar os dados mínimos de execução e definir sua agregação, preservando a privacidade da criança. O envio posterior dos registros é compatível com o funcionamento offline da revisão.</p>
+      <p>A frente GovTech oferece uma possibilidade de distribuição do serviço educacional junto a redes, integradores, fornecedores de dispositivos e financiadores de programas. O sócio executor conduzirá a integração, a governança, a validação com possíveis contratantes e a implantação, junto à continuidade da revisão pedagógica e da avaliação com usuários. A evidência de execução complementa a documentação de entrega dos aparelhos; seu uso institucional dependerá da validação e dos requisitos de cada programa. Os resultados de aprendizagem permanecem sujeitos a avaliação própria.</p>
     </section>
     <section id="referencias-revisao">
       <p class="kicker">13 · Referências sobre revisão</p>
