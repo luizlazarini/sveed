@@ -276,7 +276,7 @@ tr:last-child td{border-bottom:none}
       </p>
       <div class="quote">Schools teach. SVEED makes review possible. Educational assessments measure proficiency.</div>
       <p>SVEED is an Android system designed to make structured, regular, independent review at home possible, with the educational aim of helping children consolidate what they have learned. It provides exercises and support when difficulties arise, reducing the need for an adult to explain content already taught at school.</p>
-    <p>Contributing to learning is its educational aim. Its operational role is to make review possible; it is not designed to measure or certify proficiency. SVEED’s specific effects on study regularity and learning have not yet been measured systematically.</p>
+    <p>Contributing to learning is its educational aim. Its operational role is to make review possible; it is not designed to measure or certify proficiency. SVEED’s specific effects on study regularity and learning have not yet been measured systematically. Its architecture also includes activity records and components already implemented for Educational Use Verification in device programmes. This institutional foundation, described in Chapter 12, provides an opportunity for an operating co-founder to lead integration and deployment.</p>
 </section>
 
     <section id="problema">
@@ -580,11 +580,11 @@ tr:last-child td{border-bottom:none}
 
     <section id="governanca">
       <p class="kicker">12 · Scalability and governance</p>
-      <h2>Institutional use and planned development</h2>
-      <p>Institutional use is part of SVEED’s design: children complete review activities, and the associated records can help schools and education authorities track participation. Curriculum-based review at home remains the central activity.</p>
-<p>In a fully implemented institutional deployment, aggregated information on participation, regularity, and content reviewed could support teachers, school leaders, and education authorities. Consolidating these indicators requires integration, data governance, child protection, and validation of record integrity, which are still needed for use at scale.</p>
-<p>Availability, use, and educational outcomes are distinct dimensions. Records can provide operational evidence of use; they do not replace learning assessments, audits, or specific reporting requirements.</p>
-<p>SVEED seeks partners to complete and implement this system while preserving offline-first operation, data protection, and the absence of gamification. Use in other countries requires curriculum and language adaptation, along with local validation.</p>
+      <h2>From review to Educational Use Verification</h2>
+      <p>SVEED connects curriculum-based review with the educational use of devices. For children, it provides a structured review routine that works offline. For device-distribution programmes, its architecture already includes activity records and components designed to verify that use. An operating co-founder will build on this foundation, leading its integration and institutional deployment. Its institutional purpose is to track how many devices allocated to a programme have actually recorded curriculum-based review, by school, grade, and class.</p>
+<p>The existing foundation includes local session records and school context, data preparation for transmission, a synchronization queue, and cryptographic functions. Synchronization components remain disabled in the current configuration. Session closure uses a local hash; the additional HMAC and Android Keystore functions still need to be integrated and validated within the institutional protocol. This implemented work provides the starting point for the next stage.</p>
+<p>Putting this application into operation requires completing integration with an institutional service, linking each installation to a device in the programme inventory, counting distinct devices over the reporting period, and verifying record integrity. The current identifier represents an installation; the existing daily token alone does not support counting distinct devices across days. The protocol must select the minimum activity data needed and define how they are aggregated, while protecting children’s privacy. Sending records later is compatible with offline review.</p>
+<p>The GovTech application offers a potential distribution channel for the educational service through education authorities, systems integrators, device suppliers, and programme funders. The operating co-founder will lead integration, governance, validation with prospective contracting organisations, and deployment, alongside ongoing specialist content review and evaluation with users. Evidence of activity complements device-delivery documentation; its institutional use will depend on validation and each programme’s requirements. Learning outcomes remain subject to separate assessment.</p>
 </section>
   <section id="referencias-revisao"><p class="kicker">13 · References on review and homework</p>
 <h2>Sources for the educational rationale</h2>
