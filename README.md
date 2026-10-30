@@ -18,7 +18,7 @@ A estrutura de exercícios e revisão pode servir de base para outros sistemas p
 
 ## Parcerias
 
-Buscamos educadores, pesquisadores, desenvolvedores Android, redes públicas e profissionais de implantação que compartilhem a missão de ampliar o acesso à revisão escolar. A colaboração imediata envolve curadoria independente, melhorias do produto, um piloto pequeno e uma forma sustentável de disponibilizá-lo às crianças. Uma eventual sociedade dependerá de responsabilidades, trabalho conjunto e condições negociadas.
+Buscamos educadores, pesquisadores, desenvolvedores Android, redes públicas e profissionais de implantação que compartilhem a missão de ampliar o acesso à revisão escolar. A colaboração imediata envolve curadoria independente, melhorias do produto, um piloto pequeno e uma forma sustentável de disponibilizá-lo às crianças. A participação societária poderá ser adquirida progressivamente por parceiros que assumam responsabilidades de longo prazo, conforme entregas, permanência e regras de saída definidas previamente em acordo.
 
 A **Verificação de Uso Educacional** de dispositivos é uma aplicação institucional complementar. Sua integração e validação ainda são necessárias; ela não redefine a finalidade educacional do SVEED.
 
