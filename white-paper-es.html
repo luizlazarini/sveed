@@ -345,9 +345,9 @@ tr:last-child td{border-bottom:none}
 <h3>Recuperación activa de conocimientos</h3>
 <p>Recuperar un dato o un procedimiento requiere movilizar conocimientos previos. En SVEED, el niño responde a ejercicios vinculados al contenido seleccionado para repasar. El formato de la pregunta, las opciones de respuesta y las pistas influyen en el esfuerzo de recuperación. Karpicke y Roediger (2008) y Dunlosky et al. (2013) fundamentan este principio.</p>
 <h3>Práctica distribuida y espaciamiento</h3>
-<p>La práctica distribuida consiste en retomar un conocimiento en momentos separados. SVEED organiza una rutina diaria breve. El espaciamiento de una habilidad depende de que vuelva a aparecer en días distintos, según la selección de temas o el plan del docente. El uso diario, por sí solo, no demuestra la repetición espaciada de una habilidad. Dunlosky et al. (2013) analizan los beneficios y las condiciones de la práctica distribuida.</p>
+<p>La práctica distribuida retoma conocimientos en momentos separados. En SVEED, B y A pueden recuperar habilidades practicadas en días anteriores. La selección utiliza un historial de 15 días e intervalos de elegibilidad de 1, 3 y 7 días según el desempeño y el uso de pistas. La presentación depende de las habilidades elegibles, la prioridad de los repasos y la disponibilidad de contenido. Dunlosky et al. (2013) fundamentan el principio de distribución de la práctica.</p>
 <h3>Práctica intercalada</h3>
-<p>Alternar tipos de problemas puede exigir que el estudiante identifique la estrategia adecuada para cada caso. La variedad de ejercicios, la órbita y el repaso de requisitos previos ofrecen recursos para organizar las secuencias. Su relación con la práctica intercalada debe examinarse en la secuencia que recibe el niño. La evidencia revisada por Dunlosky et al. (2013) depende del contenido y de las condiciones de aplicación.</p>
+<p>La órbita intercala bloques sobre la habilidad elegida con bloques de repaso. Alternar tipos de problemas puede exigir que el niño identifique qué procedimiento utilizar. La evaluación pedagógica debe considerar la secuencia que recibe el niño y la relación entre sus contenidos. Dunlosky et al. (2013) revisan las evidencias de práctica intercalada en distintas condiciones.</p>
 <h3>Apoyo gradual a la autonomía</h3>
 <p>Las pistas graduales, una nueva oportunidad de responder y el repaso de requisitos previos ayudan al niño a seguir adelante. Esta elección se relaciona con el concepto de andamiaje en la resolución de problemas descrito por Wood, Bruner y Ross (1976). Los estudios con niños y docentes deberán observar la autonomía y la evolución de las necesidades de apoyo.</p>
 <p>SVEED integra estos principios en una propuesta tecnológica propia de repaso curricular en casa. Las referencias fundamentan decisiones de diseño. La evaluación del producto deberá examinar cómo funcionan con su público, incluidas las adaptaciones de presentación configuradas por el adulto responsable o el docente.</p>
@@ -425,32 +425,18 @@ tr:last-child td{border-bottom:none}
       </div>
     </section>
 
-    <section id="orbita">
-      <p class="kicker">4 · Adaptación por reglas</p>
-      <h2>La órbita: ajuste de la dificultad y refuerzo de conocimientos previos</h2>
-      <p>
-        El repaso se organiza en torno a una habilidad objetivo, con variaciones acotadas.
-        La órbita está compuesta por <strong>OBJETIVO, OBJETIVO-1, OBJETIVO-2 y OBJETIVO+1</strong>.
-      </p>
-      <div class="rule"><strong>OBJETIVO</strong><span>Habilidad principal que el niño necesita repasar.</span></div>
-      <div class="rule"><strong>OBJETIVO-1</strong><span>Reducción temporal de complejidad para mantener la fluidez y aliviar la carga.</span></div>
-      <div class="rule"><strong>OBJETIVO-2</strong><span>Segundo nivel de reducción cuando la dificultad persiste.</span></div>
-      <div class="rule"><strong>OBJETIVO+1</strong><span>Sondeo controlado por encima del objetivo. Si aparece dificultad, el sistema regresa rápidamente.</span></div>
-      <p style="margin-top:22px">
-        Descender no significa abandonar el objetivo. Puede funcionar como un <strong>respiro
-        cognitivo</strong>: el niño vuelve a una franja relativamente más simple, interrumpe
-        una secuencia frustrante de errores y después retorna al objetivo.
-      </p>
-      <p>
-        Cuando la dificultad persiste, el grafo curricular puede utilizarse para retroceder a
-        un conocimiento previo relacionado. El grafo se utiliza <strong>solo hacia abajo</strong>; no es un
-        mecanismo para empujar al niño hacia progresiones curriculares nuevas.
-      </p>
-      <div class="callout">
-        Formulación operativa: cuando errores sucesivos indican dificultad para continuar,
-        SVEED puede retroceder, mediante reglas predefinidas, a un conocimiento previo relacionado con el contenido y luego conducir al alumno de vuelta a la trayectoria original.
-      </div>
-    </section>
+<section id="orbita">
+<h2>Órbita por bloques, repaso según el historial y recuperación de conocimientos previos</h2>
+<p>La habilidad elegida por el niño es el foco C. Cuando hay dos habilidades de repaso elegibles, la sesión repite el ciclo C×4 → B×2 → C×4 → A×2. Un ciclo completo incluye ocho ejercicios sobre el foco y cuatro de repaso. El límite de tiempo de la sesión determina hasta dónde llega el niño.</p>
+<div class="rule"><strong>C × 4</strong><span>Cuatro ejercicios sobre la habilidad elegida.</span></div>
+<div class="rule"><strong>B × 2</strong><span>Dos ejercicios sobre la primera habilidad seleccionada para repasar.</span></div>
+<div class="rule"><strong>C × 4</strong><span>Vuelta a la habilidad elegida con otros cuatro ejercicios.</span></div>
+<div class="rule"><strong>A × 2</strong><span>Dos ejercicios sobre una segunda habilidad de repaso, distinta de B y C.</span></div>
+<p>B y A se seleccionan a partir del historial individual de los últimos 15 días, teniendo en cuenta los aciertos, los ejercicios con pistas y el tiempo transcurrido desde la última práctica. Son elegibles los contenidos que el niño ha señalado como estudiados y los de periodos o cursos anteriores que cumplen las reglas del calendario curricular. El plan del docente también puede definir el objetivo del repaso.</p>
+<p>Una habilidad vuelve a ser elegible al cabo de 1 día si los aciertos son inferiores al 60%, de 3 días si está en consolidación y de 7 días para mantenimiento cuando todos los ejercicios se han resuelto correctamente sin pistas en una muestra de al menos tres ejercicios. El selector prioriza los repasos pendientes con dificultades y, después, los demás repasos pendientes. El uso de pistas mantiene la habilidad en consolidación. Estas categorías orientan la selección según el desempeño registrado durante la práctica.</p>
+<p>Si hay pocos repasos pendientes, el selector puede completar los bloques con contenidos elegibles sin historial. Se omiten los bloques que carecen de habilidad o ejercicio disponible. El ciclo se ajusta al contenido disponible y al tiempo restante.</p>
+<p>La recuperación ante dificultades utiliza el grafo de conocimientos previos. Tres respuestas incorrectas consecutivas en el foco C pueden activar el repaso de un requisito previo relacionado. Tres aciertos consecutivos durante la recuperación permiten recorrer de vuelta el camino hasta C y reiniciar su bloque. El objetivo elegido sigue siendo la referencia de la sesión.</p>
+</section>
 
     <section id="autonomia">
       <p class="kicker">5 · Experiencia del niño</p>
@@ -570,7 +556,7 @@ tr:last-child td{border-bottom:none}
           </thead>
           <tbody>
             <tr><td>Aplicación Android</td><td><span class="status">Funcional</span>. El APK de evaluación institucional se ha firmado con la clave del desarrollador y se ha sometido a pruebas técnicas y funcionales dentro del alcance actual.</td></tr>
-            <tr><td>Pruebas automatizadas</td><td><span class="status">145 pruebas</span> · 0 fallos · 0 errores · 0 pruebas omitidas después del Evaluation Gate.</td></tr>
+            <tr><td>Pruebas automatizadas</td><td><span class="status">817 pruebas</span> · Recuento actualizado el 22 de noviembre de 2026.</td></tr>
             <tr><td>Estructura curricular amplia</td><td>Matemáticas, Portugués, Ciencias, Historia y Geografía del 1.º al 9.º año; Inglés del 6.º al 9.º. Materiales curriculares de la BNCC, grafos y plantillas en distintas etapas de revisión.</td></tr>
             <tr><td>Revisión exhaustiva del contenido</td><td>Los contenidos de Matemáticas de 2.º y 7.º año son los que han recibido una revisión más profunda hasta el momento.</td></tr>
             <tr><td>Uso formativo</td><td>Según el relato del fundador, dos niños que utilizan SVEED en casa consiguen completar las sesiones sin intervención pedagógica adulta una vez que se les pide que comiencen. Se trata de una observación informal, todavía sin evaluación independiente.</td></tr>

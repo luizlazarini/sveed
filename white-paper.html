@@ -371,9 +371,9 @@ tr:last-child td{border-bottom:none}
 <h3>Recuperação ativa de conhecimentos</h3>
 <p>Recuperar uma informação ou um procedimento exige mobilizar conhecimentos anteriores. No SVEED, a criança responde a exercícios vinculados ao conteúdo indicado para revisão. O tipo de questão, as alternativas e o uso de pistas influenciam o esforço de recuperação. Karpicke e Roediger (2008) e Dunlosky et al. (2013) fundamentam esse princípio.</p>
 <h3>Prática distribuída e espaçamento</h3>
-<p>Distribuir a prática significa retomar um conhecimento em momentos separados. O SVEED organiza uma rotina diária curta. O espaçamento de uma habilidade depende de ela reaparecer em dias diferentes, conforme a seleção de assuntos ou o plano do professor. A frequência diária, isoladamente, não demonstra que uma habilidade recebeu repetição espaçada. Dunlosky et al. (2013) discutem os benefícios e as condições da prática distribuída.</p>
+<p>A prática distribuída retoma conhecimentos em momentos separados. No SVEED, B e A podem recuperar habilidades praticadas em dias anteriores. A seleção usa uma janela de 15 dias e intervalos de elegibilidade de 1, 3 e 7 dias, conforme o desempenho e o uso de dicas. A entrega depende das habilidades elegíveis, da prioridade das retomadas e da disponibilidade de conteúdo. Dunlosky et al. (2013) fundamentam o princípio de distribuição da prática.</p>
 <h3>Prática intercalada</h3>
-<p>Intercalar tipos de problema pode exigir que o estudante reconheça a estratégia adequada a cada caso. A variedade de exercícios, a órbita e a retomada de pré-requisitos oferecem recursos para organizar sequências de revisão. Sua relação com a prática intercalada deve ser examinada na sequência efetivamente apresentada. A evidência discutida por Dunlosky et al. (2013) depende do conteúdo e das condições de aplicação.</p>
+<p>A órbita intercala blocos na habilidade escolhida com blocos de retomada. Alternar tipos de problema pode exigir que a criança reconheça qual procedimento usar. A sequência efetivamente entregue e a relação entre os conteúdos devem ser consideradas na avaliação pedagógica. Dunlosky et al. (2013) discutem evidências de prática intercalada em diferentes condições.</p>
 <h3>Apoio gradual à autonomia</h3>
 <p>Pistas graduadas, nova tentativa e retomada de pré-requisitos oferecem suporte para a criança prosseguir. Essa escolha dialoga com o conceito de apoio temporário à resolução de problemas, descrito por Wood, Bruner e Ross (1976). O uso autônomo e a necessidade de apoio ao longo do tempo deverão ser observados com crianças e professores.</p>
 <p>O SVEED reúne esses princípios em uma aplicação tecnológica própria para a revisão curricular domiciliar. As referências fundamentam escolhas de desenho. A avaliação do produto deverá verificar como essas escolhas funcionam com seu público, inclusive nas apresentações adaptadas configuradas pelo tutor ou professor.</p>
@@ -456,33 +456,18 @@ tr:last-child td{border-bottom:none}
       </div>
     </section>
 
-    <section id="orbita">
-      <p class="kicker">4 · Adaptação por regras</p>
-      <h2>Órbita, respiro cognitivo e recuperação de pré-requisitos</h2>
-      <p>
-        A revisão trabalha em torno de uma habilidade-alvo com pequena variação local. A órbita
-        é composta por <strong>ALVO, ALVO-1, ALVO-2 e ALVO+1</strong>.
-      </p>
-      <div class="rule"><strong>ALVO</strong><span>Habilidade principal que a criança precisa revisar.</span></div>
-      <div class="rule"><strong>ALVO-1</strong><span>Redução temporária de complexidade para manter fluidez e aliviar a carga.</span></div>
-      <div class="rule"><strong>ALVO-2</strong><span>Segundo degrau de redução quando a dificuldade persiste.</span></div>
-      <div class="rule"><strong>ALVO+1</strong><span>Sondagem controlada acima do alvo. Se houver dificuldade, o sistema retorna rapidamente.</span></div>
-      <p style="margin-top:22px">
-        Descer não significa abandonar o objetivo. Pode funcionar como um <strong>respiro
-        cognitivo</strong>: a criança volta a operar em uma faixa relativamente mais simples,
-        interrompe uma sequência frustrante de erros e depois retorna ao alvo.
-      </p>
-      <p>
-        Quando a dificuldade persiste, o grafo curricular pode ser usado para recuar a um
-        pré-requisito associado. O grafo é usado <strong>somente para baixo</strong>; não é um
-        mecanismo para empurrar a criança para progressões curriculares inéditas.
-      </p>
-      <div class="callout">
-        Formulação operacional: quando erros sucessivos indicam dificuldade para prosseguir, o
-        SVEED pode recuar, por regras predefinidas, para um pré-requisito curricular associado e
-        depois conduzir o aluno de volta à trajetória original.
-      </div>
-    </section>
+<section id="orbita">
+<h2>Órbita em blocos, retomadas pelo histórico e recuperação de pré-requisitos</h2>
+<p>A habilidade escolhida pela criança é o foco C. Quando há duas retomadas elegíveis, a sessão repete o ciclo C×4 → B×2 → C×4 → A×2. São oito exercícios no foco e quatro em retomadas por ciclo completo. O limite de tempo da sessão determina até onde a criança chega.</p>
+<div class="rule"><strong>C × 4</strong><span>Quatro exercícios na habilidade escolhida para revisar.</span></div>
+<div class="rule"><strong>B × 2</strong><span>Dois exercícios na primeira habilidade selecionada para retomada.</span></div>
+<div class="rule"><strong>C × 4</strong><span>Retorno à habilidade escolhida, com mais quatro exercícios.</span></div>
+<div class="rule"><strong>A × 2</strong><span>Dois exercícios em uma segunda habilidade de retomada, distinta de B e C.</span></div>
+<p>B e A são selecionadas pelo histórico individual dos últimos 15 dias, considerando acertos, exercícios com dicas e tempo desde a última prática. As retomadas usam conteúdos marcados pela criança como estudados ou elegíveis pelo calendário de bimestres e anos anteriores. A indicação do professor também pode definir o alvo da revisão.</p>
+<p>Os intervalos de elegibilidade são de 1 dia para habilidades com menos de 60% de acertos, 3 dias para habilidades em consolidação e 7 dias para manutenção após acerto em todos os exercícios, sem dicas, em uma amostra de pelo menos três exercícios. O seletor prioriza retomadas devidas com dificuldade e depois as demais revisões devidas. O uso de dicas mantém a habilidade em consolidação. Esses estados orientam a seleção de revisão e representam o desempenho registrado na prática.</p>
+<p>Quando faltam retomadas devidas, o seletor pode completar com conteúdos elegíveis sem histórico. Blocos sem habilidade ou exercício disponível são omitidos. O ciclo se ajusta às retomadas disponíveis e ao tempo restante.</p>
+<p>A recuperação por dificuldade usa o grafo de pré-requisitos. Três erros consecutivos nas respostas ao foco C podem ativar a retomada de um pré-requisito associado. Três acertos consecutivos na recuperação permitem retornar pelo caminho percorrido até C e reiniciar seu bloco. O alvo escolhido continua sendo a referência da sessão.</p>
+</section>
 
     <section id="autonomia">
       <p class="kicker">5 · Experiência da criança</p>
@@ -612,7 +597,7 @@ tr:last-child td{border-bottom:none}
           </thead>
           <tbody>
             <tr><td>Aplicativo Android</td><td><span class="status">Funcional</span>. O APK de avaliação institucional foi assinado com a chave do desenvolvedor e submetido a testes técnicos e funcionais no escopo atual.</td></tr>
-            <tr><td>Testes automatizados</td><td><span class="status">145 testes</span> · 0 falhas · 0 erros · 0 skips após o Evaluation Gate.</td></tr>
+            <tr><td>Testes automatizados</td><td><span class="status">817 testes</span> · Contagem atualizada em 22/11/2026.</td></tr>
             <tr><td>Estrutura curricular ampla</td><td>Matemática, Português, Ciências, História e Geografia do 1º ao 9º ano; Inglês do 6º ao 9º. Ativos BNCC, grafos e templates em diferentes estágios de curadoria.</td></tr>
             <tr><td>Curadoria profunda</td><td>Matemática do 2º e 7º anos concentra o refinamento mais avançado até o momento.</td></tr>
             <tr><td>Uso formativo</td><td>Segundo relato do fundador, duas crianças em uso familiar conseguem concluir as sessões sem intervenção pedagógica adulta durante a atividade, após solicitação de início. É uma observação informal, ainda sem avaliação independente.</td></tr>

@@ -343,9 +343,9 @@ tr:last-child td{border-bottom:none}
 <h3>Retrieval practice</h3>
 <p>Retrieving a fact or procedure requires drawing on prior knowledge. In SVEED, children answer exercises linked to the content selected for review. Question format, answer choices and hints affect the retrieval effort involved. Karpicke and Roediger (2008) and Dunlosky et al. (2013) provide the research basis for this principle.</p>
 <h3>Distributed practice and spacing</h3>
-<p>Distributed practice involves returning to knowledge at separate points in time. SVEED provides a short daily routine. Spacing for a particular skill depends on that skill being revisited on different days through topic selection or a teacher’s plan. Daily use alone does not establish spaced repetition of an individual skill. Dunlosky et al. (2013) discuss the benefits and conditions of distributed practice.</p>
+<p>Distributed practice revisits knowledge at separate points in time. In SVEED, B and A can bring back skills practised on earlier days. Selection uses a 15-day history window and eligibility intervals of 1, 3 and 7 days, based on performance and hint use. Delivery depends on eligible skills, review priorities and content availability. Dunlosky et al. (2013) provide the research basis for distributed practice.</p>
 <h3>Interleaved practice</h3>
-<p>Mixing problem types can require learners to identify the appropriate strategy for each task. Exercise variety, the orbit mechanism and prerequisite review provide ways to organise review sequences. Their relationship to interleaved practice needs to be examined in the sequence children actually encounter. The evidence reviewed by Dunlosky et al. (2013) varies with the content and conditions of use.</p>
+<p>The orbit interleaves blocks on the selected skill with review blocks. Mixing problem types can require children to identify which method to use. Educational evaluation needs to consider the sequence actually delivered and the relationship between its topics. Dunlosky et al. (2013) review evidence for interleaved practice under different conditions.</p>
 <h3>Scaffolding towards independence</h3>
 <p>Graduated hints, another attempt and prerequisite review help children continue working. This design draws on the idea of temporary support for problem solving described by Wood, Bruner and Ross (1976). Studies with children and teachers will need to examine independent use and how support needs change over time.</p>
 <p>SVEED brings these principles together in its own technological approach to curriculum review at home. The references inform design choices. Product evaluation will examine how those choices work for the intended users, including presentation adjustments configured by a caregiver or teacher.</p>
@@ -423,33 +423,18 @@ tr:last-child td{border-bottom:none}
       </div>
     </section>
 
-    <section id="orbita">
-      <p class="kicker">4 · Rule-based adaptation</p>
-      <h2>The orbit: adjusting difficulty and revisiting prerequisites</h2>
-      <p>
-        Review works around a target skill with limited local variation. The orbit consists of
-        <strong>TARGET, TARGET-1, TARGET-2, and TARGET+1</strong>.
-      </p>
-      <div class="rule"><strong>TARGET</strong><span>The main skill the child needs to review.</span></div>
-      <div class="rule"><strong>TARGET-1</strong><span>A temporary reduction in complexity to maintain flow and reduce cognitive load.</span></div>
-      <div class="rule"><strong>TARGET-2</strong><span>A second reduction step when difficulty persists.</span></div>
-      <div class="rule"><strong>TARGET+1</strong><span>A controlled probe above the target. If difficulty appears, the system quickly returns.</span></div>
-      <p style="margin-top:22px">
-        Moving down does not mean abandoning the objective. It can work as <strong>cognitive
-        breathing room</strong>: the child returns to a relatively simpler range, interrupts a
-        frustrating sequence of errors, and then returns to the target.
-      </p>
-      <p>
-        When difficulty persists, the curriculum graph can be used to step back to an associated
-        prerequisite. The graph is used <strong>only downward</strong>; it is not a mechanism
-        for pushing the child into new curriculum progressions.
-      </p>
-      <div class="callout">
-        Operational formulation: when successive errors indicate difficulty moving forward,
-        SVEED can step back, through predefined rules, to an associated curriculum prerequisite
-        and then guide the student back to the original path.
-      </div>
-    </section>
+<section id="orbita">
+<h2>Block-based orbit, history-informed review and prerequisite recovery</h2>
+<p>The skill selected by the child is the focus, C. When two eligible review skills are available, the session repeats C×4 → B×2 → C×4 → A×2. A full cycle contains eight exercises on the focus and four on previously covered skills. The session time limit determines how far the child progresses.</p>
+<div class="rule"><strong>C × 4</strong><span>Four exercises on the selected skill.</span></div>
+<div class="rule"><strong>B × 2</strong><span>Two exercises on the first skill selected for review.</span></div>
+<div class="rule"><strong>C × 4</strong><span>Return to the selected skill for another four exercises.</span></div>
+<div class="rule"><strong>A × 2</strong><span>Two exercises on a second review skill, distinct from B and C.</span></div>
+<p>B and A are selected using the child’s history over the last 15 days, taking account of correct answers, exercises completed with hints and time since the last practice. Eligible content includes topics the child identified as already studied and skills from previous terms or year groups that meet the curriculum-calendar rules. A teacher’s plan can also set the review target.</p>
+<p>Skills become eligible again after 1 day when accuracy is below 60%, after 3 days while still being consolidated, or after 7 days for maintenance when every exercise was answered correctly without hints in a sample of at least three exercises. The selector prioritises due skills with difficulties, followed by other due reviews. Using hints keeps a skill in the consolidation category. These categories guide review selection based on recorded practice performance.</p>
+<p>When too few skills are due, eligible content without a practice history can fill the remaining slots. Blocks without an available skill or exercise are omitted. The cycle adjusts to available review content and the time remaining.</p>
+<p>Prerequisite recovery uses the curriculum graph. Three consecutive incorrect answers on focus C can trigger review of an associated prerequisite. Three consecutive correct answers during recovery allow the child to retrace the recovery path towards C and restart its block. The selected target remains the reference point for the session.</p>
+</section>
 
     <section id="autonomia">
       <p class="kicker">5 · Child experience</p>
@@ -568,7 +553,7 @@ tr:last-child td{border-bottom:none}
           </thead>
           <tbody>
             <tr><td>Android application</td><td><span class="status">Functional</span>. The institutional evaluation APK has been signed with the developer’s key and undergone technical and functional testing within the current scope.</td></tr>
-            <tr><td>Automated tests</td><td><span class="status">145 tests</span> · 0 failures · 0 errors · 0 skipped tests after the Evaluation Gate.</td></tr>
+            <tr><td>Automated tests</td><td><span class="status">817 tests</span> · Count updated on November 22, 2026.</td></tr>
             <tr><td>Broad curriculum structure</td><td>Mathematics, Portuguese, Science, History, and Geography in Years 1–9; English in Years 6–9. BNCC curriculum materials, graphs, and templates are at different stages of content review.</td></tr>
             <tr><td>In-depth content review</td><td>Mathematics for Years 2 and 7 has undergone the most extensive refinement so far.</td></tr>
             <tr><td>Formative use</td><td>The founder reports that two children using SVEED at home can complete sessions without adult educational intervention once prompted to begin. This is an informal observation that has not yet been independently evaluated.</td></tr>
